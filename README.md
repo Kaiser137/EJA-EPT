@@ -18,13 +18,13 @@ O Programa da Educação de Jovens e Adultos Integrada à Educação Profissiona
 
 ## Cursos Oferecidos
 
-# EAD:
+### EAD:
 
 - **Agente de Gestão de Resíduos Sólidos;**
 - **Assistente de Controle de Qualidade;**
 - **Recepcionista em Serviços de Saúde.**
 
-# Presenciais:
+### Presenciais:
 
 - **Eletricista Instalador Predial de Baixa Tensão;**
 - **Instalador de Sistemas Eletrônicos de Segurança;**
