@@ -1,4 +1,4 @@
-# EJA EPT - IFSuldeminas Campus Pouso Alegre
+# EJA EPT - IFSULDEMINAS - Campus Pouso Alegre
 
 ## Descrição do Projeto
 
