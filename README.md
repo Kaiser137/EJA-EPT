@@ -52,13 +52,11 @@ Para mais informações sobre o projeto EJA EPT, entre em contato conosco:
 
 ## Links Úteis
 
-- [Site Oficial do IFSuldeminas Campus Pouso Alegre](https://portal.poa.ifsuldeminas.edu.br/)
-- [Página do EJA EPT](https://portal.poa.ifsuldeminas.edu.br/cursos-fic)
+- [Site Oficial do IFSULDEMINAS - Campus Pouso Alegre](https://portal.poa.ifsuldeminas.edu.br/)
+- [Página do EJA - EPT](https://portal.poa.ifsuldeminas.edu.br/cursos-fic)
 
 ## Contribuições
 
 Contribuições para o projeto são bem-vindas! Se você deseja contribuir, por favor, entre em contato conosco ou abra uma issue no repositório.
 
 ## Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
