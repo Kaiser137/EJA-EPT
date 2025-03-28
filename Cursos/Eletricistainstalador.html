@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eletricista Instalador Predial de Baixa Tensão</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
+        .corpo {
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 35px;
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            max-width: 1100px;
+        }
+
+        .imagem-topo {
+            width: 100%;
+            height: auto;
+            border-radius: 35px 35px 0 0;
+            top: 0;
+            left: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .secao-descricao {
+            height: auto;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            background-color: #00B625;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 35px;
+            padding: 20px;
+        }
+
+        .secao-descricao img {
+            width: 150px;
+            height: 150px;
+            float: right;
+            top: -100px;
+            right: -40px;
+            position: relative;
+        }
+
+        .imagem-slider {
+            width: 125px;
+            height: auto;
+            float: right;
+            top: -300px;
+            right: -127px;
+            position: relative;
+        }
+
+        .secao-slider {
+            height: auto;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 20px;
+            background-color: #00B625;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 35px;
+            padding: 20px;
+        }
+
+        .container-cartao {
+            max-width: 950px;
+            margin: 0 60px 35px;
+            padding: 10px 50px 10px 0px;
+            overflow: hidden;
+        }
+
+        .lista-cartao {
+            list-style: none;
+            display: flex;
+        }
+
+        .link-cartao {
+            user-select: none;
+            display: block;
+            background-color: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            transition: 0.2s ease;
+        }
+
+        .link-cartao:hover {
+            border-color: #000;
+        }
+
+        .imagem-cartao {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .botao-cartao {
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            color: #00B625;
+            border: 2px solid #00B625;
+            background: none;
+            cursor: pointer;
+            transform: rotate(-45deg);
+            transition: 0.4s ease;
+        }
+
+        .link-cartao:hover .botao-cartao {
+            background: #00B625;
+            color: #fff;
+        }
+
+        .swiper-pagination-bullet {
+            height: 13px;
+            width: 13px;
+            opacity: 0.5;
+            background: #fff;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
+
+        .swiper-slide-button {
+            color: #fff;
+        }
+
+        .padding-button {
+            padding-left: 10px;
+            padding-bottom: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .swiper-slide-button {
+                display: none;
+            }
+
+            .seção_slider {
+                padding: 0;
+            }
+
+            .container-cartao {
+                margin: 0 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="imagem-topo">
+            <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/residuos.png"
+                alt="Imagem topo - Eletricista Instalador Predial de Baixa Tensão">
+        </div>
+        <div class="secao-descricao">
+            <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Icones/Lixeira.png"
+                alt="Imagem topo - Eletricista Instalador Predial de Baixa Tensão">
+            <h2 style="text-align: center;">Descrição do Curso</h2>
+            O curso Eletricista Instalador Predial de Baixa Tensão faz parte deste programa e, portanto, sua oferta se
+            vincula aos objetivos desse processo, principalmente no apoio ao atingimento da meta 10 do Plano Nacional de
+            Educação (PNE), Lei nº 13.005/2014: a oferta de, no mínimo, 25% (vinte e cinco por cento) das matrículas de
+            EJA nos ensinos fundamental e médio, na forma articulada à educação profissional, consoante Portaria nº
+            962/2021/MEC. O curso integra o eixo tecnológico “Controle e Processos Industriais” e será ofertado na
+            modalidade presencial. Sua estrutura curricular intercomplementar, busca atender à necessidade de
+            capacitação de jovens e adultos, favorecendo sua inclusão no mundo do trabalho e seu desenvolvimento
+            profissional.<br><br>
+
+            A evolução tecnológica tem tornado o ser humano cada vez mais dependente da eletricidade, de modo que
+            habilidades técnicas nessa área se tornaram essenciais, tais como: trabalhar com fios, cabos, conduítes,
+            tomadas, interruptores, disjuntores, quadros de distribuição, circuitos de tomadas, chuveiro, iluminação e
+            outros componentes eletrônicos. Ademais, requer-se que este profissional seja capaz de ler e compreender
+            projetos elétricos, esquemas e diagramas e estar atualizado sobre as normas elétricas locais e nacionais,
+            garantindo que as instalações elétricas estejam em conformidade com as regulamentações de segurança.<br><br>
+
+            A partir deste curso, os profissionais estarão aptos a exercer a função de eletricista de linha de baixa
+            tensão, de maneira a contribuir com o desenvolvimento socioeconômico da região articulado aos processos de
+            democratização e justiça social.
+        </div>
+        <div class="secao-slider">
+            <h2>Veja todas as informações sobre o curso</h2><br><br>
+            <div class="corpo-slider">
+                <div class="container-swiper swiper">
+                    <div class="container-cartao">
+                        <ul class="lista-cartao swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#" class="link-cartao">
+                                    <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Teste%20Slider/Matriz%20Curricular.png"
+                                        alt="Imagem do Slider 1" class="imagem-cartao">
+                                    <div class="padding-button">
+                                        <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" class="link-cartao">
+                                    <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Teste%20Slider/Projeto%20Pedaggico.png"
+                                        alt="Imagem do Slider 2" class="imagem-cartao">
+                                    <div class="padding-button">
+                                        <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" class="link-cartao">
+                                    <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Teste%20Slider/Gesto%20do%20Curso.png"
+                                        alt="Imagem do Slider 3" class="imagem-cartao">
+                                    <div class="padding-button">
+                                        <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" class="link-cartao">
+                                    <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Teste%20Slider/Perfil%20do%20Egresso.png"
+                                        alt="Imagem do Slider 4" class="imagem-cartao">
+                                    <div class="padding-button">
+                                        <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" class="link-cartao">
+                                    <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Teste%20Slider/Notcias.png"
+                                        alt="Imagem do Slider 5" class="imagem-cartao">
+                                    <div class="padding-button">
+                                        <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#" class="link-cartao">
+                                    <img src="https://portal.ifsuldeminas.edu.br/images/comunica%C3%A7%C3%A3o/Teste%20Slider/Outras%20Informaes.png"
+                                        alt="Imagem do Slider 5" class="imagem-cartao">
+                                    <div class="padding-button">
+                                        <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper('.container-cartao', {
+            loop: true,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 }
+            }
+        });
+    </script>
+</body>
+
+</html>
