@@ -1,21 +1,829 @@
-<!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <title>Escolas dos Municipios</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
 
-        </style>
-    </head>
-    <body>
-        <div class="corpo">
-            <div class="section">
-                <h2>Escolas parceiras do EJA - Municípios</h2>
-                <div class="tabela">
-                    
+<head>
+    <meta charset="UTF-8">
+    <title>Escolas dos Municipios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght&#64;200;300;400;600;700;800&amp;display=swap');
+
+        *,
+        *:before,
+        *:after {
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .corpo {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 80px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #00B625;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #00B625;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #00B625;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 style="text-align: center;">Escolas parceiras do EJA - Municípios</h2>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Alfenas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Judith Viana</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Mecânico de Refrigeração e Climatização Industrial;<br>
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Areado
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. João Lourenço</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Barbacena
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Embaixador José Bonifácio</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Barroso
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Francisco Antônio Pires</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Pedreiro de Alvenaria Estrutural.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Botelhos
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. João de Souza Gonçalves</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Campo Belo
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Miguel Rogana</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Soldador de Estruturas e Tubulação no Processo MIG/MAG.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Conceição do Rio Verde
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Dom Othon Motta</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Conceição dos Ouros
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Joao Ribeiro de Carvalho</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Elói Mendes
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Targino Nogueira</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Formiga
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Professor Joaquim Rodarte</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Soldador de Estruturas e Tubulação no Processo MIG/MAG.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Gonçalves
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. João Ribeiro da Silva</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Pedreiro de Alvenaria Estrutural.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Guaxupé
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Dr. Benedito Leite Ribeiro</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                            <div class="divide-escola"></div>
+                            <div class="answer-box">
+                                <h2>E. E. Dr. André Cortez Granero</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Mecânico de Refrigeração e Climatização Industrial.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Ilicínea
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Nossa Senhora Aparecida</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Laboratorista de Solos.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Itanhandu
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Professor Souza Nilo</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Jesuânia
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. João de Almeida Lisboa</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Juiz de Fora
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>Escola Estadual Presidente Costa e Silva</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão;<br>
+                                    Instalador de Sistemas Eletrônicos de Segurança;<br>
+                                    Laboratorista de Solos;<br>
+                                    Mecânico de Refrigeração e Climatização Industrial;<br>
+                                    Soldador de Estruturas e Tubulação no Processo MIG/MAG.<br>
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Lavras
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Firmino Costa</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança;<br>
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Luisburgo
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Joaquim Knupp</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Machado
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Gabriel Odorico</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Laboratorista de Solos.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Maria da Fé
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. N. Sra de Lourdes</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Monte Belo
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Frei Levino</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Mecânico de Refrigeração e Climatização Industrial.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Mutum
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Dionysio Costa</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Paraguaçu
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Padre Piccinini</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Passa Quatro
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Nossa Senhora Aparecida</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Passos
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. São José</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Mecânico de Refrigeração e Climatização Industrial.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Pedralva
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Comendador Mário Goulart Santiago</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Poços de Caldas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. de Ensino Fundamental e Médio</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                            <div class="divide-escola"></div>
+                            <div class="answer-box">
+                                <h2>E. E. Edmundo Gouvea Cardillo</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Santa Rita de Caldas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Dona Rita Amélia</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Laboratorista de Solos.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Santo Antônio do Amparo
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Newton Ferreira Paiva</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    São José do Alegre
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Maria Lina de Jesus</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    São Sebastião do Paraíso
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Comendadora Ana Cândida de Figueiredo</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Sapucai Mirim
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Prof. Figueiredo Brandão</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Três Corações
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Américo Dias Pereira</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Operador de Tratamento de Águas e Efluentes;<br>
+                                    Soldador de Estruturas e Tubulação no Processo MIG/MAG.
+                                </p>
+                            </div>
+                            <div class="divide-escola"></div>
+                            <div class="answer-box">
+                                <h2>E. E. Godofredo Rangel</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão;<br>
+                                    Mecânico de Refrigeração e Climatização Industrial.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Varginha
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Afonso Pena</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Instalador de Sistemas Eletrônicos de Segurança;<br>
+                                    Soldador de Estruturas e Tubulação no Processo MIG/MAG.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Virgínia
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h2>E. E. Delfim Moreira</h2>
+                                <h3>Cursos:</h3>
+                                <p class="text-blk faq-answer">
+                                    Eletricista Instalador Predial de Baixa Tensão.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+            let currentlyActive = null;
+
+            faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                faqQuestionContainer.onclick = function () {
+                    const parentFaq = this.parentElement;
+
+                    // Se já está ativo, apenas desativa
+                    if (parentFaq.classList.contains('active')) {
+                        parentFaq.classList.remove('active');
+                        currentlyActive = null;
+                        return;
+                    }
+
+                    // Fecha o item atualmente aberto
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+
+                    // Abre o novo item
+                    parentFaq.classList.add('active');
+                    currentlyActive = parentFaq;
+                };
+            });
+        });
+    </script>
+
+</body>
+
 </html>
