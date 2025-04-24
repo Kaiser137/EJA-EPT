@@ -1,0 +1,539 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght&#64;200;300;400;600;700;800&amp;display=swap');
+
+        .corpo {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 80px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #00B625;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #00B625;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #00B625;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        /* Novos estilos para o inline-faq */
+        .inline-faq {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: auto auto;
+            gap: 10px 20px;
+            align-items: start;
+        }
+
+        .inline-faq h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #525252;
+            font-weight: 600;
+        }
+
+        .inline-faq p {
+            margin-top: -20px !important;
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 style="text-align: center;">Cursos do Programa EJA integrada à EPT</h2>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Formação de professores metodologias ativas e tecnologias para a EJA
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Educação à Distância.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        400
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Agente de Gestão de Resíduos Sólidos
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Educação à Distância.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        1000
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Assistente de Controle de Qualidade
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Educação à Distância.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        1000
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Eletricista Instalador Predial de Baixa Tensão
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Conceição do Rio Verde;<br>
+                                    Jesuânia;<br>
+                                    Juiz de Fora;<br>
+                                    Lavras;<br>
+                                    Luisburgo;<br>
+                                    Pedralva;<br>
+                                    Santo Antônio do Amparo;<br>
+                                    Três Corações;<br>
+                                    Virgínia.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Instalador de Sistemas Eletrônicos de Segurança
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Barbacena;<br>
+                                    Conceição dos Ouros;<br>
+                                    Guaxupé;<br>
+                                    Itanhandu;<br>
+                                    Juiz de Fora;<br>
+                                    Lavras;<br>
+                                    Maria da Fé;<br>
+                                    Paraguaçu;<br>
+                                    Passa Quatro;<br>
+                                    Poços de Caldas;<br>
+                                    São José do Alegre;<br>
+                                    Sapucai Mirim;<br>
+                                    Varginha.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Operador de Tratamento de Águas e Efluentes
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Alfenas;<br>
+                                    Areado;<br>
+                                    Botelhos;<br>
+                                    Elói Mendes;<br>
+                                    Mutum;<br>
+                                    Poços de Caldas;<br>
+                                    São Sebastião do Paraíso;<br>
+                                    Três Corações.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Laboratorista de Solos
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Ilicínea;<br>
+                                    Juiz de Fora;<br>
+                                    Machado;<br>
+                                    Santa Rita de Caldas.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Mecânico de Refrigeração e Climatização Industrial
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Alfenas;<br>
+                                    Guaxupé;<br>
+                                    Juiz de Fora;<br>
+                                    Monte Belo;<br>
+                                    Passos;<br>
+                                    Três Corações.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Pedreiro de Alvenaria Estrutural
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Barroso;<br>
+                                    Gonçalves.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Recepcionista em Serviços de Saúde
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Educação à Distância.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        1000
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Soldador de Estruturas e Tubulação no Processo MIG/MAG
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Municípios que ofertam:</h3>
+                                <p class="text-blk faq-answer">
+                                    Campo Belo;<br>
+                                    Juiz de Fora;<br>
+                                    Formiga;<br>
+                                    Três Corações;<br>
+                                    Varginha.
+                                </p>
+                                <div class="inline-faq">
+                                    <h3>Modalidade:</h3>
+                                    <p class="text-blk faq-answer">
+                                        Presencial.
+                                    </p>
+                                    <h3>Vagas:</h3>
+                                    <p class="text-blk faq-answer">
+                                        30 vagas por Município.
+                                    </p>
+                                </div>
+                                <p><a href="">Clique aqui para acessar a página do curso!</a><br></p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+            let currentlyActive = null;
+
+            faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                faqQuestionContainer.onclick = function () {
+                    const parentFaq = this.parentElement;
+
+                    // Se já está ativo, apenas desativa
+                    if (parentFaq.classList.contains('active')) {
+                        parentFaq.classList.remove('active');
+                        currentlyActive = null;
+                        return;
+                    }
+
+                    // Fecha o item atualmente aberto
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+
+                    // Abre o novo item
+                    parentFaq.classList.add('active');
+                    currentlyActive = parentFaq;
+                };
+            });
+        });
+    </script>
+
+</body>
+
+</html>
