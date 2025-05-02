@@ -1,0 +1,264 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Equipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght&#64;200;300;400;600;700;800&amp;display=swap');
+
+        .corpo {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 80px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #00B625;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1500px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #00B625;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #00B625;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 style="text-align: center;">Relação de bolsistas do Programa EJA integrada à EPT</h2>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    Coordenadoria de Comunicação e Marketing
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <h3>Evandro Moreira</h3>
+                                <p class="text-blk faq-answer">
+                                    Gestor de Comunicação e Marketing<br>
+                                    E-mail:
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Thiago Alves</h3>
+                                <p class="text-blk faq-answer">
+                                    Gestor de Marketing<br>
+                                    E-mail: thiago.souza@ifsuldeminas.edu.br
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Jéssica Prado</h3>
+                                <p class="text-blk faq-answer">
+                                    Coordenadora de Marketing<br>
+                                    E-mail:
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Cézar Vitor</h3>
+                                <p class="text-blk faq-answer">
+                                    Desenvolvedor Web<br>
+                                    E-mail: cezar.junior@ifsuldeminas.edu.br
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Ederson Azevedo</h3>
+                                <p class="text-blk faq-answer">
+                                    Relações Públicas<br>
+                                    E-mail:
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Natália Bae</h3>
+                                <p class="text-blk faq-answer">
+                                    Diagramadora<br>
+                                    E-mail: natalia.bae@ifsuldeminas.edu.br
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Patrik Melo</h3>
+                                <p class="text-blk faq-answer">
+                                    Designer<br>
+                                    E-mail: patrik.rangel@ifsuldeminas.edu.br
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>Raphael Garcia Bento</h3>
+                                <p class="text-blk faq-answer">
+                                    Social Media<br>
+                                    E-mail: raphael.bento@ifsuldeminas.edu.br
+                                </p>
+                                <div class="divide-escola"></div>
+                                <h3>William Sanches</h3>
+                                <p class="text-blk faq-answer">
+                                    Jornalista<br>
+                                    E-mail:
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+            let currentlyActive = null;
+
+            faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                faqQuestionContainer.onclick = function () {
+                    const parentFaq = this.parentElement;
+
+                    // Se já está ativo, apenas desativa
+                    if (parentFaq.classList.contains('active')) {
+                        parentFaq.classList.remove('active');
+                        currentlyActive = null;
+                        return;
+                    }
+
+                    // Fecha o item atualmente aberto
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+
+                    // Abre o novo item
+                    parentFaq.classList.add('active');
+                    currentlyActive = parentFaq;
+                };
+            });
+        });
+    </script>
+
+</body>
+
+</html>
