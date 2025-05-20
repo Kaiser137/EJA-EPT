@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Projeto</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .titulo {
+            text-align: center;
+            color: #01a342;
+            width: 80%;
+            margin: 0 auto;
+            font-size: 2.5em;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        main {
+            width: 100%;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #01a342;
+        }
+
+        .icones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .iconesProjeto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .iconesProjeto img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .iconesProjeto img:hover {
+            transform: scale(1.1);
+        }
+
+        .row {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .coluna1, .coluna3{
+            background-color: #02a240;
+            width: 125px;
+            height: 250px;
+            text-align: center;
+            padding-top: 20px;
+            color: #ffffff;
+        }
+
+        .coluna2, .coluna4{
+            background-color: #42506b;
+            width: 125px;
+            height: 250px;
+            text-align: center;
+            padding-top: 20px;
+            color: #ffffff;
+        }
+        
+        .OProjeto,
+        .Missao,
+        .Visao,
+        .Valores {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: justify;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="titulo">
+        O projeto: Visão, Missão e Valores
+    </div>
+    <main>
+        <section class="icones">
+            <div class="iconesProjeto">
+                <div class="row">
+                    <div class="coluna1">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/Logo_EJA.png" alt="EJA"
+                            class="iconeLogo">
+                            <p>Clique aqui para conhecer sobre o Projeto EJA-EPT</p>
+                    </div>
+                    <div class="coluna2">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/Misso.png" alt="Visão"
+                            class="iconeMissao">
+                            <p>Clique aqui para conhecer sobre a missão do projeto EJA-EPT</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="coluna3">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/Viso.png" alt="Missão"
+                            class="iconeVisao">
+                            <p>Clique aqui para conhecer sobre a visão do Projeto EJA-EPT</p>
+                    </div>
+                    <div class="coluna4">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/Valores.png"
+                            alt="Valores" class="iconeValores">
+                            <p>Clique aqui para conhecer sobre os valores do Projeto EJA-EPT</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="OProjeto">
+            <h2>O Projeto: Educação de Jovens e Adultos Integrada à Educação Profissional</h2>
+            A Educação de Jovens e Adultos (EJA) é uma modalidade voltada a pessoas que, por
+            diferentes motivos, não tiveram acesso ou continuidade nos estudos durante a idade regular
+            do Ensino Fundamental e Médio.<br><br>
+
+            O Projeto EJA-EPT tem como propósito transformar vidas por meio da elevação da
+            escolaridade integrada à qualificação profissional, atendendo especialmente jovens, adultos e
+            idosos cujas trajetórias educacionais foram interrompidas. Nosso compromisso é ampliar
+            oportunidades e contribuir para a construção de caminhos mais justos e inclusivos.
+            Entre os principais objetivos do Projeto, destacam-se:<br><br>
+
+            - Ampliar o acesso, a permanência e a conclusão dos três segmentos da EJA;<br><br>
+
+            - Fomentar a oferta da EJA integrada à Educação Profissional, em articulação com os
+            sistemas educacionais dos estados, municípios e do Distrito Federal, alinhada aos
+            arranjos produtivos locais;<br><br>
+
+            - Apoiar o desenvolvimento de propostas pedagógicas específicas para o público da
+            EJA, integrando educação, ciência, trabalho, tecnologia e cultura;<br><br>
+
+            - Promover a elevação da escolaridade de jovens, adultos e idosos, vinculada à
+            formação profissional e à valorização do saber.<br><br>
+        </section>
+        <section class="Missao">
+            <h2>Missão</h2>
+            Promover a transformação social por meio da oferta gratuita e inclusiva de educação
+            de jovens, adultos e idosos, integrando elevação da escolaridade à qualificação profissional,
+            com foco na valorização da cidadania, no desenvolvimento de competências e no
+            fortalecimento de trajetórias de vida mais dignas e promissoras.
+        </section>
+        <section class="Visao">
+            <h2>Visão</h2>
+            Consolidar-se como um projeto reconhecido nacionalmente por transformar trajetórias
+            interrompidas em histórias de conquista e realização, ampliando o acesso à educação de
+            qualidade e gerando impacto duradouro na vida dos estudantes da EJA.
+        </section>
+        <section class="Valores">
+            <h2>Valores</h2>
+            - Inclusão social: garantir o acesso à educação como um direito de todos, acolhendo diferentes
+            trajetórias e contextos de vida.<br><br>
+
+            - Valorização da diversidade: respeitar e integrar as experiências, culturas e histórias dos
+            estudantes em processos pedagógicos significativos.<br><br>
+
+            - Compromisso com a transformação: atuar de forma intencional e sensível para gerar
+            impacto positivo e duradouro nas vidas dos participantes.<br><br>
+
+            - Qualidade e relevância educacional: oferecer formação com excelência técnica, alinhada às
+            demandas do mundo do trabalho e à realidade dos territórios atendidos.<br><br>
+
+            - Transparência e diálogo: estabelecer relações claras, éticas e colaborativas entre equipe,
+            estudantes, parceiros e comunidade.<br><br>
+
+            - Acolhimento e escuta ativa: promover um ambiente educativo respeitoso, seguro e
+            empático, no qual todos se sintam vistos, ouvidos e apoiados.<br><br>
+
+            - Inovação e acessibilidade: incorporar tecnologias, metodologias e linguagens que facilitem
+            a aprendizagem e ampliem as possibilidades de participação.<br><br>
+
+            - Acreditamos que investir na educação de quem foi historicamente excluído do processo
+            escolar é fundamental para a construção de uma sociedade mais equitativa, com mais
+            oportunidades para todos.
+        </section>
+    </main>
+</body>
+
+</html>
