@@ -45,6 +45,10 @@
             margin: 0;
         }
 
+        .ProjetoDesktop {
+            margin-bottom: 20px;
+        }
+
         .ProjetoDesktop img {
             width: 250px;
             height: auto;
@@ -112,7 +116,7 @@
             padding: 20px;
         }
 
-        .ValoresDesktop {
+        .ValoresDesktop, .ValoresMobile{
             border-bottom-right-radius: 15px;
             border-bottom-left-radius: 15px;
         }
@@ -132,12 +136,67 @@
 
         .colunaValores h2,
         .colunaVisao h2,
-        .colunaMissao h2{
+        .colunaMissao h2 {
             color: #ffffff
         }
 
         .colunaValores p {
             padding: 10px;
+        }
+
+        .Mobile {
+            display: none;
+        }
+
+        .Mobile h2 {
+            color: #ffffff;
+        }
+
+        .Mobile img {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .MissaoMobile, 
+        .ValoresMobile {
+            background-color: #1b4a9b;
+            color: white;
+            margin: 0;
+            text-align: center;
+        }
+
+        .VisaoMobile {
+            background-color: #02a240;
+            color: white;
+            margin: 0;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .Desktop {
+                display: none;
+            }
+
+            .Mobile {
+                display: block;
+            }
+
+            .titulo {
+                font-size: 2em;
+                padding: 10px;
+            }
+
+            .main {
+                width: 100%;
+            }
+
+            .colunaProjeto p {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -147,83 +206,165 @@
         O PROJETO EJA-EPT
     </div>
     <div class="main">
-        <section class="ProjetoDesktop">
-            <div class="rowProjeto">
+        <section class="Desktop">
+            <section class="ProjetoDesktop">
+                <div class="rowProjeto">
+                    <div class="colunaProjeto">
+                        <p>O Projeto EJA-EPT tem como propósito transformar vidas por meio da elevação da
+                            escolaridade integrada à qualificação profissional, atendendo especialmente jovens, adultos e
+                            idosos cujas trajetórias educacionais foram interrompidas. Nosso compromisso é ampliar
+                            oportunidades e contribuir para a construção de caminhos mais justos e inclusivos.</p>
+    
+                        <p>Entre os principais objetivos do Projeto, destacam-se:</p>
+    
+                        <p>Ampliar o acesso, a permanência e a conclusão dos três segmentos da EJA;</p>
+    
+                        <p>Fomentar a oferta da EJA integrada à Educação Profissional, em articulação com os
+                            sistemas educacionais dos estados, municípios e do Distrito Federal, alinhada aos
+                            arranjos produtivos locais;</p>
+    
+                        <p>Apoiar o desenvolvimento de propostas pedagógicas específicas para o público da
+                            EJA, integrando educação, ciência, trabalho, tecnologia e cultura;</p>
+    
+                        <p>Promover a elevação da escolaridade de jovens, adultos e idosos, vinculada à
+                            formação profissional e à valorização do saber.</p>
+                    </div>
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Mar%C3%A7o/27/marca-programa-vertical_3.png"
+                        alt="EJA" class="iconeLogo">
+                </div>
+            </section>
+            <section class="MissaoDesktop">
+                <div class="rowProjeto">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/novo-misso.png" alt="Missão"
+                        class="iconeMissao">
+                    <div class="colunaMissao">
+                        <h2>Missão</h2>
+                        <p>
+                            Promover a transformação social por meio da oferta gratuita e inclusiva de educação
+                            de jovens, adultos e idosos, integrando elevação da escolaridade à qualificação profissional,
+                            com foco na valorização da cidadania, no desenvolvimento de competências e no
+                            fortalecimento de trajetórias de vida mais dignas e promissoras.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="VisaoDesktop">
+                <div class="rowProjeto">
+                    <div class="colunaVisao">
+                        <h2>Visão</h2>
+                        <p>
+                            Consolidar-se como um projeto reconhecido nacionalmente por transformar trajetórias
+                            interrompidas em histórias de conquista e realização, ampliando o acesso à educação de
+                            qualidade e gerando impacto duradouro na vida dos estudantes da EJA.
+                        </p>
+                    </div>
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/novo%20-%20visao.png"
+                        alt="Missão" class="iconeVisao">
+                </div>
+            </section>
+            <section class="ValoresDesktop">
+                <div class="rowProjeto">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/novo%20-%20valores.png"
+                        alt="Valores" class="iconeValores">
+                    <div class="colunaValores">
+                        <h2>Valores</h2>
+                        <p><b>Inclusão social:</b> assegurar o direito à educação, acolhendo diferentes trajetórias e
+                            realidades.</p>
+                        <p><b>Valorização da diversidade:</b> integrar experiências, culturas e histórias dos estudantes aos
+                            processos pedagógicos.</p>
+                        <p><b>Compromisso com a transformação:</b> atuar com intencionalidade para gerar impacto positivo e
+                            duradouro.</p>
+                        <p><b>Qualidade e relevância educacional:</b> oferecer formação técnica de excelência, alinhada às
+                            demandas do trabalho e dos territórios.</p>
+                        <p><b>Transparência e diálogo:</b> manter relações éticas, claras e colaborativas com todos os
+                            envolvidos.</p>
+                        <p><b>Acolhimento e escuta ativa:</b> garantir um ambiente educativo respeitoso, seguro e empático.
+                        </p>
+                        <p><b>Inovação e acessibilidade:</b> adotar tecnologias e métodos que ampliem o acesso e facilitem a
+                            aprendizagem.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="Mobile">
+            <section class="ProjetoMobile">
                 <div class="colunaProjeto">
-                    <p>O Projeto EJA-EPT tem como propósito transformar vidas por meio da elevação da
-                        escolaridade integrada à qualificação profissional, atendendo especialmente jovens, adultos e
-                        idosos cujas trajetórias educacionais foram interrompidas. Nosso compromisso é ampliar
-                        oportunidades e contribuir para a construção de caminhos mais justos e inclusivos.</p>
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Mar%C3%A7o/27/marca-programa-horizontal.png"
+                        alt="EJA" class="mobileIconeLogo">
+                        <p>O Projeto EJA-EPT tem como propósito transformar vidas por meio da elevação da
+                            escolaridade integrada à qualificação profissional, atendendo especialmente jovens, adultos
+                            e
+                            idosos cujas trajetórias educacionais foram interrompidas. Nosso compromisso é ampliar
+                            oportunidades e contribuir para a construção de caminhos mais justos e inclusivos.</p>
 
-                    <p>Entre os principais objetivos do Projeto, destacam-se:</p>
+                        <p>Entre os principais objetivos do Projeto, destacam-se:</p>
 
-                    <p>Ampliar o acesso, a permanência e a conclusão dos três segmentos da EJA;</p>
+                        <p>Ampliar o acesso, a permanência e a conclusão dos três segmentos da EJA;</p>
 
-                    <p>Fomentar a oferta da EJA integrada à Educação Profissional, em articulação com os
-                        sistemas educacionais dos estados, municípios e do Distrito Federal, alinhada aos
-                        arranjos produtivos locais;</p>
+                        <p>Fomentar a oferta da EJA integrada à Educação Profissional, em articulação com os
+                            sistemas educacionais dos estados, municípios e do Distrito Federal, alinhada aos
+                            arranjos produtivos locais;</p>
 
-                    <p>Apoiar o desenvolvimento de propostas pedagógicas específicas para o público da
-                        EJA, integrando educação, ciência, trabalho, tecnologia e cultura;</p>
+                        <p>Apoiar o desenvolvimento de propostas pedagógicas específicas para o público da
+                            EJA, integrando educação, ciência, trabalho, tecnologia e cultura;</p>
 
-                    <p>Promover a elevação da escolaridade de jovens, adultos e idosos, vinculada à
-                        formação profissional e à valorização do saber.</p>
+                        <p>Promover a elevação da escolaridade de jovens, adultos e idosos, vinculada à
+                            formação profissional e à valorização do saber.</p>
                 </div>
-                <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Mar%C3%A7o/27/marca-programa-vertical_3.png"
-                    alt="EJA" class="iconeLogo">
-            </div>
-        </section>
-        <section class="MissaoDesktop">
-            <div class="rowProjeto">
-                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/novo-misso.png" alt="Missão"
-                    class="iconeMissao">
-                <div class="colunaMissao">
-                    <h2>Missão</h2>
-                    <p>
-                        Promover a transformação social por meio da oferta gratuita e inclusiva de educação
-                        de jovens, adultos e idosos, integrando elevação da escolaridade à qualificação profissional,
-                        com foco na valorização da cidadania, no desenvolvimento de competências e no
-                        fortalecimento de trajetórias de vida mais dignas e promissoras.
-                    </p>
+            </section>
+            <section class="MissaoMobile">
+                <div class="colunaProjeto">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/BannerMobile%20Misso.png" alt="Missão"
+                        class="mobileIconeMissao">
+                        <h2>Missão</h2>
+                        <p>
+                            Promover a transformação social por meio da oferta gratuita e inclusiva de educação
+                            de jovens, adultos e idosos, integrando elevação da escolaridade à qualificação
+                            profissional,
+                            com foco na valorização da cidadania, no desenvolvimento de competências e no
+                            fortalecimento de trajetórias de vida mais dignas e promissoras.
+                        </p>
                 </div>
-            </div>
-        </section>
-        <section class="VisaoDesktop">
-            <div class="rowProjeto">
-                <div class="colunaVisao">
-                    <h2>Visão</h2>
-                    <p>
-                        Consolidar-se como um projeto reconhecido nacionalmente por transformar trajetórias
-                        interrompidas em histórias de conquista e realização, ampliando o acesso à educação de
-                        qualidade e gerando impacto duradouro na vida dos estudantes da EJA.
-                    </p>
+            </section>
+            <section class="VisaoMobile">
+                <div class="colunaProjeto">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/BannerMobile%20Viso.png"
+                        alt="Visão" class="mobileIconeVisao">
+                        <h2>Visão</h2>
+                        <p>
+                            Consolidar-se como um projeto reconhecido nacionalmente por transformar trajetórias
+                            interrompidas em histórias de conquista e realização, ampliando o acesso à educação de
+                            qualidade e gerando impacto duradouro na vida dos estudantes da EJA.
+                        </p>
                 </div>
-                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/novo%20-%20visao.png"
-                    alt="Missão" class="iconeVisao">
-            </div>
-        </section>
-        <section class="ValoresDesktop">
-            <div class="rowProjeto">
-                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/novo%20-%20valores.png"
-                    alt="Valores" class="iconeValores">
-                <div class="colunaValores">
-                    <h2>Valores</h2>
-                    <p><b>Inclusão social:</b> assegurar o direito à educação, acolhendo diferentes trajetórias e
-                        realidades.</p>
-                    <p><b>Valorização da diversidade:</b> integrar experiências, culturas e histórias dos estudantes aos
-                        processos pedagógicos.</p>
-                    <p><b>Compromisso com a transformação:</b> atuar com intencionalidade para gerar impacto positivo e
-                        duradouro.</p>
-                    <p><b>Qualidade e relevância educacional:</b> oferecer formação técnica de excelência, alinhada às
-                        demandas do trabalho e dos territórios.</p>
-                    <p><b>Transparência e diálogo:</b> manter relações éticas, claras e colaborativas com todos os
-                        envolvidos.</p>
-                    <p><b>Acolhimento e escuta ativa:</b> garantir um ambiente educativo respeitoso, seguro e empático.
-                    </p>
-                    <p><b>Inovação e acessibilidade:</b> adotar tecnologias e métodos que ampliem o acesso e facilitem a
-                        aprendizagem.</p>
+            </section>
+            <section class="ValoresMobile">
+                <div class="colunaProjeto">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Icones/BannerMobile%20Valore.png"
+                        alt="Valores" class="mobileIconeValores">
+                        <h2>Valores</h2>
+                        <p><b>Inclusão social:</b> assegurar o direito à educação, acolhendo diferentes trajetórias e
+                            realidades.</p>
+                        <p><b>Valorização da diversidade:</b> integrar experiências, culturas e histórias dos estudantes
+                            aos
+                            processos pedagógicos.</p>
+                        <p><b>Compromisso com a transformação:</b> atuar com intencionalidade para gerar impacto
+                            positivo e
+                            duradouro.</p>
+                        <p><b>Qualidade e relevância educacional:</b> oferecer formação técnica de excelência, alinhada
+                            às
+                            demandas do trabalho e dos territórios.</p>
+                        <p><b>Transparência e diálogo:</b> manter relações éticas, claras e colaborativas com todos os
+                            envolvidos.</p>
+                        <p><b>Acolhimento e escuta ativa:</b> garantir um ambiente educativo respeitoso, seguro e
+                            empático.
+                        </p>
+                        <p><b>Inovação e acessibilidade:</b> adotar tecnologias e métodos que ampliem o acesso e
+                            facilitem a
+                            aprendizagem.</p>
                 </div>
-            </div>
+            </section>
+
         </section>
     </div>
 </body>
