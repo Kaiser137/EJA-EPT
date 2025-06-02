@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos EJA - EPT</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            color: #01a342;
+        }
+
+        .content {
+            padding: 20px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .content h2 {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cardRow {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card1, .card2 {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            color: #333;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card1:hover, .card2:hover {
+            transform: scale(1.04);
+            outline: none;
+        }
+
+        .card1 {
+            background-color: #015822;
+        }
+
+        .card2 {
+            background-color: #1b4a9b;
+        }
+
+        .cardImage {
+            width: 100%;
+            height: auto;
+            align-self: flex-start;
+            border-radius: 10px 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="title">
+            <h2>Cursos EJA - EPT</h2>
+        </div>
+        <div class="content">
+            <h2>EAD</h2> 
+            <div class="cardRow">
+                <div class="card1">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png" class="cardImage" alt="Curso EJA - EPT">
+                </div>
+                <div class="card2">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png" class="cardImage" alt="Curso EJA - EPT">
+                </div>
+                <div class="card1">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png" class="cardImage" alt="Curso EJA - EPT">
+                </div>
+                <div class="card2">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png" class="cardImage" alt="Curso EJA - EPT">
+                </div>
+            </div>
+            <div class="cardRow">
+                <div class="card2">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png" class="cardImage" alt="Curso EJA - EPT">
+                </div>
+                <div class="card1">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png" class="cardImage" alt="Curso EJA - EPT">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

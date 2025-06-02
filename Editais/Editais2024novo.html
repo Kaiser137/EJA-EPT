@@ -1,0 +1,450 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Escolas dos Municipios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 80px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #00B625;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #00B625;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #00B625;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        .faq_7 button {
+            background-color: #00B625;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+
+        .faq_7 button:hover {
+            background-color: #008f1f;
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 style="text-align: center;">Editais do EJA/EPT Finalizados - 2024</h2>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 39/2024 - Chamada pública emergencial para provimento de vagas de bolsistas
+                                    para atuação em cargos de apoio técnico de nível médio do Projeto EJA-EPT, TED 12320
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública para provimento de vagas e
+                                    de cadastro de reserva para vinculação de bolsistas para atuar no âmbito do projeto
+                                    aprovado por meio do Edital 17/2022, da Secretaria de Educação Básica do Ministérios
+                                    da Educação, TED 12320, vinculado ao Programa Educação de Jovens e Adultos Integrada
+                                    à Educação Profissional - EJA-EPT
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-39-2024-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-em-cargos-de-apoio-tecnico-de-nivel-medio-do-projeto-eja-ept-ted-12320">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 25/2024 - Chamada Pública para provimento de vagas de bolsistas para atuação o cargo de Apoio Técnico de Nível
+        Médio
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Chamada Pública para provimento de vagas de bolsistas para atuação o cargo de Apoio Técnico de Nível Médio para
+    atender ao Programa de Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica do IFSULDEMINAS
+    - Campus Pouso Alegre
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-25-2024-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-o-cargo-de-apoio-tecnico-de-nivel-medio">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL
+        24/2024 - Chamada Pública para provimento de vagas de bolsistas para atuação no cargo de Professor Formador
+        (instrutor) para atender ao Programa EJA - EPT
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Chamada Pública para provimento de vagas de bolsistas para atuação no cargo de Professor Formador (instrutor) para
+    atender ao Programa de Educação de Jovens e Adultos Integrada à Educação Profissional e Tecnológica do IFSULDEMINAS
+    - Campus Pouso Alegre
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-24-2024-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-para-atender-ao-programa-eja-ept">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 21/2024 - Processo seletivo simplificado para provimento de vagas de bolsistas para atuação nos cargos de Apoio
+        Técnico de Nível Superior para atender ao Programa EJA-EPT
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Processo seletivo simplificado para provimento de vagas de bolsistas para atuação nos cargos de Apoio Técnico de
+    Nível Superior para atender ao Programa de Educação de Jovens e Adultos integrada à Educação Profissional e
+    Tecnológica do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-21-2024-processo-seletivo-simplificado-para-provimento-de-vagas-de-bolsistas-para-atuacao-nos-cargos-de-apoio-tecnico-de-nivel-superior-para-atender-ao-programa-eja-ept">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 20/2024 - PROCESSO SELETIVO PARA PROVIMENTO DE VAGAS DE BOLSISTAS DE APOIO TÉCNICO DE NÍVEL MÉDIO PARA ATENDER
+        AO PROGRAMA EJA-EPT
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Processo seletivo simplificado para provimento de vagas de bolsistas para atuação nos cargos de Apoio Técnico de
+    Nível Médio para atender ao Programa de Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica
+    do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-20-2024-processo-seletivo-para-provimento-de-vagas-de-bolsistas-de-apoio-tecnico-de-nivel-medio-para-atender-ao-programa-eja-ept">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 17/2024 - CHAMADA PÚBLICA EMERGENCIAL PARA PROVIMENTO DE VAGAS DE BOLSISTAS PARA ATUAÇÃO NO CARGO DE PROFESSOR
+        FORMADOR (INSTRUTOR)
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Chamada pública emergencial para provimento de vagas de bolsistas para atuação no cargo de Professor Formador
+    (instrutor) para atender ao Programa de Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica
+    do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-17-2024-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 15/2024 - CHAMADA PÚBLICA EMERGENCIAL PARA PROVIMENTO DE VAGAS DE BOLSISTAS PARA ATUAÇÃO NO CARGO DE PROFESSOR
+                                    FORMADOR (INSTRUTOR)
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna pública a abertura das inscrições
+    para a chamada pública emergencial para provimento de vagas e de cadastro de reserva para vinculação de bolsistas
+    para atuar no âmbito do projeto aprovado por meio do Edital 17/2022, da Secretaria de Educação Básica do Ministérios
+    da Educação, TED 12320, vinculado ao Programa Educação de Jovens e Adultos Integrada à Educação Profissional -
+    EJA-EPT.
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-15-2014-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-para-atender-ao-programa-de-educacao-de-jovens-e-adultos-integrada-a-educacao-profissional-e-tecnologica-do-ifsuldeminas-campus-pouso-alegre">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 14/2024 - PROCESSO SELETIVO DE BOLSISTAS PARA ATUAÇÃO NO
+        PROGRAMA EJA-EPT
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Processo seletivo simplificado para provimento de vagas de bolsistas para atuação nos cargos de Apoio Técnico de
+    Nível Médio para atender ao Programa de Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica
+    do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-00-00-eja-ept">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 37/2023 -
+        CHAMADA PÚBLICA DE SELEÇÃO DE BOLSISTAS PARA CURSOS FIC
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Este edital é destinado à contratação, por tempo determinado, de profissionais para ocupar as funções de Instrutores
+    Presenciais, de Instrutores EAD, de Tutores EaD, de Apoio Técnico de Nível Superior e de Apoio Técnico de Nível
+    Médio para os cursos de Formação Inicial e Continuada (FIC) do Programa Eja Integrada à Educação Profissional e
+    Tecnológica (EPT), conforme Termo de Execução Descentralizada (TED) 12320, a serem realizados nos anos de 2023 e de
+    2024, nas modalidades presencial e a distância.
+                                </p>
+                                <a
+                                    href="editais/editais2023/edital-37-chamada-publica-de-selecao-de-bolsistas-para-cursos-fic">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 42/2023 - PROCESSO SELETIVO PARA CONTRATAÇÃO TEMPORÁRIA DE BOLSISTAS PARA CONSTRUÇÃO DE MATERIAIS DIDÁTICOS
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Este edital é destinado à contratação de profissionais, por tempo determinado, para desempenho e atividades de
+    construção dos materiais didáticos dos cursos de Formação Inicial e Continuada (FIC) do Programa EJA (Educação de
+    Jovens e Adultos) Integrada à Educação Profissional e Tecnológica (EPT)
+                                </p>
+                                <a
+                                    href="editais/editais2023/editasos-de-fl-42-e-processo-seletivo-para-contratacao-tempor-letivo-para-contratacao-temporaria-de-bolsistas-no-aria-de-bolsistas-no-ambito-daedital-de-processo-se-ambito-da-construcao-de-materiais-didaticos-dos-cursos-de-for-teriais-didaticos-dos-cursos-de-formacao-inicial-e-macao-inicial-e-continuada-fic-doconstrucao-de-ma-continuada-fic-do-ifsuldeminas-campus-pouso-alegre">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 13/2024 - CHAMADA PÚBLICA EMERGENCIAL PARA PROVIMENTO DE VAGAS DE BOLSISTAS PARA ATUAÇÃO EM TUTORIA EM CURSO DE
+                                    FORMAÇÃO DE PROFESSORES NA MODALIDADE EAD NO IFSULDEMINAS - CAMPUS POUSO ALEGRE
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Este edital torna pública a abertura das inscrições para o processo seletivo simplificado e emergencial de provimento
+    de vagas e cadastro de reserva para vinculação de bolsistas para atuar no âmbito do projeto aprovado por meio do
+    Edital 17/2022, da Secretaria de Educação Básica do Ministérios da Educação, TED 12320, vinculado ao Programa
+    Educação de Jovens e Adultos Integrada à Educação Profissional - EJA-EPT.
+                                </p>
+                                <a
+                                    href="editais/editais2023-2/edital-13-2024-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-em-tutoria-em-curso-de-formacao-de-professores-na-modalidade-ead-no-ifsuldeminas-campus-pouso-alegre">
+                                    <button>Acesse o edital</button></a>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+            let currentlyActive = null;
+
+            faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                faqQuestionContainer.onclick = function () {
+                    const parentFaq = this.parentElement;
+
+                    // Se já está ativo, apenas desativa
+                    if (parentFaq.classList.contains('active')) {
+                        parentFaq.classList.remove('active');
+                        currentlyActive = null;
+                        return;
+                    }
+
+                    // Fecha o item atualmente aberto
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+
+                    // Abre o novo item
+                    parentFaq.classList.add('active');
+                    currentlyActive = parentFaq;
+                };
+            });
+        });
+    </script>
+
+</body>
+
+</html>
