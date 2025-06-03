@@ -15,18 +15,18 @@
             box-sizing: border-box;
         }
 
-        .header {
+        .title {
             text-align: center;
             padding: 20px;
         }
 
-        .header h1 {
+        .title h2 {
             text-align: center;
-            font-size: 24px;
-            color: #01a342 !important; 
+            font-size: 24px !important;
+            color: #01a342 !important;
         }
 
-        .header p {
+        .title p {
             color: #555;
             max-width: 800px;
             margin: 0 auto;
@@ -40,19 +40,19 @@
             align-items: center;
             margin-bottom: 60px;
             position: relative;
-            overflow: visible; 
-            z-index: 10; 
+            overflow: visible;
+            z-index: 10;
         }
-        
+
         .container-swiper {
             width: 100%;
             max-width: 850px;
             position: relative;
-            overflow: visible !important; 
+            overflow: visible !important;
             height: 100%;
-            max-height: 550px; 
+            max-height: 550px;
         }
-        
+
         .container-cartao {
             max-width: 950px;
             padding: 40px 0px 40px 0px;
@@ -63,7 +63,7 @@
         .swiper-slide {
             list-style: none !important;
         }
-        
+
         .swiper-slide::marker,
         .swiper-slide.swiper-slide-prev::marker,
         .swiper-slide.swiper-slide-active::marker,
@@ -71,7 +71,7 @@
             display: none !important;
             content: none !important;
         }
-        
+
         .lista-cartao {
             padding: 0;
         }
@@ -232,146 +232,99 @@
             transform: translateY(-50%) scale(1.1);
         }
 
-        /* Estilos da seção EJA */
-        .section {
-            max-width: 1100px;
-            margin: 40px auto 30px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            background: linear-gradient(135deg, #ffffff 0%, #f9fbfd 100%);
-            padding: 30px;
-            overflow: hidden;
-            border: 1px solid #e0e7ff;
+        .cursosLista {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
         }
 
-        .content {
-            padding: 20px;
-            margin: 0 auto;
+        .colLista {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 35px;
+            gap: 20px;
         }
 
-        .content h2 {
-            text-align: center;
-            font-size: 24px;
-            color: #01a342;
-        }
-
-        .cardRow {
+        .rowLista {
             display: flex;
             justify-content: center;
-            flex-direction: row;
             flex-wrap: wrap;
-            gap: 30px;
-            width: 100%;
+            gap: 20px;
         }
 
-        .card {
-            width: 230px;
-            height: 320px;
-            border-radius: 12px;
-            display: flex;
-            flex-direction: column;
-            font-size: 18px;
-            color: #333;
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            cursor: pointer;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-
-        .card:hover {
-            transform: translateY(-12px) scale(1.03);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
-        }
-
-        .card-content {
+        /* CARTÕES DA LISTA (ALTERAÇÕES SOLICITADAS) */
+        .cartaoCursoEAD, .cartaoCursoPresencial {
+            width: 300px;
+            min-height: 400px; /* Altura mínima aumentada */
+            height: 100%; /* Garante altura total */
+            background-color: #fff;
+            border-radius: 10px;
             padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            position: relative; /* Necessário para posicionamento do botão */
+            padding-bottom: 60px; /* Espaço para o botão no rodapé */
         }
 
-        .card-title {
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            color: #333;
+        .cartaoCursoEAD:hover, .cartaoCursoPresencial:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            border-color: #015822;
         }
 
-        .card-description {
-            font-size: 0.95rem;
-            color: #555;
+        .imagem-cartao-lista {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .cartaoCursoEAD h2, .cartaoCursoPresencial h2 {
+            font-size: 16px !important;
+            font-weight: 500;
+            color: #222;
             margin-bottom: 20px;
-            line-height: 1.5;
+            line-height: 1.4;
+            min-height: 60px; /* Altura mínima para os títulos */
         }
 
-        .card-link {
-            color: #1b4a9b;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
+        .cartaoCursoEAD a, .cartaoCursoPresencial a {
+            text-decoration: none !important;
+            color: inherit;
+        }
+
+        .botao-container-lista {
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+
+        .botao-cartao-cursos-lista {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            color: #015822;
+            border: 2px solid #015822;
+            background: none;
+            cursor: pointer;
+            transform: rotate(-45deg);
+            transition: 0.4s ease;
             display: flex;
             align-items: center;
-            gap: 8px;
-            transition: all 0.3s ease;
+            justify-content: center;
+            font-size: 20px;
         }
 
-        .card-link:hover {
-            color: #01a342;
-            gap: 12px;
-        }
-
-        .card1 {
-            background-color: #015822;
-        }
-
-        .card1 .card-content {
-            background: linear-gradient(135deg, rgba(1, 88, 34, 0.9) 0%, rgba(2, 120, 50, 0.9) 100%);
-            color: white;
-        }
-
-        .card1 .card-title,
-        .card1 .card-description {
-            color: white;
-        }
-
-        .card1 .card-link {
-            color: #FFEB3B;
-        }
-
-        .card2 {
-            background-color: #1b4a9b;
-        }
-
-        .card2 .card-content {
-            background: linear-gradient(135deg, rgba(27, 74, 155, 0.9) 0%, rgba(35, 95, 190, 0.9) 100%);
-            color: white;
-        }
-
-        .card2 .card-title,
-        .card2 .card-description {
-            color: white;
-        }
-
-        .card2 .card-link {
-            color: #FF9800;
-        }
-
-        .cardImage {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 12px 12px 0 0;
-            transition: transform 0.4s ease;
-        }
-
-        .card:hover .cardImage {
-            transform: scale(1.05);
+        .cartaoCursoEAD:hover .botao-cartao-cursos-lista, .cartaoCursoPresencial:hover .botao-cartao-cursos-lista {
+            background: #015822;
+            color: #fff;
+            transform: rotate(0deg);
         }
 
         @media screen and (max-width: 1024px) {
@@ -415,24 +368,6 @@
             .header p {
                 font-size: 1rem;
             }
-
-            .card {
-                width: 100%;
-                max-width: 320px;
-                height: auto;
-            }
-
-            .cardImage {
-                height: 180px;
-            }
-
-            .content h2 {
-                font-size: 1.6rem;
-            }
-
-            .section {
-                padding: 25px 15px;
-            }
         }
 
         @media screen and (max-width: 480px) {
@@ -449,16 +384,17 @@
                 margin-bottom: 40px;
             }
 
-            .content h2 {
-                font-size: 1.4rem;
+            /* Ajustes responsivos para cartões */
+            .cartaoCursoEAD, .cartaoCursoPresencial {
+                min-height: 380px;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Cursos do Projeto EJA - EPT</h1>
+    <div class="title">
+        <h2>Cursos do Projeto EJA - EPT</h2>
         <p>Confira todos os nossos cursos desenvolvidos para atender às necessidades de educação de jovens e adultos
             integrada à educação profissional e tecnológica.</p>
     </div>
@@ -472,7 +408,7 @@
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/formacao-professores.png"
                                 alt="Formação de Professores" class="imagem-cartao">
                             <p class="etiqueta EAD">EAD</p>
-                            <h2 class="titulo-cartao">Formação de professores: Metodologias ativas e tecnologias para a EJA</h2>
+                            <h2 class="titulo-cartao">Formação de professores</h2>
                             <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
                         </a>
                     </li>
@@ -577,71 +513,144 @@
             </div>
         </div>
     </div>
-
-    <!-- Seção de cursos EJA -->
-    <div class="section">
-        <div class="content">
-            <h2>Educação a Distância</h2>
-            <div class="cardRow">
-                <div class="card card1">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores.png"
-                        class="cardImage" alt="Formação de Professores">
-                    <div class="card-content">
-                        <h3 class="card-title">Formação de Professores</h3>
-                        <a href="#" class="card-link">Saiba mais <span
-                                class="material-symbols-rounded">arrow_forward</span></a>
+    <div class="cursosLista">
+        <div class="title">
+            <h2>Cursos da educação à distância</h2>
+        </div>
+        <div class="colLista">
+            <div class="rowLista">
+                <a href="">
+                    <div class="cartaoCursoEAD">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores%20250x150.png"
+                            alt="Formação de Professores" class="imagem-cartao-lista">
+                        <h2>Formação de professores</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
                     </div>
-                </div>
-                <div class="card card2">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Informatica.jpg"
-                        class="cardImage" alt="Informática Básica">
-                    <div class="card-content">
-                        <h3 class="card-title">Informática Básica</h3>
-                        <a href="#" class="card-link">Saiba mais <span
-                                class="material-symbols-rounded">arrow_forward</span></a>
+                </a>
+                <a href="">
+                    <div class="cartaoCursoEAD">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/residuos.png"
+                                alt="Agente de Gestão de Resíduos Sólidos" class="imagem-cartao-lista">
+                        <h2>Agente de Gestão de Resíduos Sólidos</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
                     </div>
-                </div>
-                <div class="card card1">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Administracao.jpg"
-                        class="cardImage" alt="Administração">
-                    <div class="card-content">
-                        <h3 class="card-title">Administração</h3>
-                        <a href="#" class="card-link">Saiba mais <span
-                                class="material-symbols-rounded">arrow_forward</span></a>
-                    </div>
-                </div>
-                <div class="card card2">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Gastronomia.jpg"
-                        class="cardImage" alt="Gastronomia">
-                    <div class="card-content">
-                        <h3 class="card-title">Gastronomia</h3>
-                        <a href="#" class="card-link">Saiba mais <span
-                                class="material-symbols-rounded">arrow_forward</span></a>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="cardRow">
-                <div class="card card2">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Meio_Ambiente.jpg"
-                        class="cardImage" alt="Meio Ambiente">
-                    <div class="card-content">
-                        <h3 class="card-title">Meio Ambiente</h3>
-                        <a href="#" class="card-link">Saiba mais <span
-                                class="material-symbols-rounded">arrow_forward</span></a>
+            <div class="rowLista">
+                <a href="">
+                    <div class="cartaoCursoEAD">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/controle.png"
+                                alt="Assistente de Controle de Qualidade" class="imagem-cartao-lista">
+                        <h2>Assistente de Controle de Qualidade</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
                     </div>
-                </div>
-                <div class="card card1">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Saude.jpg"
-                        class="cardImage" alt="Saúde">
-                    <div class="card-content">
-                        <h3 class="card-title">Saúde</h3>
-                        <a href="#" class="card-link">Saiba mais <span
-                                class="material-symbols-rounded">arrow_forward</span></a>
+                </a>
+                <a href="">
+                    <div class="cartaoCursoEAD">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/recepcionista.png"
+                                alt="Recepcionista em Serviços de Saúde" class="imagem-cartao-lista">
+                        <h2>Recepcionista em Serviços de Saúde</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+        </div>
+        <div class="title">
+            <h2>Cursos presenciais</h2>
+        </div>
+        <div class="colLista">
+            <div class="rowLista">
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/eletricista.png"
+                                alt="Eletricista Instalador Predial de Baixa Tensão" class="imagem-cartao-lista">
+                        <h2>Eletricista Instalador Predial de Baixa Tensão</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/seguranca.png"
+                                alt="Instalador de Sistemas Eletrônicos de Segurança" class="imagem-cartao-lista">
+                        <h2>Instalador de Sistemas Eletrônicos de Segurança</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="rowLista">
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/operador.png"
+                                alt="Operador de Tratamento de Águas e Efluentes" class="imagem-cartao-lista">
+                        <h2>Operador de Tratamento de Águas e Efluentes</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/laboratorista.png"
+                                alt="Laboratorista de Solos" class="imagem-cartao-lista">
+                        <h2>Laboratorista de Solos</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="colLista" style="margin-top: 20px;">
+            <div class="rowLista">
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/mecanico.png"
+                                alt="Mecânico de Refrigeração e Climatização Industrial" class="imagem-cartao-lista">
+                        <h2>Mecânico de Refrigeração e Climatização Industrial</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/pedreiro.png"
+                                alt="Pedreiro de Alvenaria Estrutural" class="imagem-cartao-lista">
+                        <h2>Pedreiro de Alvenaria Estrutural</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="rowLista">
+                <a href="">
+                    <div class="cartaoCursoPresencial">
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/soldador.png"
+                        alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG" class="imagem-cartao-lista">
+                        <h2>Soldador de Estruturas e Tubulação no Processo MIG/MAG</h2>
+                        <div class="botao-container-lista">
+                            <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
