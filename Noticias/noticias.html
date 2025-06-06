@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias</title>
@@ -84,9 +85,11 @@
             margin: 0 auto;
         }
 
-        .noticiaSecundaria1, .noticiaSecundaria2 {
+        .noticiaSecundaria1,
+        .noticiaSecundaria2 {
             flex: 1;
-            min-width: 0; /* Permite que os itens flex encolham */
+            min-width: 0;
+            /* Permite que os itens flex encolham */
             display: flex;
             flex-direction: column;
             background: #ffffff;
@@ -107,7 +110,8 @@
             padding: 20px;
             display: flex;
             flex-direction: column;
-            flex-grow: 1; /* Faz o conteúdo se expandir */
+            flex-grow: 1;
+            /* Faz o conteúdo se expandir */
         }
 
         .noticiaSecundariaTitulo {
@@ -130,7 +134,82 @@
             color: #555;
             line-height: 1.6;
             margin-bottom: 20px;
-            flex-grow: 1; /* Ocupa o espaço disponível */
+            flex-grow: 1;
+            /* Ocupa o espaço disponível */
+        }
+
+        .tituloLista {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+        }
+
+        /* Solução para notícias secundárias com altura uniforme */
+        .noticiasLista {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .noticiaListaArtigo {
+            flex: 1;
+            min-width: 0;
+            /* Permite que os itens flex encolham */
+            display: flex;
+            flex-direction: row;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-bottom: 2px solid #015822;
+        }
+
+        .noticiaListaImg {
+            width: 300px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .noticiaListaImgContainer {
+            width: 300px;
+            min-width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .noticiaListaContent {
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .noticiaListaTitulo {
+            text-align: left;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 20px !important;
+            color: #015822 !important;
+        }
+
+        .noticiaListaData {
+            font-size: 0.85rem;
+            color: #888;
+            display: block;
+        }
+
+        .noticiaListaTexto {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            flex-grow: 1;
         }
 
         .botao-ver-noticia-container {
@@ -154,7 +233,7 @@
             transition: all 0.3s ease;
             border: 2px solid #015822;
             width: auto;
-            margin-top: 20px;
+            margin-bottom: 10px;
         }
 
         .botao-ver-noticia:hover {
@@ -172,29 +251,44 @@
             transform: translateX(5px);
         }
 
-        .tituloLista {
-            text-align: center;
-            font-size: 24px !important;
-            color: #01a342 !important;
-        }
-
         @media (max-width: 768px) {
             .noticiasGrande {
                 display: none;
             }
         }
     </style>
-    </head>
-    <body>
-        <div class="containerSection">
+</head>
+
+<body>
+    <div class="containerSection">
+        <div class="noticiasGrande">
             <h2 class="titulo">Notícias do EJA/EPT</h2>
-            <div class="noticiasGrande">
-                <div class="noticiaPrincipal">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2025/Fevereiro/20/0e004cc9-ff02-415b-8766-af68a4b08b10.jpg" alt="EJA-EPT em Campo do Meio" class="noticiaPrincipalImg">
-                    <div class="noticiaPrincipalContent">
-                        <h3 class="noticiaPrincipalTitulo">EJA-EPT EM CAMPO DO MEIO</h3>
-                        <span class="noticiaPrincipalData">20/02/2025</span>
-                        <p class="noticiaPrincipalTexto">Equipe gestora conhece assentamento que poderá receber aulas do projeto. A iniciativa visa ampliar o acesso à educação profissionalizante em áreas rurais.</p>
+            <div class="noticiaPrincipal">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/EJA%20-%20CAMPO%20DO%20MEIO%20-%20PRINCIPAL.png"
+                    alt="EJA-EPT em Campo do Meio" class="noticiaPrincipalImg">
+                <div class="noticiaPrincipalContent">
+                    <h3 class="noticiaPrincipalTitulo">EJA-EPT EM CAMPO DO MEIO</h3>
+                    <span class="noticiaPrincipalData">20/02/2025 - Por: William Sanches</span>
+                    <p class="noticiaPrincipalTexto">Equipe gestora conhece assentamento que poderá receber aulas do
+                        projeto. A iniciativa visa ampliar o acesso à educação profissionalizante em áreas rurais.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="#" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="noticiasSecundaria">
+                <div class="noticiaSecundaria1">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/DIVULGAO%20DO%20PROJETO%20-%20SECUNDRIA.png"
+                        alt="Divulgação do Projeto" class="noticiaSecundariaImg">
+                    <div class="noticiaSecundariaContent">
+                        <h3 class="noticiaSecundariaTitulo">DIVULGAÇÃO DO PROJETO</h3>
+                        <span class="noticiaSecundariaData">18/02/2025 - Por: William Sanches</span>
+                        <p class="noticiaSecundariaTexto">Ação do projeto EJA-EPT apresenta curso ofertado no Centro
+                            Municipal de Educação de Jovens e Adultos de Pouso Alegre, destacando oportunidades de
+                            formação profissional.</p>
                         <div class="botao-ver-noticia-container">
                             <a href="#" class="botao-ver-noticia">
                                 Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
@@ -202,54 +296,82 @@
                         </div>
                     </div>
                 </div>
-    
-                <div class="noticiasSecundaria">
-                    <div class="noticiaSecundaria1">
-                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2025/Fevereiro/18/9fc3f108-6548-495b-8b76-e2b2167faa40.jpg" alt="Divulgação do Projeto" class="noticiaSecundariaImg">
-                        <div class="noticiaSecundariaContent">
-                            <h3 class="noticiaSecundariaTitulo">DIVULGAÇÃO DO PROJETO</h3>
-                            <span class="noticiaSecundariaData">18/02/2025</span>
-                            <p class="noticiaSecundariaTexto">Ação do projeto EJA-EPT apresenta curso ofertado no Centro Municipal de Educação de Jovens e Adultos de Pouso Alegre, destacando oportunidades de formação profissional.</p>
-                            <div class="botao-ver-noticia-container">
-                                <a href="#" class="botao-ver-noticia">
-                                    Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
-                                </a>
-                            </div>
+                <div class="noticiaSecundaria2">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/EDUCAO%20PROFISSIONALIZANTE%20-%20SECUNDRIA.png"
+                        alt="Educação Profissionalizante" class="noticiaSecundariaImg">
+                    <div class="noticiaSecundariaContent">
+                        <h3 class="noticiaSecundariaTitulo">EDUCAÇÃO PROFISSIONALIZANTE</h3>
+                        <span class="noticiaSecundariaData">13/02/2025 - Por: William Sanches</span>
+                        <p class="noticiaSecundariaTexto">Parceria entre o EJA-EPT e CMEJA vai oferecer educação
+                            profissionalizante para formação de eletricistas, capacitando jovens e adultos para o
+                            mercado de trabalho.</p>
+                        <div class="botao-ver-noticia-container">
+                            <a href="#" class="botao-ver-noticia">
+                                Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="noticiaSecundaria2">
-                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/2025/Fevereiro/13/WhatsApp_Image_2025-02-13_at_16.36.58.jpeg" alt="Educação Profissionalizante" class="noticiaSecundariaImg">
-                        <div class="noticiaSecundariaContent">
-                            <h3 class="noticiaSecundariaTitulo">EDUCAÇÃO PROFISSIONALIZANTE</h3>
-                            <span class="noticiaSecundariaData">13/02/2025</span>
-                            <p class="noticiaSecundariaTexto">Parceria entre o EJA-EPT e CMEJA vai oferecer educação profissionalizante para formação de eletricistas, capacitando jovens e adultos para o mercado de trabalho.</p>
-                            <div class="botao-ver-noticia-container">
-                                <a href="#" class="botao-ver-noticia">
-                                    Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="noticiasLista">
-                    <h2 class="titulo">Todas as Notícias do Projeto EJA/EPT</h2>
-                <div class="noticiaLista1">
-
-                </div>
-                <div class="noticiaLista2">
-
-                </div>
-                <div class="noticiaLista3">
-
-                </div>
-                <div class="noticiaLista4">
-
-                </div>
-                <div class="noticiaLista5">
-
                 </div>
             </div>
         </div>
-    </body>
+
+        <div class="noticiasLista">
+            <h2 class="titulo">Todas as Notícias do Projeto EJA/EPT</h2>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/EJA%20-%20CAMPO%20DO%20MEIO%20-%20PEQUENO.png"
+                        alt="EJA-EPT em Campo do Meio" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">EJA-EPT EM CAMPO DO MEIO</h3>
+                    <span class="noticiaListaData">20/02/2025 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Equipe gestora conhece assentamento que poderá receber aulas do
+                        projeto. A iniciativa visa ampliar o acesso à educação profissionalizante em áreas rurais.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="#" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/DIVULGAO%20DO%20PROJETO%20-%20PEQUENO.png"
+                        alt="Divulgação do Projeto" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">DIVULGAÇÃO DO PROJETO</h3>
+                    <span class="noticiaListaData">18/02/2025 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Ação do projeto EJA-EPT apresenta curso ofertado no Centro
+                        Municipal de Educação de Jovens e Adultos de Pouso Alegre, destacando oportunidades de
+                        formação profissional.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="#" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/EDUCAO%20PROFISSIONALIZANTE%20-%20PEQUENO.png"
+                        alt="Educação Profissionalizante" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">EDUCAÇÃO PROFISSIONALIZANTE</h3>
+                    <span class="noticiaListaData">13/02/2025 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Parceria entre o EJA-EPT e CMEJA vai oferecer educação
+                        profissionalizante para formação de eletricistas, capacitando jovens e adultos para o
+                        mercado de trabalho.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="#" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
