@@ -109,7 +109,7 @@
             margin: 0 auto;
             border-radius: 12px;
             transition: transform 0.3s ease;
-            object-fit: scale-down;
+            object-fit: contain;
         }
 
         .etiqueta {
@@ -257,21 +257,27 @@
         }
 
         /* CARTÕES DA LISTA (ALTERAÇÕES SOLICITADAS) */
-        .cartaoCursoEAD, .cartaoCursoPresencial {
+        .cartaoCursoEAD,
+        .cartaoCursoPresencial {
             width: 300px;
-            min-height: 300px; /* Altura mínima aumentada */
-            height: 100%; /* Garante altura total */
+            min-height: 300px;
+            /* Altura mínima aumentada */
+            height: 100%;
+            /* Garante altura total */
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease;
-            position: relative; /* Necessário para posicionamento do botão */
-            padding-bottom: 60px; /* Espaço para o botão no rodapé */
+            position: relative;
+            /* Necessário para posicionamento do botão */
+            padding-bottom: 60px;
+            /* Espaço para o botão no rodapé */
         }
 
-        .cartaoCursoEAD:hover, .cartaoCursoPresencial:hover {
+        .cartaoCursoEAD:hover,
+        .cartaoCursoPresencial:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
             border-color: #015822;
@@ -285,16 +291,19 @@
             margin-bottom: 15px;
         }
 
-        .cartaoCursoEAD h2, .cartaoCursoPresencial h2 {
+        .cartaoCursoEAD h2,
+        .cartaoCursoPresencial h2 {
             font-size: 16px !important;
             font-weight: 500;
             color: #222;
             margin-bottom: 20px;
             line-height: 1.4;
-            min-height: 60px; /* Altura mínima para os títulos */
+            min-height: 60px;
+            /* Altura mínima para os títulos */
         }
 
-        .cartaoCursoEAD a, .cartaoCursoPresencial a {
+        .cartaoCursoEAD a,
+        .cartaoCursoPresencial a {
             text-decoration: none !important;
             color: inherit;
         }
@@ -321,10 +330,15 @@
             font-size: 20px;
         }
 
-        .cartaoCursoEAD:hover .botao-cartao-cursos-lista, .cartaoCursoPresencial:hover .botao-cartao-cursos-lista {
+        .cartaoCursoEAD:hover .botao-cartao-cursos-lista,
+        .cartaoCursoPresencial:hover .botao-cartao-cursos-lista {
             background: #015822;
             color: #fff;
             transform: rotate(0deg);
+        }
+
+        .corpo-mobile {
+            display: none;
         }
 
         @media screen and (max-width: 1024px) {
@@ -353,7 +367,8 @@
 
         @media screen and (max-width: 768px) {
             .container-swiper {
-                padding: 0 5px;
+                padding: 0 15px;
+                max-width: 500px;
             }
 
             .swiper-button-prev,
@@ -368,6 +383,28 @@
             .header p {
                 font-size: 1rem;
             }
+
+            .corpo {
+                display: none;
+            }
+
+            .corpo-mobile {
+                display: block;
+            }
+
+            .imagem-cartao {
+                width: 100%;
+                border-radius: 20px;
+                height: auto;
+                margin-top: 10px 0;
+                padding: 10px 0;
+            }
+
+            .link-cartao {
+                margin: 0 15px;
+                border-radius: 12px;
+                padding-top: 0 !important;
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -380,12 +417,8 @@
                 font-size: 1.7rem;
             }
 
-            .corpo {
-                margin-bottom: 40px;
-            }
-
-            /* Ajustes responsivos para cartões */
-            .cartaoCursoEAD, .cartaoCursoPresencial {
+            .cartaoCursoEAD,
+            .cartaoCursoPresencial {
                 min-height: 280px;
             }
         }
@@ -408,7 +441,8 @@
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/formacao-professores.png"
                                 alt="Formação de Professores" class="imagem-cartao">
                             <p class="etiqueta EAD">EAD</p>
-                            <h2 class="titulo-cartao">Formação de professores metodologias ativas e tecnologias para a EJA</h2>
+                            <h2 class="titulo-cartao">Formação de professores metodologias ativas e tecnologias para a
+                                EJA</h2>
                             <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
                         </a>
                     </li>
@@ -513,6 +547,121 @@
             </div>
         </div>
     </div>
+    <div class="corpo-mobile">
+        <div class="container-swiper">
+            <div class="container-cartao swiper">
+                <ul class="lista-cartao swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/formacao-professores%201.png"
+                                alt="Formação de Professores" class="imagem-cartao">
+                            <p class="etiqueta EAD">EAD</p>
+                            <h2 class="titulo-cartao">Formação de professores metodologias ativas e tecnologias para a
+                                EJA</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/eletricista%201.png"
+                                alt="Eletricista Instalador Predial de Baixa Tensão" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Eletricista Instalador Predial de Baixa Tensão</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/seguranca%202.png"
+                                alt="Instalador de Sistemas Eletrônicos de Segurança" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Instalador de Sistemas Eletrônicos de Segurança</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/residuos%202.png"
+                                alt="Agente de Gestão de Resíduos Sólidos" class="imagem-cartao">
+                            <p class="etiqueta EAD">EAD</p>
+                            <h2 class="titulo-cartao">Agente de Gestão de Resíduos Sólidos</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/operador.png"
+                                alt="Operador de Tratamento de Águas e Efluentes" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Operador de Tratamento de Águas e Efluentes</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/laboratorista.png"
+                                alt="Laboratorista de Solos" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Laboratorista de Solos</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/controle%201.png"
+                                alt="Assistente de Controle de Qualidade" class="imagem-cartao">
+                            <p class="etiqueta EAD">EAD</p>
+                            <h2 class="titulo-cartao">Assistente de Controle de Qualidade</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/mecanico.png"
+                                alt="Mecânico de Refrigeração e Climatização Industrial" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Mecânico de Refrigeração e Climatização Industrial</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/pedreiro%201.png"
+                                alt="Pedreiro de Alvenaria Estrutural" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Pedreiro de Alvenaria Estrutural</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/recepcionista%201.png"
+                                alt="Recepcionista em Serviços de Saúde" class="imagem-cartao">
+                            <p class="etiqueta EAD">EAD</p>
+                            <h2 class="titulo-cartao">Recepcionista em Serviços de Saúde</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#" class="link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/soldador%201.png"
+                                alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG" class="imagem-cartao">
+                            <p class="etiqueta Presencial">Presencial</p>
+                            <h2 class="titulo-cartao">Soldador de Estruturas e Tubulação no Processo MIG/MAG</h2>
+                            <button class="botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-button-prev">
+                <span class="material-symbols-rounded">chevron_left</span>
+            </div>
+            <div class="swiper-button-next">
+                <span class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </div>
+    </div>
     <div class="cursosLista">
         <div class="title">
             <h2>Cursos da educação à distância</h2>
@@ -521,7 +670,7 @@
             <div class="rowLista">
                 <a href="">
                     <div class="cartaoCursoEAD">
-                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/Formacao%20de%20professores%20250x150.png"
+                        <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/formacao-professores%201.png"
                             alt="Formação de Professores" class="imagem-cartao-lista">
                         <h2>Formação de professores metodologias ativas e tecnologias para a EJA</h2>
                         <div class="botao-container-lista">
@@ -532,7 +681,7 @@
                 <a href="">
                     <div class="cartaoCursoEAD">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/residuos%202.png"
-                                alt="Agente de Gestão de Resíduos Sólidos" class="imagem-cartao-lista">
+                            alt="Agente de Gestão de Resíduos Sólidos" class="imagem-cartao-lista">
                         <h2>Agente de Gestão de Resíduos Sólidos</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -544,7 +693,7 @@
                 <a href="">
                     <div class="cartaoCursoEAD">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/controle%201.png"
-                                alt="Assistente de Controle de Qualidade" class="imagem-cartao-lista">
+                            alt="Assistente de Controle de Qualidade" class="imagem-cartao-lista">
                         <h2>Assistente de Controle de Qualidade</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -554,7 +703,7 @@
                 <a href="">
                     <div class="cartaoCursoEAD">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/recepcionista%201.png"
-                                alt="Recepcionista em Serviços de Saúde" class="imagem-cartao-lista">
+                            alt="Recepcionista em Serviços de Saúde" class="imagem-cartao-lista">
                         <h2>Recepcionista em Serviços de Saúde</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -571,7 +720,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/eletricista%201.png"
-                                alt="Eletricista Instalador Predial de Baixa Tensão" class="imagem-cartao-lista">
+                            alt="Eletricista Instalador Predial de Baixa Tensão" class="imagem-cartao-lista">
                         <h2>Eletricista Instalador Predial de Baixa Tensão</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -581,7 +730,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/seguranca%202.png"
-                                alt="Instalador de Sistemas Eletrônicos de Segurança" class="imagem-cartao-lista">
+                            alt="Instalador de Sistemas Eletrônicos de Segurança" class="imagem-cartao-lista">
                         <h2>Instalador de Sistemas Eletrônicos de Segurança</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -593,7 +742,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/operador.png"
-                                alt="Operador de Tratamento de Águas e Efluentes" class="imagem-cartao-lista">
+                            alt="Operador de Tratamento de Águas e Efluentes" class="imagem-cartao-lista">
                         <h2>Operador de Tratamento de Águas e Efluentes</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -603,7 +752,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/laboratorista.png"
-                                alt="Laboratorista de Solos" class="imagem-cartao-lista">
+                            alt="Laboratorista de Solos" class="imagem-cartao-lista">
                         <h2>Laboratorista de Solos</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -617,7 +766,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/mecanico.png"
-                                alt="Mecânico de Refrigeração e Climatização Industrial" class="imagem-cartao-lista">
+                            alt="Mecânico de Refrigeração e Climatização Industrial" class="imagem-cartao-lista">
                         <h2>Mecânico de Refrigeração e Climatização Industrial</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -627,7 +776,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/pedreiro%201.png"
-                                alt="Pedreiro de Alvenaria Estrutural" class="imagem-cartao-lista">
+                            alt="Pedreiro de Alvenaria Estrutural" class="imagem-cartao-lista">
                         <h2>Pedreiro de Alvenaria Estrutural</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
@@ -639,7 +788,7 @@
                 <a href="">
                     <div class="cartaoCursoPresencial">
                         <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/soldador%201.png"
-                        alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG" class="imagem-cartao-lista">
+                            alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG" class="imagem-cartao-lista">
                         <h2>Soldador de Estruturas e Tubulação no Processo MIG/MAG</h2>
                         <div class="botao-container-lista">
                             <button class="botao-cartao-cursos-lista material-symbols-rounded">arrow_forward</button>
