@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financeiro</title>
+    <style>
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .container-botoes {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+
+        .row-card>a {
+            flex: 1 1 calc(50% - 40px);
+            min-width: 300px;
+            max-width: 500px;
+        }
+
+        .titulo-botao-financeiro {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+            margin: 0 !important;
+            margin-bottom: 10px;
+        }
+
+        .texto-botoes {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            margin: 0 20px;
+        }
+
+        .card-botao-financeiro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            height: 100%;
+            box-sizing: border-box;
+            transition: transform 0.3s ease;
+        }
+
+        .card-botao-financeiro:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-botao-financeiro a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .imagembotoes {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .titulobotoes {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #015822;
+            margin: 15px 0 10px;
+            text-align: left;
+        }
+
+        .textobotoes {
+            font-size: 1rem;
+            color: #015822;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-botoes">
+        <div class="titulo-botoes">
+            <h2 class="titulo-botao-financeiro">Dados Financeiros do EJA/EPT</h2>
+            <p class="texto-botoes">
+                Esta página contém informações sobre os dados financeiros do projeto EJA/EPT, incluindo links para
+                editais,
+                documentos e outras informações relevantes. Navegue pelos botões abaixo para acessar os conteúdos
+                específicos.
+            </p>
+        </div>
+        <div class="row-card">
+            <a
+                href="https://docs.google.com/spreadsheets/d/1QbPARgWz0-7XgvO7LYIYTkFXkiM0Zcx9q1dRMFO_qDI/edit?gid=721866708#gid=721866708">
+                <div class="card-botao-financeiro">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Financeiro/03-consulta-dados.png"
+                        alt="botoes" class="imagembotoes">
+
+                    <h3 class="titulobotoes">Consulta de Dados Orçamentários</h3>
+                    <p class="textobotoes"> A consulta de dados orçamentários do EJA/EPT é uma ferramenta essencial para
+                        o
+                        acompanhamento e a transparência
+                        dos recursos financeiros destinados ao projeto.</p>
+                </div>
+            </a>
+            <a
+                href="https://docs.google.com/spreadsheets/d/1QO3jEQHB0x12Cedw7NShFuK35EHvmvZ5moNVn_2UwKk/edit?gid=721866708#gid=721866708&fvid=1259741584">
+                <div class="card-botao-financeiro">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Financeiro/04-consulta-liquidacoes.png"
+                        alt="botoes" class="imagembotoes">
+                    <h3 class="titulobotoes">Consulta de Liquidações e Pagamentos</h3>
+                    <p class="textobotoes"> A consulta de liquidações e pagamentos do EJA/EPT é uma ferramenta que
+                        permite
+                        verificar as transações financeiras realizadas,
+                        garantindo a transparência e o controle dos recursos utilizados no projeto.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

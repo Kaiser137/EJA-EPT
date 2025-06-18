@@ -9,12 +9,18 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
+        /* ==================== ESTILOS GERAIS ==================== */
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
-
+        
         * {
             box-sizing: border-box;
         }
 
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        /* ==================== SLIDER TOPO ==================== */
         .corpo-slider-topo {
             display: flex;
             justify-content: center;
@@ -35,7 +41,8 @@
 
         .container-cartao {
             max-width: 950px;
-            padding: 20px 0 20px 0;
+            padding-top: 0;
+            padding-bottom: 20px;
             overflow: hidden;
             height: auto;
             cursor: pointer;
@@ -52,10 +59,6 @@
         .swiper-slide.swiper-slide-next::marker {
             display: none !important;
             content: none !important;
-        }
-
-        .lista-cartao {
-            padding: 0;
         }
 
         .lista-cartao {
@@ -87,56 +90,6 @@
             transition: transform 0.3s ease;
             object-fit: contain;
             cursor: pointer;
-        }
-
-        .etiqueta {
-            padding: 8px 18px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            width: fit-content;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        .etiqueta.EAD {
-            background: #015822;
-            color: #fff;
-        }
-
-        .etiqueta.Presencial {
-            background: #1b4a9b;
-            color: #fff;
-        }
-
-        .titulo-cartao {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 20px;
-            line-height: 1.4;
-        }
-
-        .botao-cartao {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            margin: 20px 0 5px;
-            color: #015822;
-            border: 2px solid #015822;
-            background: none;
-            cursor: pointer;
-            transform: rotate(-45deg);
-            transition: 0.4s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .link-cartao:hover .botao-cartao {
-            background: #015822;
-            color: #fff;
-            transform: rotate(0deg);
         }
 
         .swiper-pagination {
@@ -209,6 +162,7 @@
             transform: translateY(-50%) scale(1.1);
         }
 
+        /* ==================== FAQ ==================== */
         .divImagemFaq {
             display: flex;
             justify-content: center;
@@ -238,6 +192,7 @@
             border-color: #015822;
         }
 
+        /* ==================== SLIDER DE NOTÍCIAS ==================== */
         .slider-noticias-container {
             margin: 0 auto;
             max-width: 850px;
@@ -281,7 +236,7 @@
         .noticia-titulo {
             font-size: 1.3rem;
             font-weight: 700;
-            color: #222;
+            color: #015822;
             line-height: 1.4;
         }
 
@@ -369,7 +324,6 @@
             right: 0;
         }
 
-
         .slider-noticias-button-prev:hover,
         .slider-noticias-button-next:hover {
             background: #015822;
@@ -384,6 +338,46 @@
             width: 100%;
         }
 
+        .botao-ver-todos-noticias-container {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 850px;
+            margin: 0 auto 0;
+            padding: 0 20px;
+        }
+
+        .botao-ver-todos-noticias-cursos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822;
+            width: auto;
+            margin-top: 20px;
+        }
+
+        .botao-ver-todos-noticias-cursos:hover {
+            background: transparent;
+            color: #015822;
+            border-color: #015822;
+        }
+
+        .botao-ver-todos-noticias-cursos .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-ver-todos-noticias-cursos:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        /* ==================== EDITAIS ==================== */
         .divEditais {
             display: flex;
             flex-direction: column;
@@ -427,115 +421,7 @@
             transform: scale(1.05);
         }
 
-        /* Responsividade */
-        @media screen and (max-width: 900px) {
-
-            .slider-noticias-button-prev,
-            .slider-noticias-button-next {
-                width: 40px;
-                height: 40px;
-            }
-
-            .slider-noticias-button-prev {
-                left: -15px;
-            }
-
-            .slider-noticias-button-next {
-                right: -15px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-
-            .slider-controls-wrapper {
-                gap: 5px;
-            }
-
-            .slider-noticias-button-prev,
-            .slider-noticias-button-next {
-                display: none;
-                /* Oculta botões em mobile */
-            }
-
-            .slider-noticias-title {
-                font-size: 1.5rem;
-            }
-
-            .noticia-imagem {
-                object-fit: fill;
-                width: 290px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .noticia-imagem {
-                height: 180px;
-            }
-
-            .noticia-titulo {
-                font-size: 1.15rem;
-            }
-        }
-
-        @media screen and (max-width: 1024px) {
-            .header h1 {
-                font-size: 2.2rem;
-            }
-
-            .header p {
-                font-size: 1.1rem;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 45px;
-                height: 45px;
-            }
-
-            .swiper-button-prev {
-                left: -15px;
-            }
-
-            .swiper-button-next {
-                right: -15px;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .container-swiper {
-                padding: 0 5px;
-            }
-
-            .swiper-button-prev,
-            .swiper-button-next {
-                display: none;
-            }
-
-            .header h1 {
-                font-size: 1.9rem;
-            }
-
-            .header p {
-                font-size: 1rem;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .header {
-                padding: 10px;
-                margin-bottom: 30px;
-            }
-
-            .header h1 {
-                font-size: 1.7rem;
-            }
-
-            .corpo-slider-topo {
-                margin-bottom: 40px;
-            }
-        }
-
-        /* Estilos para o slider de cursos (prefixados com "cursos-") */
+        /* ==================== CURSOS ==================== */
         .cursos-title {
             text-align: center;
             padding: 20px;
@@ -576,7 +462,7 @@
 
         .cursos-container-cartao {
             max-width: 950px;
-            padding: 40px 0px 40px 0px;
+            padding: 40px 0;
             overflow: hidden;
             height: auto;
         }
@@ -586,7 +472,6 @@
         }
 
         .cursos-lista-cartao {
-            padding: 0;
             list-style: none;
             display: flex;
             padding: 0;
@@ -622,6 +507,7 @@
             object-fit: scale-down;
         }
 
+        .etiqueta,
         .cursos-etiqueta {
             padding: 8px 18px;
             font-size: 0.95rem;
@@ -631,24 +517,28 @@
             display: inline-block;
         }
 
+        .etiqueta.EAD,
         .cursos-etiqueta.EAD {
             background: #015822;
             color: #fff;
         }
 
+        .etiqueta.Presencial,
         .cursos-etiqueta.Presencial {
             background: #1b4a9b;
             color: #fff;
         }
 
+        .titulo-cartao,
         .cursos-titulo-cartao {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #222;
+            color: #015822;
             margin-bottom: 20px;
             line-height: 1.4;
         }
 
+        .botao-cartao,
         .cursos-botao-cartao {
             height: 40px;
             width: 40px;
@@ -666,6 +556,7 @@
             font-size: 20px;
         }
 
+        .link-cartao:hover .botao-cartao,
         .cursos-link-cartao:hover .cursos-botao-cartao {
             background: #015822;
             color: #fff;
@@ -695,7 +586,6 @@
             background: #01a342;
         }
 
-        /* CORREÇÃO DO POSICIONAMENTO DAS SETAS */
         .cursos-swiper-button-prev,
         .cursos-swiper-button-next {
             position: absolute;
@@ -744,16 +634,14 @@
             transform: translateY(-50%) scale(1.1);
         }
 
-        /* Container para centralizar e posicionar o botão */
         .botao-ver-todos-container {
             display: flex;
             justify-content: flex-end;
             max-width: 850px;
-            margin: -30px auto 0 auto;
+            margin: -30px auto 0;
             padding: 0 20px;
         }
 
-        /* Estilos do botão */
         .botao-ver-todos-cursos {
             display: inline-flex;
             align-items: center;
@@ -785,8 +673,91 @@
             transform: translateX(5px);
         }
 
-        @media screen and (max-width: 1024px) {
+        .cursos-corpo-mobile {
+            display: none;
+        }
 
+        /* ==================== RESPONSIVIDADE ==================== */
+        @media screen and (max-width: 900px) {
+            .slider-noticias-button-prev,
+            .slider-noticias-button-next {
+                width: 40px;
+                height: 40px;
+            }
+
+            .slider-noticias-button-prev {
+                left: -15px;
+            }
+
+            .slider-noticias-button-next {
+                right: -15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .slider-controls-wrapper {
+                gap: 5px;
+            }
+
+            .slider-noticias-button-prev,
+            .slider-noticias-button-next {
+                display: none;
+            }
+
+            .slider-noticias-title {
+                font-size: 1.5rem;
+            }
+
+            .noticia-imagem {
+                object-fit: fill;
+                width: 290px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .noticia-imagem {
+                height: 180px;
+            }
+
+            .noticia-titulo {
+                font-size: 1.15rem;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 45px;
+                height: 45px;
+            }
+
+            .swiper-button-prev {
+                left: -15px;
+            }
+
+            .swiper-button-next {
+                right: -15px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container-swiper {
+                padding: 0 5px;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .corpo-slider-topo {
+                margin-bottom: 40px;
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
             .cursos-swiper-button-prev,
             .cursos-swiper-button-next {
                 width: 45px;
@@ -802,7 +773,7 @@
             }
         }
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 540px) {
             .cursos-container-swiper {
                 padding: 0 5px;
             }
@@ -810,6 +781,33 @@
             .cursos-swiper-button-prev,
             .cursos-swiper-button-next {
                 display: none;
+            }
+
+            .cursos-corpo {
+                display: none;
+            }
+
+            .cursos-corpo-mobile {
+                display: block;
+            }
+
+            .cursos-imagem-cartao {
+                width: 100%;
+                border-radius: 20px;
+                height: auto;
+                margin: 10px 0;
+                padding: 10px 0;
+                object-fit: contain;
+            }
+
+            .cursos-link-cartao {
+                margin: 0 15px;
+                border-radius: 12px;
+                padding-top: 0 !important;
+            }
+
+            .botao-ver-todos-cursos {
+                margin-top: 30px;
             }
         }
 
@@ -960,6 +958,12 @@
         </div>
     </div>
 
+    <div class="botao-ver-todos-noticias-container">
+        <a href="#" class="botao-ver-todos-noticias-cursos">
+            Veja todas as notícias <span class="material-symbols-rounded">arrow_forward</span>
+        </a>
+    </div>
+
     <div class="divEditais">
         <h2 class="tituloEditais">Confira nossas oportunidades</h2>
         <p class="textoEditais">Confira os editais abertos para seleção de alunos e equipe do projeto EJA-EPT</p>
@@ -994,7 +998,8 @@
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/formacao-professores.png"
                                 alt="Formação de Professores" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
-                            <h2 class="cursos-titulo-cartao">Formação de professores metodologias ativas e tecnologias para a EJA</h2>
+                            <h2 class="cursos-titulo-cartao">Formação de professores metodologias ativas e tecnologias
+                                para a EJA</h2>
                             <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
                         </a>
                     </li>
@@ -1082,6 +1087,122 @@
                     <li class="cursos-swiper-slide swiper-slide">
                         <a href="#" class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/soldador.png"
+                                alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG"
+                                class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Soldador de Estruturas e Tubulação no Processo MIG/MAG</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                </ul>
+                <div class="cursos-swiper-pagination swiper-pagination"></div>
+            </div>
+            <div class="cursos-swiper-button-prev">
+                <span class="material-symbols-rounded">chevron_left</span>
+            </div>
+            <div class="cursos-swiper-button-next">
+                <span class="material-symbols-rounded">chevron_right</span>
+            </div>
+        </div>
+    </div>
+    <div class="cursos-corpo-mobile">
+        <div class="cursos-container-swiper">
+            <div class="cursos-container-cartao swiper cursos-swiper">
+                <ul class="cursos-lista-cartao swiper-wrapper">
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/formacao-professores%201.png"
+                                alt="Formação de Professores" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta EAD">EAD</p>
+                            <h2 class="cursos-titulo-cartao">Formação de professores metodologias ativas e tecnologias
+                                para a EJA</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/eletricista%201.png"
+                                alt="Eletricista Instalador Predial de Baixa Tensão" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Eletricista Instalador Predial de Baixa Tensão</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/seguranca%202.png"
+                                alt="Instalador de Sistemas Eletrônicos de Segurança" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Instalador de Sistemas Eletrônicos de Segurança</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/residuos%202.png"
+                                alt="Agente de Gestão de Resíduos Sólidos" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta EAD">EAD</p>
+                            <h2 class="cursos-titulo-cartao">Agente de Gestão de Resíduos Sólidos</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/operador.png"
+                                alt="Operador de Tratamento de Águas e Efluentes" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Operador de Tratamento de Águas e Efluentes</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/laboratorista.png"
+                                alt="Laboratorista de Solos" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Laboratorista de Solos</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/controle%201.png"
+                                alt="Assistente de Controle de Qualidade" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta EAD">EAD</p>
+                            <h2 class="cursos-titulo-cartao">Assistente de Controle de Qualidade</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/mecanico.png"
+                                alt="Mecânico de Refrigeração e Climatização Industrial" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Mecânico de Refrigeração e Climatização Industrial</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/pedreiro%201.png"
+                                alt="Pedreiro de Alvenaria Estrutural" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta Presencial">Presencial</p>
+                            <h2 class="cursos-titulo-cartao">Pedreiro de Alvenaria Estrutural</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/recepcionista%201.png"
+                                alt="Recepcionista em Serviços de Saúde" class="cursos-imagem-cartao">
+                            <p class="cursos-etiqueta EAD">EAD</p>
+                            <h2 class="cursos-titulo-cartao">Recepcionista em Serviços de Saúde</h2>
+                            <button class="cursos-botao-cartao material-symbols-rounded">arrow_forward</button>
+                        </a>
+                    </li>
+                    <li class="cursos-swiper-slide swiper-slide">
+                        <a href="#" class="cursos-link-cartao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/soldador%201.png"
                                 alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG"
                                 class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>

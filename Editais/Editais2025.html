@@ -1,0 +1,396 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editais 2025</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
+        .titulo {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 10px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #00B625;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #00B625;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #00B625;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        .faq_7 button {
+            background-color: #00B625;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+
+        .faq_7 button:hover {
+            background-color: #008f1f;
+        }
+
+        .botao-ver-edital-container {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 850px;
+            margin: -30px auto 10px auto;
+            padding: 0 20px;
+        }
+
+        .botao-ver-edital-cursos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822;
+            width: auto;
+            margin-top: 20px;
+        }
+
+        .botao-ver-edital-cursos:hover {
+            background: transparent;
+            color: #015822;
+            border-color: #015822;
+        }
+
+        .botao-ver-edital-cursos .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-ver-edital-cursos:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 class="titulo">Editais do EJA/EPT - 2025</h2>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 31/2025 - Chamada Pública para provimento de cadastro de reservas de
+                                    bolsistas para atuação no cargo de Professor Formador (instrutor) e Apoio Técnico de
+                                    Nível Médio para atuar no Programa Institucional de Bolsas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Esta chamada pública será regida por esse Edital, cujo objeto é a seleção de
+                                    bolsistas para atuar nas seguintes atividades: Professor Formador (instrutor) e
+                                    Apoio Técnico de Nível Médio/Almoxarife, Apoio Técnico de Nível Médio/Apoio às
+                                    Atividades Administrativas e Pedagógicas, Apoio Técnico de Nível Médio/Suporte de
+                                    Informática, Apoio Técnico de Nível Médio/Técnico em Química e Apoio Técnico de
+                                    Nível Médio/Motorista, na modalidade presencial
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-31-2025-chamada-publica-para-provimento-de-cadastro-de-reservas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio-para-atuar-no-programa-institucional-de-bolsas"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 09/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Professor Formador (instrutor) e Apoio Técnico de Nível Médio para
+                                    atender ao Programa EJA -EPT
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública emergencial para provimento
+                                    de vagas e de cadastro de reserva para vinculação de bolsistas para atuar no âmbito
+                                    do projeto aprovado por meio do Edital 17/2022, da Secretaria de Educação Básica do
+                                    Ministérios da Educação, TED 12320, vinculado ao Programa Educação de Jovens e
+                                    Adultos Integrada à Educação Profissional - EJA-EPT
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-09-2025-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio-para-atender-ao-programa-eja-ept"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 04/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Professor
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública para provimento de vagas e
+                                    de cadastro de reserva para vinculação de bolsistas para atuar no âmbito do projeto
+                                    de Extensão Cursinho Pré-Universitário do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-04-2025"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 03/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Apoio Técnico de Nível Médio/Apoio às Atividades Administrativas e
+                                    Pedagógicas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública para provimento de vagas e
+                                    de cadastro de reserva para vinculação de bolsistas para atuar no âmbito do projeto
+                                    de Extensão Cursinho Pré-Universitário do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-03-2025"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 01/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Professor Formador (instrutor) e Apoio Técnico de Nível Médio
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Chamada Pública para provimento de vagas de bolsistas para atuação no cargo de
+                                    Professor Formador (instrutor) e Apoio Técnico de Nível Médio para atender ao
+                                    Programa de Educação de Jovens e Adultos Integrada à Educação Profissional e
+                                    Tecnológica do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-01-2025-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+                let currentlyActive = null;
+
+                faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                    faqQuestionContainer.onclick = function () {
+                        const parentFaq = this.parentElement;
+
+                        // Se já está ativo, apenas desativa
+                        if (parentFaq.classList.contains('active')) {
+                            parentFaq.classList.remove('active');
+                            currentlyActive = null;
+                            return;
+                        }
+
+                        // Fecha o item atualmente aberto
+                        if (currentlyActive) {
+                            currentlyActive.classList.remove('active');
+                        }
+
+                        // Abre o novo item
+                        parentFaq.classList.add('active');
+                        currentlyActive = parentFaq;
+                    };
+                });
+            });
+        </script>
+
+</body>
+
+</html>
