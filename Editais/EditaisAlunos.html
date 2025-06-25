@@ -1,0 +1,568 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editais de seleção de Alunos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+            margin: 0 !important;
+        }
+
+        .titulo-editais {
+            text-align: center;
+            font-size: 20px !important;
+            color: #015822 !important;
+            margin-top: 20px;
+        }
+
+        .editais-abertos-fechados {
+            font-size: 18px;
+            color: #015822;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 10px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #015822;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #015822;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #015822;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        .faq_7 button {
+            background-color: #015822;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+
+        .faq_7 button:hover {
+            background-color: #008f1f;
+        }
+
+        .botao-ver-edital-container {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 850px;
+            margin: -30px auto 10px auto;
+            padding: 0 20px;
+        }
+
+        .botao-ver-edital-cursos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822;
+            width: auto;
+            margin-top: 20px;
+        }
+
+        .botao-ver-edital-cursos:hover {
+            background: transparent;
+            color: #015822;
+            border-color: #015822;
+        }
+
+        .botao-ver-edital-cursos .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-ver-edital-cursos:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 class="titulo">Editais de seleção de Alunos</h2>
+
+            <h3 class="titulo-editais">Editais publicados em 2025</h3>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <h4 class="editais-abertos-fechados">Aberto</h4>
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 45/2025 - Processo seletivo para ingresso de estudantes no curso de Formação
+                                    de Professores: Metodologias Ativas e Tecnologias para a EJA
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Diretor-Geral do Instituto Federal de Educação, Ciência e Tecnologia do Sul de
+                                    Minas Gerais - Campus Pouso Alegre, pelo presente edital, faz saber aos interessados
+                                    que, no período de 16 de junho a 31 de julho de 2025, estarão abertas as inscrições
+                                    para o processo seletivo para ingresso de estudantes no curso de Formação de
+                                    Professores: Metodologias Ativas e Tecnologias para a EJA - Formação Inicial e
+                                    Continuada (FIC) na modalidade a distância (EaD), por meio do Programa Educação de
+                                    Jovens e Adultos Integrada à Educação Profissional e Tecnológica (EJA-EPT).
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-45-2025-processo-seletivo-para-ingresso-de-estudantes-no-curso-de-formacao-de-professores-metodologias-ativas-e-tecnologias-para-a-eja"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 44/2025 - Processo seletivo para estudantes em vagas remanescentes de curso
+                                    de formação inicial e continuada Noções Básicas em Conservação e Restauro de Bens
+                                    Culturais
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Diretor-geral do Instituto Federal de Educação, Ciência e Tecnologia do Sul de
+                                    Minas Gerais - Campus Pouso Alegre, pelo presente edital, faz saber aos interessados
+                                    que, no período de 13 de junho a 30 de junho de 2025, estarão abertas as inscrições
+                                    para o processo seletivo para ingresso de estudantes no curso de formação inicial e
+                                    continuada Noções Básicas em Conservação e Restauro de Bens Culturais do
+                                    IFSULDEMINAS - Campus Pouso Alegre, fomentado da Secretaria de Educação Continuada,
+                                    Alfabetização de Jovens e Adultos, Diversidade e Inclusão (Secadi), através do TED
+                                    15123, a ser executado em Ouro Preto (MG), através de parceria entre o IFSULDEMINAS
+                                    - Campus Pouso Alegre, o IFMG - Campus Ouro Preto e a Prefeitura Municipal de Ouro
+                                    Preto
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-44-2025-processo-seletivo-para-estudantes-em-vagas-remanescentes-de-curso-de-formacao-inicial-e-continuada-nocoes-basicas-em-conservacao-e-restauro-de-bens-culturais"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 43/2025 - Processo seletivo de estudantes para os cursos Agente de Gestão de
+                                    Resíduos Sólidos, Assistente de Controle da Qualidade e Recepcionista em Serviços de
+                                    Saúde - Formação Inicial e Continuada (FIC) na modalidade a distância (EaD)
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Diretor-geral do Campus Pouso Alegre do Instituto Federal de Educação, Ciência e
+                                    Tecnologia do Sul de Minas Gerais (IFSULDEMINAS), pelo presente edital, faz saber
+                                    aos interessados, que no período de 14 de junho a 06 de agosto de 2025, estarão
+                                    abertas as inscrições para o processo seletivo para ingresso de estudantes nos
+                                    cursos Agente de Gestão de Resíduos Sólidos, Assistente de Controle da Qualidade e
+                                    Recepcionista em Serviços de Saúde - Formação Inicial e Continuada (FIC) na
+                                    modalidade a distância (EaD), por meio do Programa Educação de Jovens e Adultos
+                                    Integrada à Educação Profissional e Tecnológica (EJA-EPT).
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-43-2025-processo-seletivo-de-estudantes-para-os-cursos-agente-de-gestao-de-residuos-solidos-assistente-de-controle-da-qualidade-e-recepcionista-em-servicos-de-saude-formacao-inicial-e-continuada-fic-na-modalidade-a-distancia-ead"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 31/2025 - Chamada Pública para provimento de cadastro de reservas de
+                                    bolsistas para atuação no cargo de Professor Formador (instrutor) e Apoio Técnico de
+                                    Nível Médio para atuar no Programa Institucional de Bolsas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Esta chamada pública será regida por esse Edital, cujo objeto é a seleção de
+                                    bolsistas para atuar nas seguintes atividades: Professor Formador (instrutor) e
+                                    Apoio Técnico de Nível Médio/Almoxarife, Apoio Técnico de Nível Médio/Apoio às
+                                    Atividades Administrativas e Pedagógicas, Apoio Técnico de Nível Médio/Suporte de
+                                    Informática, Apoio Técnico de Nível Médio/Técnico em Química e Apoio Técnico de
+                                    Nível Médio/Motorista, na modalidade presencial
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-31-2025-chamada-publica-para-provimento-de-cadastro-de-reservas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio-para-atuar-no-programa-institucional-de-bolsas"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <h4 class="editais-abertos-fechados">Finalizados</h4>
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 37/2025 - Chamada para Preenchimento de Vagas Remanescentes Projeto de
+                                    Oficinas de Musicalização Baseadas em Saberes Tradicionais Afro-Brasileiros
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    <b>(EDITAL COMPLEMENTAR AO EDITAL 21/2025)</b><br><br>
+
+                                    Edital de Chamada para Preenchimento de Vagas Remanescentes Projeto de Oficinas de
+                                    Musicalização Baseadas em Saberes Tradicionais Afro-Brasileiros do IFSULDEMINAS –
+                                    Campus Pouso Alegre (Modalidade Presencial na Casa de Cultura Negra em Ouro
+                                    Preto/MG)
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-37-2025-chamada-para-preenchimento-de-vagas-remanescentes-projeto-de-oficinas-de-musicalizacao-baseadas-em-saberes-tradicionais-afro-brasileiros"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 36/2025 - processo seletivo para ingresso de estudantes nos cursos Pedreiro
+                                    de Alvenaria Estrutural e Instalador de Sistemas Eletrônicos de Segurança
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Inscrições para o processo seletivo para ingresso de estudantes nos cursos Pedreiro
+                                    de Alvenaria Estrutural e Instalador de Sistemas Eletrônicos de Segurança - Formação
+                                    Inicial e Continuada (FIC) na modalidade presencial, por meio do Programa Educação
+                                    de Jovens e Adultos Integrada à Educação Profissional e Tecnológica (EJAEPT).
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-36-2025-processo-seletivo-para-ingresso-de-estudantes-nos-cursos-pedreiro-de-alvenaria-estrutural-e-instalador-de-sistemas-eletronicos-de-seguranca"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 28/2025 - Processo seletivo para ingresso de estudantes nos cursos Agente de
+                                    Gestão de Resíduos Sólidos, Assistente de Controle da Qualidade e Recepcionista em
+                                    Serviços de Saúde
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Diretor-geral do Campus Pouso Alegre do Instituto Federal de Educação, Ciência e
+                                    Tecnologia do Sul de Minas Gerais (IFSULDEMINAS), pelo presente edital, faz saber
+                                    aos interessados, que no período de 17 de abril a 12 de maio de 2025, estarão
+                                    abertas as inscrições para o processo seletivo para ingresso de estudantes nos
+                                    cursos Agente de Gestão de Resíduos Sólidos, Assistente de Controle da Qualidade e
+                                    Recepcionista em Serviços de Saúde - Formação Inicial e Continuada (FIC) na
+                                    modalidade a distância (EaD), por meio do Programa Educação de Jovens e Adultos
+                                    Integrada à Educação Profissional e Tecnológica (EJA-EPT).
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-28-2025-processo-seletivo-para-ingresso-de-estudantes-nos-cursos-agente-de-gestao-de-residuos-solidos-assistente-de-controle-da-qualidade-e-recepcionista-em-servicos-de-saude"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 24/2025 - Seleção de estudantes para curso FIC Noções Básicas de Conservação
+                                    e Restauração de Bens Patrimoniais Imóveis
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Processo seletivo para estudantes em curso de formação inicial e continuada Noções
+                                    Básicas de Conservação e Restauração de Bens Patrimoniais Imóveis do IFSULDEMINAS -
+                                    Campus Pouso Alegre na modalidade presencial
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-24-2025-selecao-de-estudantes-para-curso-fic-nocoes-basicas-de-conservacao-e-restauracao-de-bens-patrimoniais-imoveis"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 21/2025 - Seleção para alunos(as) no projeto: Oficinas de Musicalização
+                                    Baseadas em Saberes Tradicionais Afro-Brasileiros
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Abertas as inscrições para o processo seletivo para ingresso de alunos(as) no
+                                    projeto: Oficinas de Musicalização Baseadas em Saberes Tradicionais Afro-Brasileiros
+                                    do IFSULDEMINAS, Campus Pouso Alegre, fomentado da Secretaria de Educação
+                                    Continuada, Alfabetização de Jovens e Adultos, Diversidade e Inclusão
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-21-2025-selecao-para-alunos-as-no-projeto-oficinas-de-musicalizacao-baseadas-em-saberes-tradicionais-afro-brasileiros"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+                <h3 class="titulo-editais">Editais publicados em 2024</h3>
+
+                <div class="faq_7" unique-script-id="w-w-dm-id">
+                    <div class="responsive-container-block">
+                        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                            id="imiw">
+                            <h4 class="editais-abertos-fechados">Finalizados</h4>
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 66 - Seleção de estudantes para o curso de Formação de Professores:
+                                        Metodologias Ativas e Tecnologias para a EJA
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        PROCESSO SELETIVO PARA ESTUDANTES EM CURSO DE FORMAÇÃO DE PROFESSORES EM
+                                        METODOLOGIAS ATIVAS E TECNOLOGIAS PARA A EDUCAÇÃO DE JOVENS E ADULTOS (EJA) -
+                                        FORMAÇÃO INICIAL E CONTINUADA (FIC) NA MODALIDADE A DISTÂNCIA, POR MEIO DO
+                                        PROGRAMA EDUCAÇÃO DE JOVENS E ADULTOS INTEGRADA À EDUCAÇÃO PROFISSIONAL E
+                                        TECNOLÓGICA (EJA-EPT).
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/edital-66-selecao-de-estudantes-para-o-curso-de-formacao-de-professores-metodologias-ativas-e-tecnologias-para-a-eja"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+                    let currentlyActive = null;
+
+                    faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                        faqQuestionContainer.onclick = function () {
+                            const parentFaq = this.parentElement;
+
+                            // Se já está ativo, apenas desativa
+                            if (parentFaq.classList.contains('active')) {
+                                parentFaq.classList.remove('active');
+                                currentlyActive = null;
+                                return;
+                            }
+
+                            // Fecha o item atualmente aberto
+                            if (currentlyActive) {
+                                currentlyActive.classList.remove('active');
+                            }
+
+                            // Abre o novo item
+                            parentFaq.classList.add('active');
+                            currentlyActive = parentFaq;
+                        };
+                    });
+                });
+            </script>
+
+</body>
+
+</html>

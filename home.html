@@ -11,7 +11,7 @@
     <style>
         /* ==================== ESTILOS GERAIS ==================== */
         @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
-        
+
         * {
             box-sizing: border-box;
         }
@@ -186,10 +186,11 @@
             height: auto;
             border-radius: 12px;
             object-fit: contain;
+            transition: transform 0.3s ease;
         }
 
-        .link-Faq:hover {
-            border-color: #015822;
+        .link-Faq:hover .imagem-Faq {
+            transform: scale(1.02) translateY(-10px);
         }
 
         /* ==================== SLIDER DE NOTÍCIAS ==================== */
@@ -260,6 +261,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             border: 2px solid #015822;
+            cursor: pointer;
         }
 
         .noticia-botao:hover {
@@ -677,8 +679,40 @@
             display: none;
         }
 
+        .container-card-redes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card-redes {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 150px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .card-redes:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-redes img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
         /* ==================== RESPONSIVIDADE ==================== */
         @media screen and (max-width: 900px) {
+
             .slider-noticias-button-prev,
             .slider-noticias-button-next {
                 width: 40px;
@@ -712,6 +746,11 @@
                 object-fit: fill;
                 width: 290px;
             }
+
+            .card-redes {
+                max-width: 100px;
+                padding: 10px;
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -725,6 +764,7 @@
         }
 
         @media screen and (max-width: 1024px) {
+
             .swiper-button-prev,
             .swiper-button-next {
                 width: 45px;
@@ -758,6 +798,7 @@
         }
 
         @media screen and (max-width: 1024px) {
+
             .cursos-swiper-button-prev,
             .cursos-swiper-button-next {
                 width: 45px;
@@ -826,33 +867,28 @@
             <div class="container-cartao swiper" id="swiper-topo">
                 <ul class="lista-cartao swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="#" class="link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept" class="link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/01.png"
-                                alt="01" class="imagem-cartao">
+                                alt="Banner - 01" class="imagem-cartao">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#" class="link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept" class="link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/02.png"
-                                alt="02" class="imagem-cartao">
+                                alt="Banner - 02" class="imagem-cartao">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#" class="link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept" class="link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/03.png"
-                                alt="03" class="imagem-cartao">
+                                alt="Banner - 03" class="imagem-cartao">
                         </a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#" class="link-cartao">
-                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/04.png"
-                                alt="04" class="imagem-cartao">
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#" class="link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-43-2025-processo-seletivo-de-estudantes-para-os-cursos-agente-de-gestao-de-residuos-solidos-assistente-de-controle-da-qualidade-e-recepcionista-em-servicos-de-saude-formacao-inicial-e-continuada-fic-na-modalidade-a-distancia-ead"
+                            class="link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/05.png"
-                                alt="05" class="imagem-cartao">
+                                alt="Banner - Edital 43/2025" class="imagem-cartao">
                         </a>
                     </li>
                 </ul>
@@ -862,7 +898,7 @@
     </div>
 
     <div class="divImagemFaq">
-        <a href="#" class="link-Faq">
+        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/perguntas-frequentes" class="link-Faq">
             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Home/Slider_Topo/Banner_Perguntas_Frequentes.png"
                 alt="Perguntas Frequentes" class="imagem-Faq">
         </a>
@@ -884,7 +920,8 @@
                         <h3 class="noticia-titulo">EJA-EPT EM CAMPO DO MEIO</h3>
                         <p class="noticia-legenda">Equipe gestora conhece assentamento que poderá receber aulas do
                             projeto</p>
-                        <a href="#" class="noticia-botao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=3997:eja-ept-em-campo-do-meio&catid=343"
+                            class="noticia-botao">
                             Leia mais <span class="material-symbols-rounded">arrow_forward</span>
                         </a>
                     </div>
@@ -896,7 +933,8 @@
                         <h3 class="noticia-titulo">DIVULGAÇÃO DO PROJETO</h3>
                         <p class="noticia-legenda">Ação do projeto EJA-EPT apresenta curso ofertado no Centro Municipal
                             de Educação de Jovens e Adultos de Pouso Alegre</p>
-                        <a href="#" class="noticia-botao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4014:divulgacao-do-projeto-noticia-eja-ept&catid=343"
+                            class="noticia-botao">
                             Leia mais <span class="material-symbols-rounded">arrow_forward</span>
                         </a>
                     </div>
@@ -908,7 +946,8 @@
                         <h3 class="noticia-titulo">EDUCAÇÃO PROFISSIONALIZANTE</h3>
                         <p class="noticia-legenda">Parceria entre o EJA-EPT e CMEJA vai oferecer educação
                             profissionalizante para formação de eletricistas</p>
-                        <a href="#" class="noticia-botao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4015:educacao-profissionalizante&catid=343"
+                            class="noticia-botao">
                             Leia mais <span class="material-symbols-rounded">arrow_forward</span>
                         </a>
                     </div>
@@ -920,7 +959,8 @@
                         <h3 class="noticia-titulo">INVESTIMENTO EM EDUCAÇÃO</h3>
                         <p class="noticia-legenda">Projeto Eja-EPT investe em conhecimento e segue na vanguarda
                             educacional.</p>
-                        <a href="#" class="noticia-botao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4021:investimento-em-educacao&catid=343"
+                            class="noticia-botao">
                             Leia mais <span class="material-symbols-rounded">arrow_forward</span>
                         </a>
                     </div>
@@ -932,7 +972,8 @@
                         <h3 class="noticia-titulo">METAS PARA 2025</h3>
                         <p class="noticia-legenda">Equipe de Gestão promove encontro entre bolsistas do Projeto EJA-EPT.
                         </p>
-                        <a href="#" class="noticia-botao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4022:metas-para-2025&catid=343"
+                            class="noticia-botao">
                             Leia mais <span class="material-symbols-rounded">arrow_forward</span>
                         </a>
                     </div>
@@ -944,7 +985,7 @@
                         <h3 class="noticia-titulo">PARCERIA EM POUSO ALEGRE</h3>
                         <p class="noticia-legenda">Prefeitura de Pouso Alegre, CMEJA e IFSULDEMINAS oferecem curso
                             profissionalizante para alunos da EJA</p>
-                        <a href="#" class="noticia-botao">
+                        <a href="https://pousoalegre.mg.gov.br/noticias_individual/4320" class="noticia-botao">
                             Leia mais <span class="material-symbols-rounded">arrow_forward</span>
                         </a>
                     </div>
@@ -959,7 +1000,8 @@
     </div>
 
     <div class="botao-ver-todos-noticias-container">
-        <a href="#" class="botao-ver-todos-noticias-cursos">
+        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept"
+            class="botao-ver-todos-noticias-cursos">
             Veja todas as notícias <span class="material-symbols-rounded">arrow_forward</span>
         </a>
     </div>
@@ -969,13 +1011,13 @@
         <p class="textoEditais">Confira os editais abertos para seleção de alunos e equipe do projeto EJA-EPT</p>
         <div class="rowEditais">
             <div class="colEditais">
-                <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/editais-eja-ept-selecao-de-alunos">
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/editais?view=article&id=4024:editais-de-alunos-eja-ept&catid=339">
                     <img src="https://portal.poa.ifsuldeminas.edu.br/images/2023/Setembro/25/site.png" alt="Editais"
                         class="imagemEditais">
                 </a>
             </div>
             <div class="colEditais">
-                <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/editais-eja-ept-selecao-de-equipe">
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/editais?view=article&id=4006:editais-eja-ept-2025&catid=339">
                     <img src="https://portal.poa.ifsuldeminas.edu.br/images/2023/Setembro/25/site_1.png" alt="Editais"
                         class="imagemEditais">
                 </a>
@@ -994,7 +1036,8 @@
             <div class="cursos-container-cartao swiper cursos-swiper">
                 <ul class="cursos-lista-cartao swiper-wrapper">
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/formacao-de-professores"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/formacao-professores.png"
                                 alt="Formação de Professores" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1004,7 +1047,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/eletricista-instalador-predial-de-baixa-tensao"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/eletricista.png"
                                 alt="Eletricista Instalador Predial de Baixa Tensão" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1013,7 +1057,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/instalador-de-sistemas-eletronicos-de-seguranca"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/seguranca.png"
                                 alt="Instalador de Sistemas Eletrônicos de Segurança" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1022,7 +1067,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/agente-de-gestao-de-residuos-solidos"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/residuos.png"
                                 alt="Agente de Gestão de Resíduos Sólidos" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1031,7 +1077,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/operador-de-tratamento-de-aguas-e-efluentes"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/operador.png"
                                 alt="Operador de Tratamento de Águas e Efluentes" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1040,7 +1087,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/laboratorista-de-solos"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/laboratorista.png"
                                 alt="Laboratorista de Solos" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1049,7 +1097,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/assistente-de-controle-de-qualidade"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/controle.png"
                                 alt="Assistente de Controle de Qualidade" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1058,7 +1107,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/mecanico-de-refrigeracao-e-climatizacao-industrial"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/mecanico.png"
                                 alt="Mecânico de Refrigeração e Climatização Industrial" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1067,7 +1117,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/pedreiro-de-alvenaria-estrutural"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/pedreiro.png"
                                 alt="Pedreiro de Alvenaria Estrutural" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1076,7 +1127,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/recepcionista-em-servicos-de-saude"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/recepcionista.png"
                                 alt="Recepcionista em Serviços de Saúde" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1085,7 +1137,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/soldador-de-estruturas-e-tubulacao-no-processo-mig-mag"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/soldador.png"
                                 alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG"
                                 class="cursos-imagem-cartao">
@@ -1110,7 +1163,8 @@
             <div class="cursos-container-cartao swiper cursos-swiper">
                 <ul class="cursos-lista-cartao swiper-wrapper">
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/formacao-de-professores"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/formacao-professores%201.png"
                                 alt="Formação de Professores" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1120,7 +1174,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/eletricista-instalador-predial-de-baixa-tensao"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/eletricista%201.png"
                                 alt="Eletricista Instalador Predial de Baixa Tensão" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1129,7 +1184,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/instalador-de-sistemas-eletronicos-de-seguranca"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/seguranca%202.png"
                                 alt="Instalador de Sistemas Eletrônicos de Segurança" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1138,7 +1194,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/agente-de-gestao-de-residuos-solidos"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/residuos%202.png"
                                 alt="Agente de Gestão de Resíduos Sólidos" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1147,7 +1204,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/operador-de-tratamento-de-aguas-e-efluentes"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/operador.png"
                                 alt="Operador de Tratamento de Águas e Efluentes" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1156,7 +1214,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/laboratorista-de-solos"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/laboratorista.png"
                                 alt="Laboratorista de Solos" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1165,7 +1224,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/assistente-de-controle-de-qualidade"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/controle%201.png"
                                 alt="Assistente de Controle de Qualidade" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1174,7 +1234,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/mecanico-de-refrigeracao-e-climatizacao-industrial"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/mecanico.png"
                                 alt="Mecânico de Refrigeração e Climatização Industrial" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1183,7 +1244,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/pedreiro-de-alvenaria-estrutural"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/pedreiro%201.png"
                                 alt="Pedreiro de Alvenaria Estrutural" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta Presencial">Presencial</p>
@@ -1192,7 +1254,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/recepcionista-em-servicos-de-saude"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/recepcionista%201.png"
                                 alt="Recepcionista em Serviços de Saúde" class="cursos-imagem-cartao">
                             <p class="cursos-etiqueta EAD">EAD</p>
@@ -1201,7 +1264,8 @@
                         </a>
                     </li>
                     <li class="cursos-swiper-slide swiper-slide">
-                        <a href="#" class="cursos-link-cartao">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept/soldador-de-estruturas-e-tubulacao-no-processo-mig-mag"
+                            class="cursos-link-cartao">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20Cursos/soldador%201.png"
                                 alt="Soldador de Estruturas e Tubulação no Processo MIG/MAG"
                                 class="cursos-imagem-cartao">
@@ -1223,8 +1287,29 @@
     </div>
 
     <div class="botao-ver-todos-container">
-        <a href="#" class="botao-ver-todos-cursos">
+        <a href="https://portal.poa.ifsuldeminas.edu.br/cursos-eja-ept" class="botao-ver-todos-cursos">
             Veja todos os cursos <span class="material-symbols-rounded">arrow_forward</span>
+        </a>
+    </div>
+
+    <div class="container-card-redes">
+        <a href="https://www.instagram.com/eja_ept/" target="_blank" class="link-card-redes">
+            <div class="card-redes">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Card%20baixo%20-%20home/Instagram_icon.png"
+                    alt="Instagram" class="imagem-card-redes">
+            </div>
+        </a>
+        <a href="https://suap.ifsuldeminas.edu.br/accounts/login/?next=/" target="_blank" class="link-card-redes">
+            <div class="card-redes">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Card%20baixo%20-%20home/suap.png"
+                    alt="Suap" class="imagem-card-redes">
+            </div>
+        </a>
+        <a href="https://portal.poa.ifsuldeminas.edu.br/" target="_blank" class="link-card-redes">
+            <div class="card-redes">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Card%20baixo%20-%20home/pouso-alegre-ver.png"
+                    alt="Campus Pouso Alegre" class="imagem-card-redes">
+            </div>
         </a>
     </div>
 

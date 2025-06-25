@@ -1,0 +1,789 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editais de seleção de Equipe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+            margin: 0 !important;
+        }
+
+        .titulo-editais {
+            text-align: center;
+            font-size: 20px !important;
+            color: #015822 !important;
+            margin-top: 20px;
+        }
+
+        .editais-abertos-fechados {
+            font-size: 18px;
+            color: #015822;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 10px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #015822;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #015822;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #015822;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        .faq_7 button {
+            background-color: #015822;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 20px;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+
+        .faq_7 button:hover {
+            background-color: #008f1f;
+        }
+
+        .botao-ver-edital-container {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 850px;
+            margin: -30px auto 10px auto;
+            padding: 0 20px;
+        }
+
+        .botao-ver-edital-cursos {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822;
+            width: auto;
+            margin-top: 20px;
+        }
+
+        .botao-ver-edital-cursos:hover {
+            background: transparent;
+            color: #015822;
+            border-color: #015822;
+        }
+
+        .botao-ver-edital-cursos .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-ver-edital-cursos:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 class="titulo">Editais de seleção de Equipe</h2>
+
+            <h3 class="titulo-editais">Editais publicados em 2025</h3>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <h4 class="editais-abertos-fechados">Aberto</h4>
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 31/2025 - Chamada Pública para provimento de cadastro de reservas de
+                                    bolsistas para atuação no cargo de Professor Formador (instrutor) e Apoio Técnico de
+                                    Nível Médio para atuar no Programa Institucional de Bolsas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Esta chamada pública será regida por esse Edital, cujo objeto é a seleção de
+                                    bolsistas para atuar nas seguintes atividades: Professor Formador (instrutor) e
+                                    Apoio Técnico de Nível Médio/Almoxarife, Apoio Técnico de Nível Médio/Apoio às
+                                    Atividades Administrativas e Pedagógicas, Apoio Técnico de Nível Médio/Suporte de
+                                    Informática, Apoio Técnico de Nível Médio/Técnico em Química e Apoio Técnico de
+                                    Nível Médio/Motorista, na modalidade presencial
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-31-2025-chamada-publica-para-provimento-de-cadastro-de-reservas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio-para-atuar-no-programa-institucional-de-bolsas"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <h4 class="editais-abertos-fechados">Finalizados</h4>
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 34/2025 - Chamada Pública para provimento de vagas e de cadastro de reservas
+                                    de bolsistas internos (servidores da rede EPT), para atuação no Programa EJA
+                                    integrada à EPT, cargo de Tutor EaD
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Chamada Pública para provimento de vagas e de cadastro de reservas de bolsistas
+                                    internos (servidores da rede EPT), para atuação no Programa EJA integrada à EPT,
+                                    cargo de Tutor EaD , através dos TEDs 12320 e 15123, nos termos do Programa
+                                    Institucional de Bolsas (PIBO) do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-34-2025-chamada-publica-para-provimento-de-vagas-e-de-cadastro-de-reservas-de-bolsistas-internos-servidores-da-rede-ept-para-atuacao-no-programa-eja-integrada-a-ept-cargo-de-tutor-ead"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 23/2025 - Chamada Pública para seleção de bolsistas para o cargo de Professor
+                                    no curso de formação inicial e continuada Noções Básicas de Restauração e
+                                    Conservação de Bens Patrimoniais Imóveis
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública para provimento de vagas e
+                                    de cadastro de reserva para vinculação de bolsistas para atuar no curso de formação
+                                    inicial e continuada Noções Básicas de Restauração e Conservação de Bens
+                                    Patrimoniais Imóveis do IFSULDEMINAS - Campus Pouso Alegre, fomentado pela
+                                    Secretaria de Educação Continuada, Alfabetização de Jovens e Adultos, Diversidade e
+                                    Inclusão (Secadi)
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-23-2025-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-para-atuar-no-curso-de-formacao-inicial-e-continuada-nocoes-basicas-de-restauracao-e-conservacao-de-bens-patrimoniais-imoveis-do-ifsuldeminas-campus-pouso-alegre"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 09/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Professor Formador (instrutor) e Apoio Técnico de Nível Médio para
+                                    atender ao Programa EJA -EPT
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública emergencial para provimento
+                                    de vagas e de cadastro de reserva para vinculação de bolsistas para atuar no âmbito
+                                    do projeto aprovado por meio do Edital 17/2022, da Secretaria de Educação Básica do
+                                    Ministérios da Educação, TED 12320, vinculado ao Programa Educação de Jovens e
+                                    Adultos Integrada à Educação Profissional - EJA-EPT
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-09-2025-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio-para-atender-ao-programa-eja-ept"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 04/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Professor
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública para provimento de vagas e
+                                    de cadastro de reserva para vinculação de bolsistas para atuar no âmbito do projeto
+                                    de Extensão Cursinho Pré-Universitário do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-04-2025"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 03/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Apoio Técnico de Nível Médio/Apoio às Atividades Administrativas e
+                                    Pedagógicas
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais torna
+                                    pública a abertura das inscrições para a chamada pública para provimento de vagas e
+                                    de cadastro de reserva para vinculação de bolsistas para atuar no âmbito do projeto
+                                    de Extensão Cursinho Pré-Universitário do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-03-2025"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    EDITAL 01/2025 - Chamada Pública para provimento de vagas de bolsistas para atuação
+                                    no cargo de Professor Formador (instrutor) e Apoio Técnico de Nível Médio
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Chamada Pública para provimento de vagas de bolsistas para atuação no cargo de
+                                    Professor Formador (instrutor) e Apoio Técnico de Nível Médio para atender ao
+                                    Programa de Educação de Jovens e Adultos Integrada à Educação Profissional e
+                                    Tecnológica do IFSULDEMINAS - Campus Pouso Alegre
+                                </p>
+                                <div class="botao-ver-edital-container">
+                                    <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-01-2025-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-e-apoio-tecnico-de-nivel-medio"
+                                        class="botao-ver-edital-cursos">
+                                        Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+                <h3 class="titulo-editais">Editais publicados em 2024</h3>
+
+                <div class="faq_7" unique-script-id="w-w-dm-id">
+                    <div class="responsive-container-block">
+                        <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                            id="imiw">
+                            <h4 class="editais-abertos-fechados">Finalizados</h4>
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        EDITAL 39/2024 - Chamada pública emergencial para provimento de vagas de
+                                        bolsistas para atuação em cargos de apoio técnico de nível médio do Projeto
+                                        EJA-EPT, TED 12320
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais
+                                        torna pública a abertura das inscrições para a chamada pública para provimento
+                                        de vagas e de cadastro de reserva para vinculação de bolsistas para atuar no
+                                        âmbito do projeto aprovado por meio do Edital 17/2022, da Secretaria de Educação
+                                        Básica do Ministérios da Educação, TED 12320, vinculado ao Programa Educação de
+                                        Jovens e Adultos Integrada à Educação Profissional - EJA-EPT, nos termos do
+                                        Programa Institucional de Bolsas, regulamentado pela resolução CONSUP nº 392, de
+                                        25 de julho de 2024, em consonância com a Portaria MEC/SETEC nº 19, de 12 de
+                                        abril de 2023, que regulamenta o disposto no § 6º do art. 5º da Lei nº 11.892,
+                                        de 29 de dezembro de 2008, da Portaria Normativa nº 447, de 29 de junho de 2023,
+                                        retificada pela Portaria Normativa nº 448, de 19 de julho de 2023 e da Instrução
+                                        Normativa 01/2024 do IFSULDEMINAS - Campus Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-39-2024-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-em-cargos-de-apoio-tecnico-de-nivel-medio-do-projeto-eja-ept-ted-12320"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        EDITAL 25/2024 - Chamada Pública para provimento de vagas de bolsistas para
+                                        atuação o cargo de Apoio Técnico de Nível Médio
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Chamada Pública para provimento de vagas de bolsistas para atuação o cargo de
+                                        Apoio Técnico de Nível Médio para atender ao Programa de Educação de Jovens e
+                                        Adultos integrada à Educação Profissional e Tecnológica do IFSULDEMINAS - Campus
+                                        Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-25-2024-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-o-cargo-de-apoio-tecnico-de-nivel-medio"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        EDITAL 24/2024 - Chamada Pública para provimento de vagas de bolsistas para
+                                        atuação no cargo de Professor Formador (instrutor) para atender ao Programa EJA
+                                        - EPT
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Chamada Pública para provimento de vagas de bolsistas para atuação no cargo de
+                                        Professor Formador (instrutor) para atender ao Programa de Educação de Jovens e
+                                        Adultos Integrada à Educação Profissional e Tecnológica do IFSULDEMINAS - Campus
+                                        Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-24-2024-chamada-publica-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-para-atender-ao-programa-eja-ept"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 21/2024 - Processo seletivo simplificado para provimento de vagas de
+                                        bolsistas para atuação nos cargos de Apoio Técnico de Nível Superior para
+                                        atender ao Programa EJA-EPT
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Processo seletivo simplificado para provimento de vagas de bolsistas para
+                                        atuação nos cargos de Apoio Técnico de Nível Superior para atender ao Programa
+                                        de Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica
+                                        do IFSULDEMINAS - Campus Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-21-2024-processo-seletivo-simplificado-para-provimento-de-vagas-de-bolsistas-para-atuacao-nos-cargos-de-apoio-tecnico-de-nivel-superior-para-atender-ao-programa-eja-ept"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 20/2024 - Processo seletivo para provimento de vagas de bolsistas de
+                                        Apoio Técnico de Nível Médio para atender ao Programa EJA-EPT
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Processo seletivo simplificado para provimento de vagas de bolsistas para
+                                        atuação nos cargos de Apoio Técnico de Nível Médio para atender ao Programa de
+                                        Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica do
+                                        IFSULDEMINAS - Campus Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-20-2024-processo-seletivo-para-provimento-de-vagas-de-bolsistas-de-apoio-tecnico-de-nivel-medio-para-atender-ao-programa-eja-ept"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 17/2024 - Chamada pública emergencial para provimento de vagas de
+                                        bolsistas para atuação no cargo de Professor Formador (instrutor)
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Chamada pública emergencial para provimento de vagas de bolsistas para atuação
+                                        no cargo de Professor Formador (instrutor) para atender ao Programa de Educação
+                                        de Jovens e Adultos integrada à Educação Profissional e Tecnológica do
+                                        IFSULDEMINAS - Campus Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-17-2024-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 15/2024 - Chamada pública emergencial para provimento de vagas de
+                                        bolsistas para atuação no cargo de Professor Formador (instrutor) para atender
+                                        ao Programa EJA-EPT
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        O Instituto Federal de Educação, Ciência e Tecnologia do Sul de Minas Gerais
+                                        torna pública a abertura das inscrições para a chamada pública emergencial para
+                                        provimento de vagas e de cadastro de reserva para vinculação de bolsistas para
+                                        atuar no âmbito do projeto aprovado por meio do Edital 17/2022, da Secretaria de
+                                        Educação Básica do Ministérios da Educação, TED 12320, vinculado ao Programa
+                                        Educação de Jovens e Adultos Integrada à Educação Profissional - EJA-EPT.
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-15-2014-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-no-cargo-de-professor-formador-instrutor-para-atender-ao-programa-de-educacao-de-jovens-e-adultos-integrada-a-educacao-profissional-e-tecnologica-do-ifsuldeminas-campus-pouso-alegre"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 14/2024 - Processo seletivo de bolsistas para atuação no Programa EJA-EPT
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Processo seletivo simplificado para provimento de vagas de bolsistas para
+                                        atuação nos cargos de Apoio Técnico de Nível Médio para atender ao Programa de
+                                        Educação de Jovens e Adultos integrada à Educação Profissional e Tecnológica do
+                                        IFSULDEMINAS - Campus Pouso Alegre
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-00-00-eja-ept"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                            <!--Aqui começa uma pergunta da FAQ-->
+                            <div class="faq">
+                                <span class="faq-question-container">
+                                    <p class="text-blk faq-questions">
+                                        Edital 13/2024 - Chamada pública emergencial para provimento de vagas de
+                                        bolsistas para atuação em tutoria em curso de formação de professores na
+                                        modalidade EAD no IFSULDEMINAS - Campus Pouso Alegre
+                                    </p>
+                                    <span class="arrow-icon">▼</span>
+                                </span>
+                                <div class="answer-box">
+                                    <p class="text-blk faq-answer">
+                                        Este edital torna pública a abertura das inscrições para o processo seletivo
+                                        simplificado e emergencial de provimento de vagas e cadastro de reserva para
+                                        vinculação de bolsistas para atuar no âmbito do projeto aprovado por meio do
+                                        Edital 17/2022, da Secretaria de Educação Básica do Ministérios da Educação, TED
+                                        12320, vinculado ao Programa Educação de Jovens e Adultos Integrada à Educação
+                                        Profissional - EJA-EPT.
+                                    </p>
+                                    <div class="botao-ver-edital-container">
+                                        <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023-2/edital-13-2024-chamada-publica-emergencial-para-provimento-de-vagas-de-bolsistas-para-atuacao-em-tutoria-em-curso-de-formacao-de-professores-na-modalidade-ead-no-ifsuldeminas-campus-pouso-alegre"
+                                            class="botao-ver-edital-cursos">
+                                            Acessar o edital <span class="material-symbols-rounded">arrow_forward</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Aqui termina uma pergunta da FAQ-->
+                        </div>
+                    </div>
+                    <h3 class="titulo-editais">Editais publicados em 2023</h3>
+
+                    <div class="faq_7" unique-script-id="w-w-dm-id">
+                        <div class="responsive-container-block">
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                                id="imiw">
+                                <h4 class="editais-abertos-fechados">Finalizados</h4>
+                                <!--Aqui começa uma pergunta da FAQ-->
+                                <div class="faq">
+                                    <span class="faq-question-container">
+                                        <p class="text-blk faq-questions">
+                                            EDITAL 42 - PROCESSO SELETIVO PARA CONTRATAÇÃO TEMPORÁRIA DE BOLSISTAS PARA
+                                            CONSTRUÇÃO DE MATERIAIS DIDÁTICOS
+                                        </p>
+                                        <span class="arrow-icon">▼</span>
+                                    </span>
+                                    <div class="answer-box">
+                                        <p class="text-blk faq-answer">
+                                            Este edital é destinado à contratação de profissionais, por tempo
+                                            determinado,
+                                            para desempenho e atividades de construção dos materiais didáticos dos
+                                            cursos de
+                                            Formação Inicial e Continuada (FIC) do Programa EJA (Educação de Jovens e
+                                            Adultos) Integrada à Educação Profissional e Tecnológica (EPT)
+                                        </p>
+                                        <div class="botao-ver-edital-container">
+                                            <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023/editasos-de-fl-42-e-processo-seletivo-para-contratacao-tempor-letivo-para-contratacao-temporaria-de-bolsistas-no-aria-de-bolsistas-no-ambito-daedital-de-processo-se-ambito-da-construcao-de-materiais-didaticos-dos-cursos-de-for-teriais-didaticos-dos-cursos-de-formacao-inicial-e-macao-inicial-e-continuada-fic-doconstrucao-de-ma-continuada-fic-do-ifsuldeminas-campus-pouso-alegre"
+                                                class="botao-ver-edital-cursos">
+                                                Acessar o edital <span
+                                                    class="material-symbols-rounded">arrow_forward</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Aqui termina uma pergunta da FAQ-->
+                                <!--Aqui começa uma pergunta da FAQ-->
+                                <div class="faq">
+                                    <span class="faq-question-container">
+                                        <p class="text-blk faq-questions">
+                                            EDITAL 37 - CHAMADA PÚBLICA DE SELEÇÃO DE BOLSISTAS PARA CURSOS FIC
+                                        </p>
+                                        <span class="arrow-icon">▼</span>
+                                    </span>
+                                    <div class="answer-box">
+                                        <p class="text-blk faq-answer">
+                                            Este edital é destinado à contratação, por tempo determinado, de
+                                            profissionais
+                                            para ocupar as funções de Instrutores Presenciais, de Instrutores EAD, de
+                                            Tutores EaD, de Apoio Técnico de Nível Superior e de Apoio Técnico de Nível
+                                            Médio para os cursos de Formação Inicial e Continuada (FIC) do Programa Eja
+                                            Integrada à Educação Profissional e Tecnológica (EPT), conforme Termo de
+                                            Execução Descentralizada (TED) 12320, a serem realizados nos anos de 2023 e
+                                            de
+                                            2024, nas modalidades presencial e a distância.
+                                        </p>
+                                        <div class="botao-ver-edital-container">
+                                            <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais2023/edital-37-chamada-publica-de-selecao-de-bolsistas-para-cursos-fic"
+                                                class="botao-ver-edital-cursos">
+                                                Acessar o edital <span
+                                                    class="material-symbols-rounded">arrow_forward</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Aqui termina uma pergunta da FAQ-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function () {
+                    let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+                    let currentlyActive = null;
+
+                    faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                        faqQuestionContainer.onclick = function () {
+                            const parentFaq = this.parentElement;
+
+                            // Se já está ativo, apenas desativa
+                            if (parentFaq.classList.contains('active')) {
+                                parentFaq.classList.remove('active');
+                                currentlyActive = null;
+                                return;
+                            }
+
+                            // Fecha o item atualmente aberto
+                            if (currentlyActive) {
+                                currentlyActive.classList.remove('active');
+                            }
+
+                            // Abre o novo item
+                            parentFaq.classList.add('active');
+                            currentlyActive = parentFaq;
+                        };
+                    });
+                });
+            </script>
+
+</body>
+
+</html>

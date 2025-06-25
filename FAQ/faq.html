@@ -1,0 +1,563 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perguntas Frequentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+            margin: 0 !important;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            max-width: 900px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        .wk {
+            width: 100%;
+        }
+
+        .faq_7 .text-blk {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .faq_7 .text-blk.faq-questions {
+            color: #525252;
+            font-size: 20px;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .faq_7 .text-blk.faq-answer {
+            padding-left: 20px;
+            color: #6c6c6c;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .faq_7 .faq-dropdown-bg {
+            padding: 10px 60px;
+        }
+
+        .faq_7 .faq {
+            display: block;
+            border-bottom: 1px solid #015822;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .faq_7 .faq-question-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            padding: 10px 0;
+        }
+
+        .faq_7 .faq-question-container:hover {
+            cursor: pointer;
+        }
+
+        .faq_7 .faq-question-container:hover .faq-questions {
+            color: #333;
+        }
+
+        .faq_7 .answer-box {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: max-height;
+        }
+
+        .faq_7 .faq.active .answer-box {
+            max-height: 1000px;
+        }
+
+        .faq_7 .arrow-icon {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 16px;
+            color: #015822;
+        }
+
+        .faq_7 .faq.active .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+        .faq_7 .faq-answer {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .faq-answer {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .faq_7 .divide-escola {
+            transition:
+                opacity 0.6s ease 0.2s,
+                transform 0.6s ease 0.2s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        .faq_7 .faq.active .divide-escola {
+            border-top: 1px solid #015822;
+            margin-top: 20px;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 60px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .faq_7 .faq-dropdown-bg {
+                padding: 50px 30px;
+            }
+
+            .faq_7 .text-blk.faq-answer {
+                padding-left: 0;
+                font-size: 16px;
+            }
+
+            .faq_7 .text-blk.faq-questions {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="corpo">
+        <div class="section">
+            <h2 class="titulo">Perguntas Frequentes</h2>
+
+            <div class="faq_7" unique-script-id="w-w-dm-id">
+                <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-7 wk-ipadp-7 faq-dropdown-bg"
+                        id="imiw">
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    1. Por que participar de um curso do Projeto EJA-EPT?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Participando do Projeto EJA-EPT, você conclui ao mesmo tempo o Ensino Médio e um
+                                    curso de
+                                    qualificação profissional, aumentando suas chances de inserção no mercado de
+                                    trabalho.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    2. O Projeto EJA-EPT oferece cursos técnicos?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Não. São cursos de qualificação profissional. Sua carga horária é menor que a de um
+                                    curso
+                                    técnico, mas proporciona conhecimentos relevantes para a área escolhida.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    3. Quais áreas de qualificação são oferecidas?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Projeto EJA-EPT oferece cursos de qualificação profissional em diferentes áreas,
+                                    de acordo
+                                    com a modalidade e a parceria com as escolas participantes.<br><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>- Cursos presenciais:</b> são ofertados
+                                    conforme a estrutura e disponibilidade das
+                                    escolas
+                                    parceiras em cada localidade.<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>- Cursos EaD (Ensino à Distância):</b> são
+                                    realizados totalmente online, com
+                                    flexibilidade de
+                                    horário.<br><br>
+                                    Confira abaixo os cursos disponíveis:<br><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Eletricista Instalador Predial de Baixa
+                                    Tensão (Modalidade Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Instalador de Sistemas Eletrônicos de
+                                    Segurança (Modalidade Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Operador de Tratamento de Águas e Efluentes
+                                    (Modalidade Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Laboratorista de Solos (Modalidade
+                                    Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Mecânico de Refrigeração e Climatização
+                                    Industrial (Modalidade
+                                    Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. Pedreiro de Alvenaria Estrutural (Modalidade
+                                    Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7. Soldador de Estruturas e Tubulação no
+                                    Processo MIG/MAG (Modalidade
+                                    Presencial)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8. Agente de Gestão de Resíduos Sólidos
+                                    (Modalidade EaD)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9. Assistente de Controle de Qualidade
+                                    (Modalidade EaD)<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10. Recepcionista em Serviços de Saúde
+                                    (Modalidade EaD)
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    4. Onde poderei atuar depois de concluir algum curso do Projeto EJA-EPT?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Conforme o curso escolhido, poderá atuar em áreas específicas relacionadas à
+                                    qualificação
+                                    obtida, melhorando suas oportunidades no mercado de trabalho.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    5. O curso terá aulas práticas?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Sim. Elas serão desenvolvidas por meio de laboratórios móveis, de acordo com a
+                                    necessidade
+                                    de cada curso.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    6. Os cursos são gratuitos?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Sim. Todos os cursos oferecidos são gratuitos, proporcionando acesso à educação e
+                                    qualificação profissional sem custos.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    7. Quem pode se inscrever nos cursos do Projeto EJA-EPT?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Os cursos são destinados a jovens e adultos que não concluíram o Ensino Médio e
+                                    desejam
+                                    obter uma qualificação profissional.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    8. Há limite de idade para se inscrever?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Qualquer pessoa interessada com 18 anos ou mais pode participar.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    9. Como faço para me inscrever nos cursos e quais documentos são necessários?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Para se inscrever, o caminho depende da modalidade do curso:<br><br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>- Cursos presenciais:</b> Procure a
+                                    secretaria de uma das escolas parceiras do Projeto
+                                    para
+                                    mais informações.<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>- Cursos EaD (a distância):</b> A inscrição
+                                    deve ser feita online, por meio de um
+                                    formulário
+                                    específico. O link é disponibilizado nos editais e nas divulgações oficiais do
+                                    projeto.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    10. Os cursos oferecem certificado?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Sim. Ao concluir o curso, os alunos recebem o certificado do Ensino Médio e de
+                                    qualificação profissional.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    11. Há algum tipo de avaliação durante o curso?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Sim. Os alunos são avaliados através de provas teóricas e práticas, trabalhos e
+                                    participação em
+                                    atividades.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    12. Os cursos são presenciais ou online?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    A maior parte dos cursos é ofertada na modalidade presencial, em parceria com
+                                    escolas
+                                    participantes. No entanto, também oferecemos cursos na modalidade a distância (EaD),
+                                    que
+                                    podem ser realizados de forma totalmente online, com flexibilidade de horário.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    13. Há suporte para os alunos durante o curso?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Sim. Os alunos terão acesso a uma equipe multidisciplinar para auxiliar no
+                                    desenvolvimento
+                                    acadêmico e profissional.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    14. Como o Projeto EJA-EPT contribui para minha carreira?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O Projeto oferece uma formação completa que integra educação básica e qualificação
+                                    profissional, aumentando suas chances de sucesso no mercado de trabalho.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    15. Preciso ter experiência na área?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Não é necessário ter experiência prévia na área escolhida. Os cursos são planejados
+                                    para
+                                    atender tanto iniciantes quanto aqueles que já possuem alguma experiência.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    16. O estudante que já se formou na EJA pode se inscrever?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Não, apenas estudantes devidamente matriculados na EJA.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    17. Qual é a carga horária dos cursos?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Cada curso possui uma carga horária específica, definida de acordo com os conteúdos
+                                    e a
+                                    formação proposta. A carga horária varia conforme o curso escolhido e pode ser
+                                    consultada no
+                                    edital correspondente.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    18. Quais são os critérios de avaliação dos cursos?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    Os critérios de avaliação incluem provas teóricas e práticas, trabalhos,
+                                    participação em
+                                    atividades e projetos desenvolvidos ao longo do curso.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                        <!--Aqui começa uma pergunta da FAQ-->
+                        <div class="faq">
+                            <span class="faq-question-container">
+                                <p class="text-blk faq-questions">
+                                    19. Como é feito o acompanhamento do desempenho dos alunos?
+                                </p>
+                                <span class="arrow-icon">▼</span>
+                            </span>
+                            <div class="answer-box">
+                                <p class="text-blk faq-answer">
+                                    O desempenho dos alunos é acompanhado por meio de avaliações periódicas, feedback
+                                    dos
+                                    professores e reuniões de orientação.
+                                </p>
+                            </div>
+                        </div>
+                        <!--Aqui termina uma pergunta da FAQ-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let faqQuestionContainers = document.querySelectorAll(`[unique-script-id="w-w-dm-id"] .faq-question-container`);
+            let currentlyActive = null;
+
+            faqQuestionContainers.forEach(function (faqQuestionContainer) {
+                faqQuestionContainer.onclick = function () {
+                    const parentFaq = this.parentElement;
+
+                    // Se já está ativo, apenas desativa
+                    if (parentFaq.classList.contains('active')) {
+                        parentFaq.classList.remove('active');
+                        currentlyActive = null;
+                        return;
+                    }
+
+                    // Fecha o item atualmente aberto
+                    if (currentlyActive) {
+                        currentlyActive.classList.remove('active');
+                    }
+
+                    // Abre o novo item
+                    parentFaq.classList.add('active');
+                    currentlyActive = parentFaq;
+                };
+            });
+        });
+    </script>
+
+</body>
+
+</html>
