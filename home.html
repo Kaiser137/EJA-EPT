@@ -80,6 +80,36 @@
             margin-bottom: 10px;
         }
 
+        .link-cartao-eja {
+            user-select: none;
+            display: block;
+            background-color: #fff;
+            border-radius: 16px;
+            text-decoration: none;
+            border: 3px solid transparent;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .link-cartao-eja {
+            pointer-events: none !important;
+        }
+
+        .link-cartao-eja .imagem-cartao {
+            pointer-events: none !important;
+            cursor: default !important;
+        }
+
+        .swiper-slide:not(:nth-child(4)) .link-cartao-eja,
+        .swiper-slide:not(:nth-child(4)) .link-cartao-eja * {
+            pointer-events: none !important;
+            cursor: default !important;
+        }
+
+        .swiper-slide:not(:nth-child(4)) {
+            cursor: default !important;
+        }
+
         .imagem-cartao {
             width: 100%;
             max-width: 750px;
@@ -859,22 +889,22 @@
             <div class="container-cartao swiper" id="swiper-topo">
                 <ul class="lista-cartao swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept" class="link-cartao">
+                        <span class="link-cartao-eja">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/01.png"
                                 alt="Banner - 01" class="imagem-cartao">
-                        </a>
+                        </span>
                     </li>
                     <li class="swiper-slide">
-                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept" class="link-cartao">
+                        <span class="link-cartao-eja">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/02.png"
                                 alt="Banner - 02" class="imagem-cartao">
-                        </a>
+                        </span>
                     </li>
                     <li class="swiper-slide">
-                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept" class="link-cartao">
+                        <span class="link-cartao-eja">
                             <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Slider%20topo%20-%20Home/03.png"
                                 alt="Banner - 03" class="imagem-cartao">
-                        </a>
+                        </span>
                     </li>
                     <li class="swiper-slide">
                         <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-43-2025-processo-seletivo-de-estudantes-para-os-cursos-agente-de-gestao-de-residuos-solidos-assistente-de-controle-da-qualidade-e-recepcionista-em-servicos-de-saude-formacao-inicial-e-continuada-fic-na-modalidade-a-distancia-ead"
@@ -1003,13 +1033,15 @@
         <p class="textoEditais">Confira os editais abertos para seleção de alunos e equipe do projeto EJA-EPT</p>
         <div class="rowEditais">
             <div class="colEditais">
-                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/editais?view=article&id=4024:editais-de-alunos-eja-ept&catid=339">
+                <a
+                    href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/editais?view=article&id=4024:editais-de-alunos-eja-ept&catid=339">
                     <img src="https://portal.poa.ifsuldeminas.edu.br/images/2023/Setembro/25/site.png" alt="Editais"
                         class="imagemEditais">
                 </a>
             </div>
             <div class="colEditais">
-                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/editais?view=article&id=4006:editais-eja-ept-2025&catid=339">
+                <a
+                    href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/editais?view=article&id=4006:editais-eja-ept-2025&catid=339">
                     <img src="https://portal.poa.ifsuldeminas.edu.br/images/2023/Setembro/25/site_1.png" alt="Editais"
                         class="imagemEditais">
                 </a>
