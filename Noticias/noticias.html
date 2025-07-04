@@ -255,6 +255,47 @@
         .botao-ver-noticia:hover .material-symbols-rounded {
             transform: translateX(5px);
         }
+      
+      /* Estilos da paginação */
+        .paginacao-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            gap: 8px;
+        }
+
+        .pagina-bolinha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid #01a342;
+            color: #01a342;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pagina-bolinha:hover {
+            background-color: #e9f7ed;
+        }
+
+        .pagina-bolinha.ativa {
+            background-color: #01a342;
+            color: white;
+            border-color: #01a342;
+        }
+
+        .paginacao-texto {
+            text-align: center;
+            color: #015822;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
         @media (max-width: 768px) {
             .noticiasGrande {
@@ -481,7 +522,7 @@
                 </div>
                 <div class="noticiaListaContent">
                     <h3 class="noticiaListaTitulo">PARCERIA EM POUSO ALEGRE</h3>
-                    <span class="noticiaListaData">23/01/2025 - Por: Gamaliel Basílio</span>
+                    <span class="noticiaListaData">23/01/2025 - Por: Prefeitura de Pouso Alegre</span>
                     <p class="noticiaListaTexto">Prefeitura de Pouso Alegre, CMEJA e IFSULDEMINAS oferecem curso
                         profissionalizante para alunos da EJA</p>
                     <div class="botao-ver-noticia-container">
@@ -561,41 +602,25 @@
                     </div>
                 </div>
             </div>
-            <div class="noticiaListaArtigo">
-                <div class="noticiaListaImgContainer">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Agosto/19/Encontro_eja_nov.png"
-                        alt="Encontro Nacional EJA-EPT" class="noticiaListaImg">
-                </div>
-                <div class="noticiaListaContent">
-                    <h3 class="noticiaListaTitulo">ENCONTRO NACIONAL EJA-EPT</h3>
-                    <span class="noticiaListaData">19/08/2024 - Por: William Sanches</span>
-                    <p class="noticiaListaTexto">EJA-EPT do Campus Pouso Alegre apresenta trabalhos no Encontro Nacional
-                        da Rede Federal</p>
-                    <div class="botao-ver-noticia-container">
-                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4028:encontro-nacional-eja-ept-2&catid=343"
-                            class="botao-ver-noticia">
-                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="noticiaListaArtigo">
-                <div class="noticiaListaImgContainer">
-                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Julho/31/image_2.png"
-                        alt="Reunião com professores formadores" class="noticiaListaImg">
-                </div>
-                <div class="noticiaListaContent">
-                    <h3 class="noticiaListaTitulo">REUNIÃO COM PROFESSORES</h3>
-                    <span class="noticiaListaData">31/07/2024 - Por: William Sanches</span>
-                    <p class="noticiaListaTexto">Professores formadores participam da primeira reunião com equipe
-                        pedagógica</p>
-                    <div class="botao-ver-noticia-container">
-                        <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4030:reuniao-com-professores&catid=343"
-                            class="botao-ver-noticia">
-                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
-                        </a>
-                    </div>
-                </div>
+          <!-- Sistema de paginação -->
+            <div class="paginacao-texto">Página 1 de 8</div>
+            <div class="paginacao-container">
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept"
+                    class="pagina-bolinha  ativa">1</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4034:noticias-pagina-2-eja-ept&catid=343"
+                    class="pagina-bolinha">2</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4035:noticias-pagina-3-eja-ept&catid=343"
+                    class="pagina-bolinha">3</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4036:noticias-pagina-4-eja-ept&catid=343"
+                    class="pagina-bolinha">4</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4037:noticias-pagina-5-eja-ept&catid=343"
+                    class="pagina-bolinha">5</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4038:noticias-pagina-6-eja-ept&catid=343"
+                    class="pagina-bolinha">6</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4039:noticias-pagina-7-eja-ept&catid=343"
+                    class="pagina-bolinha">7</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4040:noticias-pagina-8-eja-ept&catid=343"
+                    class="pagina-bolinha">8</a>
             </div>
         </div>
     </div>

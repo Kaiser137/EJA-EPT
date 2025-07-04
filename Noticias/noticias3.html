@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
+        .containerSection {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 20px 20px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+            margin: 0 auto !important;
+        }
+
+        .noticiasLista {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .noticiaListaArtigo {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: row;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-bottom: 2px solid #015822;
+        }
+
+        .noticiaListaImg {
+            width: 300px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .noticiaListaImgContainer {
+            width: 300px;
+            min-width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .noticiaListaContent {
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .noticiaListaTitulo {
+            text-align: left;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 20px !important;
+            color: #015822 !important;
+        }
+
+        .noticiaListaData {
+            font-size: 0.85rem;
+            color: #888;
+            display: block;
+        }
+
+        .noticiaListaTexto {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .botao-ver-noticia-container {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 850px;
+            margin: 0 auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .botao-ver-noticia {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .botao-ver-noticia:hover {
+            background: transparent;
+            color: #015822;
+            border-color: #015822;
+        }
+
+        .botao-ver-noticia .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-ver-noticia:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        /* Estilos da paginação */
+        .paginacao-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            gap: 8px;
+        }
+
+        .pagina-bolinha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid #01a342;
+            color: #01a342;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pagina-bolinha:hover {
+            background-color: #e9f7ed;
+        }
+
+        .pagina-bolinha.ativa {
+            background-color: #01a342;
+            color: white;
+            border-color: #01a342;
+        }
+
+        .paginacao-texto {
+            text-align: center;
+            color: #015822;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .containerSection {
+                padding: 0 !important;
+                border-radius: 0;
+            }
+
+            .noticiasLista {
+                width: 90%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .noticiaListaArtigo {
+                flex-direction: column;
+                margin-bottom: 25px;
+            }
+
+            .noticiaListaImgContainer {
+                width: 365px !important;
+                min-width: 100% !important;
+                height: 243px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .noticiaListaImg {
+                width: 365px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .noticiaListaContent {
+                padding: 15px !important;
+            }
+
+            .noticiaListaTitulo {
+                font-size: 18px !important;
+                margin-top: 10px !important;
+            }
+
+            .botao-ver-noticia-container {
+                padding: 0;
+                margin: 15px 0 5px 0 !important;
+                justify-content: center;
+            }
+
+            .botao-ver-noticia {
+                width: 100%;
+                max-width: 280px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .titulo {
+                font-size: 20px !important;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .noticiaListaTexto {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerSection">
+        <div class="noticiasLista">
+            <h2 class="titulo">Todas as Notícias do Projeto EJA/EPT</h2>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Junho/10/d0d0abb7-01f8-4152-8d5a-44cdf8b35cf0.jpeg"
+                        alt="Laboratórios móveis" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">LABORATÓRIOS MÓVEIS</h3>
+                    <span class="noticiaListaData">10/06/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Campus Pouso Alegre recebe contêineres laboratórios para os cursos EJA-
+                        EPT.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/laboratorios-moveis" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/INTELIGNCIA%20ARTIFICIAL.png"
+                        alt="Inteligência artificial" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">INTELIGÊNCIA ARTIFICIAL</h3>
+                    <span class="noticiaListaData">22/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Projeto EJA-EPT adota inteligência artificial para otimização de seus
+                        trabalhos.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/inteligencia-artificial" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/21/784b726a-ba6c-4d24-8398-eb6baa1ff94e.jpeg"
+                        alt="EJA-EPT chega a mais de 40 municípios" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">EJA-EPT CHEGA A MAIS DE 40 MUNICÍPIOS</h3>
+                    <span class="noticiaListaData">21/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Estudantes de 41 municípios serão beneficiados pelo projeto EJA
+                        integrada à EPT.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/eja-ept-chega-a-mais-de-40-municipios" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/20/WhatsApp_Image_2024-05-20_at_14.35.11_1.jpeg"
+                        alt="Reunião com as SREs" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">REUNIÃO COM AS SREs</h3>
+                    <span class="noticiaListaData">21/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Projeto EJA-EPT chegará a 35 municípios mineiros.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/reuniao-com-sres" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/WhatsApp_Image_2024-05-15_at_14.11.42.jpeg"
+                        alt="Letramento digital" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">LETRAMENTO DIGITAL</h3>
+                    <span class="noticiaListaData">15/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Melhoria no acesso à educação digital no CEM de Juiz de Fora com a
+                        ampliação do laboratório de informática pelo projeto EJA-EPT.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/letramento-digital" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/medica-sorridente-usando-fone-de-ouvido-enquanto-trabalhava-no-call-center-medico-e-olhando-para-a-camera_637285-5094.jpg"
+                        alt="Recepcionista em serviços de saúde" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">RECEPCIONISTA EM SERVIÇOS DE SAÚDE</h3>
+                    <span class="noticiaListaData">15/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Saiba onde o profissional pode atuar após a formação.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/recepcionista-em-servicos-de-saude" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/pedreiro-de-pedreiro-de-construcao-instalando-tijolo-vermelho-com-espatula-de-espatula-ao-ar-livre_255667-37333.jpg"
+                        alt="Pedreiro de alvenaria industrial" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">PEDREIRO DE ALVENARIA INDUSTRIAL</h3>
+                    <span class="noticiaListaData">15/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">O que faz um pedreiro de alvenaria industrial?</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/pedreiro-de-alvenaria-industrial" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/teste-de-resistencia-dos-sensores-de-temperatura-na-secao-de-fornecimento-de-resfriamento-da-unidade-de-ventilacao_179755-11887.jpg"
+                        alt="Mecânico de refrigeração e climatização industrial" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">MECÂNICO DE REFRIGERAÇÃO E CLIMATIZAÇÃO INDUSTRIAL</h3>
+                    <span class="noticiaListaData">15/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Responsabilidades do Técnico de refrigeração e climatização industrial.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/mecanico-de-refrigeracao-e-climatizacao-industrial" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/15/teste-de-solo-agronomo-indiano-colocando-solo-com-pa-de-jardim-em-saco-de-amostra-de-solo-pesquisa-ambiental-ao-ar-livre_255667-57183.jpg"
+                        alt="Laboratorista de solos" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">LABORATORISTA DE SOLOS</h3>
+                    <span class="noticiaListaData">15/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">O que faz um Laboratorista de solos?</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/laboratorista-de-solos" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/WhatsApp_Image_2024-05-13_at_13.42.22.jpeg"
+                        alt="Apresentação e Mapeamento" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">APRESENTAÇÃO E MAPEAMENTO</h3>
+                    <span class="noticiaListaData">13/05/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Primeiro encontro da oficina de Comunicação e Marketing apresenta a metodologia das aulas.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/apresentacao-e-mapeamento" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sistema de paginação -->
+            <div class="paginacao-texto">Página 3 de 8</div>
+            <div class="paginacao-container">
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept"
+                    class="pagina-bolinha">1</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4034:noticias-pagina-2-eja-ept&catid=343"
+                    class="pagina-bolinha">2</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4035:noticias-pagina-3-eja-ept&catid=343"
+                    class="pagina-bolinha ativa">3</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4036:noticias-pagina-4-eja-ept&catid=343"
+                    class="pagina-bolinha">4</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4037:noticias-pagina-5-eja-ept&catid=343"
+                    class="pagina-bolinha">5</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4038:noticias-pagina-6-eja-ept&catid=343"
+                    class="pagina-bolinha">6</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4039:noticias-pagina-7-eja-ept&catid=343"
+                    class="pagina-bolinha">7</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4040:noticias-pagina-8-eja-ept&catid=343"
+                    class="pagina-bolinha">8</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

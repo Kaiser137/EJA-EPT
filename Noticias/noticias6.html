@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
+        .containerSection {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 20px 20px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 24px !important;
+            color: #01a342 !important;
+            margin: 0 auto !important;
+        }
+
+        .noticiasLista {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            justify-content: center;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        .noticiaListaArtigo {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: row;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-bottom: 2px solid #015822;
+        }
+
+        .noticiaListaImg {
+            width: 300px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .noticiaListaImgContainer {
+            width: 300px;
+            min-width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .noticiaListaContent {
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            overflow: hidden;
+        }
+
+        .noticiaListaTitulo {
+            text-align: left;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 20px !important;
+            color: #015822 !important;
+        }
+
+        .noticiaListaData {
+            font-size: 0.85rem;
+            color: #888;
+            display: block;
+        }
+
+        .noticiaListaTexto {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .botao-ver-noticia-container {
+            display: flex;
+            justify-content: flex-end;
+            max-width: 850px;
+            margin: 0 auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .botao-ver-noticia {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822;
+            width: auto;
+            margin-bottom: 10px;
+        }
+
+        .botao-ver-noticia:hover {
+            background: transparent;
+            color: #015822;
+            border-color: #015822;
+        }
+
+        .botao-ver-noticia .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-ver-noticia:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        /* Estilos da paginação */
+        .paginacao-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+            gap: 8px;
+        }
+
+        .pagina-bolinha {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid #01a342;
+            color: #01a342;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .pagina-bolinha:hover {
+            background-color: #e9f7ed;
+        }
+
+        .pagina-bolinha.ativa {
+            background-color: #01a342;
+            color: white;
+            border-color: #01a342;
+        }
+
+        .paginacao-texto {
+            text-align: center;
+            color: #015822;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .containerSection {
+                padding: 0 !important;
+                border-radius: 0;
+            }
+
+            .noticiasLista {
+                width: 90%;
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .noticiaListaArtigo {
+                flex-direction: column;
+                margin-bottom: 25px;
+            }
+
+            .noticiaListaImgContainer {
+                width: 365px !important;
+                min-width: 100% !important;
+                height: 243px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .noticiaListaImg {
+                width: 365px;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .noticiaListaContent {
+                padding: 15px !important;
+            }
+
+            .noticiaListaTitulo {
+                font-size: 18px !important;
+                margin-top: 10px !important;
+            }
+
+            .botao-ver-noticia-container {
+                padding: 0;
+                margin: 15px 0 5px 0 !important;
+                justify-content: center;
+            }
+
+            .botao-ver-noticia {
+                width: 100%;
+                max-width: 280px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .titulo {
+                font-size: 20px !important;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .noticiaListaTexto {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerSection">
+        <div class="noticiasLista">
+            <h2 class="titulo">Todas as Notícias do Projeto EJA/EPT</h2>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Abril/18/Sem_t%C3%ADtulo_2.jpg"
+                        alt="Tirando dúvidas" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">TIRANDO DÚVIDAS</h3>
+                    <span class="noticiaListaData">18/04/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Gestão do projeto EJA-EPT fala sobre os cursos que poderão ser ofertados em Juiz de Fora.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/tirando-duvidas" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/REVISO%20DOS%20PPCs.png"
+                        alt="Comunicação e Marketing" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">COMUNICAÇÃO E MARKETING</h3>
+                    <span class="noticiaListaData">21/03/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Equipe de Comunicação e Marketing inicia divulgação do curso de formação de professores que atuam na EJA.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/comunicacao-e-marketing-2" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Mar%C3%A7o/19/reuniao_juiz_de_fora_1.png"
+                        alt="Esclarecendo dúvidas" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">ESCLARECENDO DÚVIDAS</h3>
+                    <span class="noticiaListaData">19/03/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Gestores esclarecem dúvidas da prefeitura de Juiz de Fora, parceira do projeto EJA-EPT.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/esclarecendo-duvidas" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Mar%C3%A7o/08/unnamed_2.jpg"
+                        alt="Desenvolvimento de lideranças" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">CAPACITAÇÃO DE LIDERANÇAS</h3>
+                    <span class="noticiaListaData">08/03/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Servidores e bolsistas do projeto EJA-EPT participam de curso de capacitação.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/desenvolvimento-de-liderancas" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/REVISO%20DOS%20PPCs.png"
+                        alt="Parcerias" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">PARCERIAS</h3>
+                    <span class="noticiaListaData">08/03/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Cursos do projeto EJA-EPT serão ofertados em mais de 40 escolas mineiras.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/parcerias" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/REVISO%20DOS%20PPCs.png"
+                        alt="Revisão dos PPCs" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">REVISÃO DOS PPCs</h3>
+                    <span class="noticiaListaData">21/03/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Projetos Pedagógicos dos cursos passam por adaptação antes da publicação.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/revisao-dos-ppcs" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Mar%C3%A7o/08/WhatsApp_Image_2024-03-08_at_11.28.00.jpeg"
+                        alt="Novas ações" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">NOVAS AÇÕES</h3>
+                    <span class="noticiaListaData">08/03/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Equipes do EJA se reúnem para avaliação dos trabalhos e apresentação das próximas ações.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/novas-acoes" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/REVISO%20DOS%20PPCs.png "
+                        alt="Dúvidas frequentes" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">DÚVIDAS FREQUENTES</h3>
+                    <span class="noticiaListaData">05/02/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Procuramos responder às dúvidas mais frequentes sobre o projeto EJA-EPT.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/duvidas-frequentes" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/CURSO%20PARA%20PROFESSORES%20DA%20EJA.png"
+                        alt="Curso para professores da EJA" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">CURSO PARA PROFESSORES DA EJA</h3>
+                    <span class="noticiaListaData">26/01/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Programa EJA-EPT ofertará curso de formação para professores que atuam na Educação de Jovens e Adultos.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/curso-para-professores-da-eja" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticiaListaArtigo">
+                <div class="noticiaListaImgContainer">
+                    <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Janeiro/26/processo-educacional-moderno-online-em-aula-virtual_189557-433_1.jpg"
+                        alt="Capacitação de professores" class="noticiaListaImg">
+                </div>
+                <div class="noticiaListaContent">
+                    <h3 class="noticiaListaTitulo">CAPACITAÇÃO DE PROFESSORES</h3>
+                    <span class="noticiaListaData">26/01/2024 - Por: William Sanches</span>
+                    <p class="noticiaListaTexto">Professores conteudistas terão capacitação em fevereiro.</p>
+                    <div class="botao-ver-noticia-container">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/noticias/capacitacao-de-professores" class="botao-ver-noticia">
+                            Veja a notícia <span class="material-symbols-rounded">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Sistema de paginação -->
+            <div class="paginacao-texto">Página 6 de 8</div>
+            <div class="paginacao-container">
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept"
+                    class="pagina-bolinha">1</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4034:noticias-pagina-2-eja-ept&catid=343"
+                    class="pagina-bolinha">2</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4035:noticias-pagina-3-eja-ept&catid=343"
+                    class="pagina-bolinha">3</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4036:noticias-pagina-4-eja-ept&catid=343"
+                    class="pagina-bolinha">4</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4037:noticias-pagina-5-eja-ept&catid=343"
+                    class="pagina-bolinha">5</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4038:noticias-pagina-6-eja-ept&catid=343"
+                    class="pagina-bolinha ativa">6</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4039:noticias-pagina-7-eja-ept&catid=343"
+                    class="pagina-bolinha">7</a>
+                <a href="https://portal.poa.ifsuldeminas.edu.br/home-eja-ept/noticias-eja-ept?view=article&id=4040:noticias-pagina-8-eja-ept&catid=343"
+                    class="pagina-bolinha">8</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
