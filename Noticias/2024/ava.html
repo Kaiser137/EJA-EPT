@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVA: IDENTIDADE VISUAL</title>
+    <style>
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .containerNoticias {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        .noticiasGrande {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px auto;
+        }
+
+        .noticiaPrincipal {
+            width: 80%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .noticiaPrincipalImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            display: block;
+        }
+
+        .noticiaPrincipalContent {
+            padding: 25px;
+        }
+
+        .noticiaPrincipalTitulo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #015822;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .noticiaPrincipalData {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .noticiaPrincipalTexto {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .noticiaSecundariaImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 0 0 10px 10px;
+            display: block;
+        }
+
+        .noticiaMeioImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .textoDireita {
+            text-align: right;
+            font-size: 1rem;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .noticiasGrande {
+                flex-direction: column;
+            }
+
+            .noticiaPrincipal {
+                width: 100%;
+            }
+
+            .noticiaPrincipalImg,
+            .noticiaSecundariaImg,
+            .noticiaMeioImg {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerNoticias">
+        <div class="noticiasGrande">
+            <div class="noticiaPrincipal">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Abril/05/ava.png"
+                    alt="AVA: identidade visual" class="noticiaPrincipalImg">
+                <div class="noticiaPrincipalContent">
+                    <h3 class="noticiaPrincipalTitulo">AVA: IDENTIDADE VISUAL</h3>
+                    <span class="noticiaPrincipalData">05/04/2024 - Por: William Sanches</span>
+                    <p class="noticiaPrincipalTexto">Após várias reuniões e apresentações de ideias, o AVA – Ambiente
+                        Virtual de Aprendizagem foi definida a identidade visual do projeto EJA-EPT. O trabalho foi
+                        desenvolvido por uma equipe multidisciplinar, envolvendo profissionais de diversas áreas, com o
+                        intuito de proporcionar uma experiência agradável aos alunos, professores e demais profissionais
+                        envolvidos no processo de ensino e aprendizagem.<br><br>
+
+                        De acordo com o coordenador do AVA, Guilherme Rodrigues de Souza, as salas de aula virtual do
+                        projeto EJA -EPT serão configuradas no formato de menus, sendo os laterais correspondentes às
+                        unidades curriculares e os superiores, referentes às semanas das unidades curriculares.<br><br>
+
+                        Ainda segundo o coordenador, também estão sendo desenvolvidos materiais de orientação aos
+                        professores formadores, como um guia de para elaboração de conteúdos, incluindo templates para o
+                        desenvolvimento de atividades avaliativas e orientações para o preenchimento da Matriz AVA, que
+                        representa um pilar fundamental no planejamento e execução de cursos à distância.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
