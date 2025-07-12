@@ -94,7 +94,7 @@
         .tabela th,
         .tabela td {
             border: 1px solid #ddd;
-            padding: 8px;
+            padding: 12px;
             text-align: left;
         }
 
@@ -113,17 +113,70 @@
         }
 
         @media (max-width: 768px) {
-
-            .tabela th,
+            /* Transforma cada linha em um bloco/card */
+            .tabela thead {
+                display: none;
+            }
+            
+            .tabela, .tabela tbody, .tabela tr {
+                display: block;
+                width: 100%;
+            }
+            
+            .tabela tr {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-bottom: 20px;
+                background: white;
+                box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+                padding: 15px;
+                /* Ajuste importante para as margens */
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
             .tabela td {
-                font-size: 0.9rem;
-                padding: 4px;
+                display: block;
+                text-align: left;
+                padding: 10px 0; /* Aumentei o padding vertical */
+                border: none;
+                border-bottom: 1px solid #eee;
+                padding-left: 0;
+                position: relative;
+                /* Garante que o texto não toque nas bordas */
+                padding-right: 10px;
             }
-
-            .noticiasGrande {
-                flex-direction: column;
+            
+            .tabela td:last-child {
+                border-bottom: none;
+                padding-bottom: 5px; /* Espaço extra no último item */
             }
-
+            
+            .tabela td::before {
+                content: attr(data-label);
+                display: block;
+                font-weight: bold;
+                color: #015822;
+                margin-bottom: 8px; /* Mais espaço entre rótulo e conteúdo */
+                position: static;
+                transform: none;
+                width: 100%;
+            }
+            
+            /* Ajustes de espaçamento e fonte */
+            .tabela th, 
+            .tabela td {
+                font-size: 0.85rem;
+            }
+            
+            /* Garante margem lateral adequada */
+            .containerNoticias,
+            .noticiasGrande,
+            .noticiaPrincipal {
+                padding: 0 15px; /* Margem lateral consistente */
+                box-sizing: border-box;
+            }
+            
             .noticiaPrincipal {
                 width: 100%;
             }
@@ -132,6 +185,13 @@
             .noticiaSecundariaImg,
             .noticiaMeioImg {
                 height: auto;
+            }
+            
+            /* Ajuste específico para a tabela ocupar 100% com margens */
+            .tabela {
+                width: calc(100% - 5px); /* Pequeno ajuste para caber no container */
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     </style>
@@ -162,58 +222,58 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Desafios na Educação Profissional de Jovens e Adultos: uma análise a partir do censo
+                                <td data-label="Título">Desafios na Educação Profissional de Jovens e Adultos: uma análise a partir do censo
                                     escolar e da plataforma Nilo Peçanha</td>
-                                <td>Thiago, Donizeti e Eliane</td>
-                                <td>Comunicação Oral</td>
+                                <td data-label="Autores">Thiago, Donizeti e Eliane</td>
+                                <td data-label="Tipo">Comunicação Oral</td>
                             </tr>
                             <tr>
-                                <td>Estratégias de Comunicação & Marketing no Projeto EJA-EPT do IFSULDEMINAS - Campus
+                                <td data-label="Título">Estratégias de Comunicação & Marketing no Projeto EJA-EPT do IFSULDEMINAS - Campus
                                     Pouso Alegre</td>
-                                <td>Thiago, Eliane e Fieno</td>
-                                <td>Relato de Experiência</td>
+                                <td data-label="Autores">Thiago, Eliane e Fieno</td>
+                                <td data-label="Tipo">Relato de Experiência</td>
                             </tr>
                             <tr>
-                                <td>Disparidades regionais e educação de jovens e adultos no Brasil: uma análise por
+                                <td data-label="Título">Disparidades regionais e educação de jovens e adultos no Brasil: uma análise por
                                     meio de indicadores socioeconômicos </td>
-                                <td>Donizeti, Fieno e Evandro</td>
-                                <td>Comunicação Oral</td>
+                                <td data-label="Autores">Donizeti, Fieno e Evandro</td>
+                                <td data-label="Tipo">Comunicação Oral</td>
                             </tr>
                             <tr>
-                                <td>Perfil demográfico e educacional dos municípios alcançados pelo Projeto EJA-EPT do
+                                <td data-label="Título">Perfil demográfico e educacional dos municípios alcançados pelo Projeto EJA-EPT do
                                     IFSULDEMINAS – Campus Pouso Alegre</td>
-                                <td>Isabel, Evandro e Henrique</td>
-                                <td>Comunicação Oral</td>
+                                <td data-label="Autores">Isabel, Evandro e Henrique</td>
+                                <td data-label="Tipo">Comunicação Oral</td>
                             </tr>
                             <tr>
-                                <td>Processo de produção de cadernos temáticos de curso, material didático para o
+                                <td data-label="Título">Processo de produção de cadernos temáticos de curso, material didático para o
                                     Projeto EJA-EPT do IFSULDEMINAS – Campus Pouso Alegre</td>
-                                <td>Isabel, Jociana e Rafael</td>
-                                <td>Relato de Experiência</td>
+                                <td data-label="Autores">Isabel, Jociana e Rafael</td>
+                                <td data-label="Tipo">Relato de Experiência</td>
                             </tr>
                             <tr>
-                                <td>Tecendo Saberes na EJA-EPT: A experiência do Guia de Orientação para Práticas
+                                <td data-label="Título">Tecendo Saberes na EJA-EPT: A experiência do Guia de Orientação para Práticas
                                     Pedagógicas de Professores Formadores do IFSULDEMINAS - Campus Pouso Alegre</td>
-                                <td>Igor, Luis Otoni e Raymundo</td>
-                                <td>Relato de Experiência</td>
+                                <td data-label="Autores">Igor, Luis Otoni e Raymundo</td>
+                                <td data-label="Tipo">Relato de Experiência</td>
                             </tr>
                             <tr>
-                                <td>Elaboração de Projetos Pedagógicos de Curso para EJA integrada à EPT no sul de Minas
+                                <td data-label="Título">Elaboração de Projetos Pedagógicos de Curso para EJA integrada à EPT no sul de Minas
                                     Gerais: um relato de experiência</td>
-                                <td>Emanuelle, Marcel</td>
-                                <td>Relato de Experiência</td>
+                                <td data-label="Autores">Emanuelle, Marcel</td>
+                                <td data-label="Tipo">Relato de Experiência</td>
                             </tr>
                             <tr>
-                                <td>Cooperação pedagógica entre a Rede Federal de Educação Profissional, Científica e
+                                <td data-label="Título">Cooperação pedagógica entre a Rede Federal de Educação Profissional, Científica e
                                     Tecnológica (RFEPCT) e os estados, municípios na elaboração do currículo integrado
                                     EJA e EPT: análise do caso IFSULDEMINAS Campus Pouso Alegre</td>
-                                <td>Emanuelle e Henrique</td>
-                                <td>Comunicação Oral</td>
+                                <td data-label="Autores">Emanuelle e Henrique</td>
+                                <td data-label="Tipo">Comunicação Oral</td>
                             </tr>
                             <tr>
-                                <td>Acessibilidade com IA no EJA-EPT do IFSULDEMINAS - Campus Pouso Alegre</td>
-                                <td>Raymundo, Igor e Luis Otoni</td>
-                                <td>Comunicação Oral</td>
+                                <td data-label="Título">Acessibilidade com IA no EJA-EPT do IFSULDEMINAS - Campus Pouso Alegre</td>
+                                <td data-label="Autores">Raymundo, Igor e Luis Otoni</td>
+                                <td data-label="Tipo">Comunicação Oral</td>
                             </tr>
                         </tbody>
                     </table>
@@ -293,14 +353,14 @@
                         <b>2. ACESSO, PERMANÊNCIA E ÊXITO NA EJA-EPT (PROEJA)</b><br>
                         Apresentação de pesquisas resultantes de estudos teórico ou teórico-práticos, cujas questões de
                         investigação envolvam processos de divulgação de cursos, processo seletivo e formas de ingresso,
-                        acolhida de estudantes, estratégias para permanência e acompanhamento de ações que demonstram o
+                        acolhida de estudantes, estratégias para permanência e acompanhamento de ações que demonstrem o
                         êxito de estudantes e de cursos no campo da EJA-EPT (PROEJA), em sua concepção de formação
                         humana
                         integral.<br>
                         Apresentação de relatos de experiência que envolvam processos de divulgação de cursos, processo
                         seletivo e forma de ingresso, acolhida de estudantes, estratégias para permanência e
                         acompanhamento
-                        de ações que demonstram o êxito de estudantes e de cursos no campo da EJA-EPT (PROEJA), em sua
+                        de ações que demonstrem o êxito de estudantes e de cursos no campo da EJA-EPT (PROEJA), em sua
                         concepção de formação humana integral.<br><br>
 
                         <b>3. ESTUDANTES DA EJA-EPT (PROEJA)</b><br>
