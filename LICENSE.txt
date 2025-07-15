@@ -226,8 +226,7 @@ seguintes condições.
 
   a. Atribuição.
 
-       1. Se você compartilhar o material licenciado (incluindo em versões modificadas)
-          formulário), você deve:
+       1. Se você compartilhar o material licenciado (incluindo em versões modificadas), você deve:
 
             a. reter o seguinte se for fornecido pelo Licenciante
                com o Material Licenciado:
