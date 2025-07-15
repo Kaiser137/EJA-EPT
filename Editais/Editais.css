@@ -1,0 +1,73 @@
+.content-header-options-1.row-fluid {
+    display: none !important;
+}
+
+.container-editais {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+.titulo-edital {
+    text-align: center;
+    font-size: 24px !important;
+    color: #01a342 !important;
+    margin: 0 !important;
+    margin-bottom: 10px;
+}
+
+.texto-editais {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin: 0 20px;
+}
+
+.card-edital {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card-edital:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-edital a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.imagemEditais {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.tituloEditais {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #015822;
+    margin: 15px 0 10px;
+    text-align: left;
+}
+
+.textoEditais {
+    font-size: 1rem;
+    color: #015822;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}

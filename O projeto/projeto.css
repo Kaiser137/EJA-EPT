@@ -1,0 +1,208 @@
+.content-header-options-1.row-fluid {
+    display: none !important;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 24px !important;
+    color: #01a342 !important;
+    margin: 0 !important;
+    margin-bottom: 15px;
+}
+
+.main {
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.main p {
+    padding: 5px !important;
+}
+
+section h2 {
+    text-align: center;
+    color: #01a342;
+}
+
+.rowProjeto {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.colunaProjeto {
+    display: flex;
+    flex-direction: column;
+}
+
+.colunaProjeto p {
+    padding: 100px;
+    margin: 0;
+}
+
+.ProjetoDesktop {
+    margin-bottom: 20px;
+}
+
+.ProjetoDesktop img {
+    width: 250px;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    margin: auto 0;
+}
+
+.ProjetoDesktop p {
+    padding: 10px;
+}
+
+.MissaoDesktop,
+.ValoresDesktop {
+    background-color: #1b4a9b;
+}
+
+.VisaoDesktop {
+    background-color: #02a240;
+}
+
+.MissaoDesktop,
+.ValoresDesktop,
+.VisaoDesktop {
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.MissaoDesktop,
+.VisaoDesktop {
+    margin-bottom: 30px;
+}
+
+.MissaoDesktop img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: middle;
+}
+
+.MissaoDesktop p {
+    padding: 20px;
+}
+
+.VisaoDesktop img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: middle;
+}
+
+.VisaoDesktop p {
+    padding: 20px;
+}
+
+.ValoresDesktop img {
+    width: auto;
+    height: 100%;
+    text-align: center;
+    justify-content: middle;
+}
+
+.ValoresDesktop p {
+    padding: 5px 20px;
+    margin: 0 !important;
+}
+
+.colunaValores,
+.colunaVisao,
+.colunaMissao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.colunaValores h2,
+.colunaVisao h2,
+.colunaMissao h2 {
+    color: #ffffff
+}
+
+.colunaValores p {
+    padding: 10px;
+}
+
+.Mobile {
+    display: none;
+}
+
+.Mobile h2 {
+    color: #ffffff;
+}
+
+.Mobile img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.MissaoMobile,
+.ValoresMobile {
+    background-color: #1b4a9b;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.VisaoMobile {
+    background-color: #02a240;
+    color: white;
+    margin: 0;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.textoFinal {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .Desktop {
+        display: none;
+    }
+
+    .Mobile {
+        display: block;
+    }
+
+    .titulo {
+        font-size: 2em;
+        padding: 10px;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .colunaProjeto p {
+        padding: 10px 20px !important;
+    }
+
+    .projetoMobile {
+        margin-bottom: 20px;
+    }
+
+    .missaoMobile,
+    .visaoMobile,
+    .valoresMobile {
+        margin-bottom: 20px;
+    }
+}

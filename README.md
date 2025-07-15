@@ -1,5 +1,11 @@
 # EJA EPT - IFSULDEMINAS - Campus Pouso Alegre
 
+## Explicações sobre o repositório
+
+O repositório foi criado para abrigar as novas páginas do Projeto EJA-EPT do IFSULDEMINAS Campus Pouso Alegre! Nele fora criada primeiramente, todas as páginas utilizando CSS e JS internos! Isso por conta de limitações do Joomla, plataforma utilizada para gerenciamento das páginas do projeto. Posteriormente a criação, decidi criar arquivos contendo o CSS e JS de cada página separadamente, para organizar melhor e ter clareza sobre os códigos desenvolvidos!
+
+Caso queira falar comigo, me envie um e-mail: cezarvitorti@gmail.com!
+
 ## Descrição do Projeto
 
 O IFSULDEMINAS promove educação profissional e tecnológica (EPT) nas diferentes modalidades de ensino, com base na conjugação de conhecimentos técnicos e tecnológicos com sua prática pedagógica, visando promover o desenvolvimento social, tecnológico e econômico por meio de diversas ações educativas, dentre elas, a oferta de cursos de Formação Inicial e Continuada em seu Programa de Educação de Jovens e Adultos (FIC-EJA) à comunidade.
