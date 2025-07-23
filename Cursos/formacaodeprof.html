@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formação de professores: Metodologias ativas e tecnologias para a EJA </title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght&#64;14..32,100..900&display=swap');
+
         .content-header-options-1.row-fluid {
             display: none !important;
         }
@@ -56,16 +61,102 @@
             margin-bottom: 10px !important;
         }
 
+        .etiquetaInscricao {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            align-items: center;
+            margin: 20px 40px; 
+            width: calc(100% - 80px); 
+        }
+
         .etiqueta {
             padding: 8px 18px;
             font-size: 0.95rem;
             font-weight: 600;
-            width: fit-content;
             border-radius: 50px;
-            display: inline-block;
             background: #015822;
             color: #fff;
-            margin: 10px 10px 0px 10px;
+            margin: 0;
+            flex-shrink: 0;
+        }
+
+        .botao-edital {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 25px;
+            background: #fff;
+            color: #015822;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822 !important;
+            flex-shrink: 0;
+        }
+
+        .botao-edital:hover {
+            background: #015822;
+            color: #fff;
+            border-color: #015822;
+        }
+
+        .botao-edital .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-edital:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        .botao-inscrever {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 25px;
+            background: #015822;
+            color: #fff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #015822 !important;
+            flex-shrink: 0;
+        }
+
+        .botao-inscrever:hover {
+            background: transparent;
+            color: #015822;
+            border: 2px solid #015822;
+        }
+
+        .botao-inscrever .material-symbols-rounded {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .botao-inscrever:hover .material-symbols-rounded {
+            transform: translateX(5px);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .etiquetaInscricao {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                margin: 0 auto;
+                margin-top: 20px;
+                width: 100%;
+            }
+            
+            .etiqueta, .botao-inscrever, .botao-edital {
+                width: 300px !important;
+                text-align: center;
+                padding: 8px 15px;
+            }
         }
 
     </style>
@@ -77,7 +168,15 @@
             <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Maio/13/formacao-professores.png"
                 alt="Imagem topo - Formação de professores">
         </div>
-        <p class="etiqueta">Educação à Distância</p>
+        <div class="etiquetaInscricao">
+            <p class="etiqueta">Educação à Distância</p>
+            <a href="https://portal.poa.ifsuldeminas.edu.br/editais/editais-de-2025/edital-45-2025-processo-seletivo-para-ingresso-de-estudantes-no-curso-de-formacao-de-professores-metodologias-ativas-e-tecnologias-para-a-eja" class="botao-edital">
+                Leia o edital <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+            <a href="https://suap.ifsuldeminas.edu.br/inscricoesfic/efetuar_inscricao/2561/" class="botao-inscrever">
+                Inscreva-se <span class="material-symbols-rounded">arrow_forward</span>
+            </a>
+        </div>
         <div class="secao-descricao">
             <h3 class="titulo">Habilidades e Competências Desenvolvidas</h3>
 
