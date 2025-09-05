@@ -52,6 +52,29 @@
             margin: 0;
         }
 
+        .VideoDesktop, .VideoMobile {
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+
+        .VideoDesktop iframe {
+            margin: 0 auto;
+        }
+
+        .rowVideo {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .colunaVideo {
+            display: flex;
+            flex-direction: column;
+        }
+
         .ProjetoDesktop {
             margin-bottom: 20px;
         }
@@ -213,6 +236,35 @@
             .valoresMobile {
                 margin-bottom: 20px;
             }
+
+            .VideoMobile h2 {
+                color: #01a342 !important;
+            }
+
+            .VideoMobile .rowVideo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .VideoMobile .colunaVideo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 100%;
+            }
+            
+            .VideoMobile .colunaVideo iframe {
+                max-width: 100%;
+                height: auto;
+                aspect-ratio: 356/634; /* Mantém a proporção do vídeo */
+            }
+            
+            .VideoMobile h2 {
+                text-align: center;
+                padding: 0 15px;
+            }
         }
     </style>
 </head>
@@ -253,6 +305,15 @@
 
                         <p>• Promover a elevação da escolaridade de jovens e adultos, vinculada à
                             formação profissional e à valorização do saber.</p>
+                    </div>
+                </div>
+                <div class="rowProjeto">
+                    <div class="colunaProjeto">
+                        <p>• Apoiar o desenvolvimento de propostas pedagógicas específicas para o público da
+                            EJA, integrando educação, ciência, trabalho, tecnologia e cultura;</p>
+
+                        <p>• Promover a elevação da escolaridade de jovens e adultos, vinculada à
+                            formação profissional e à valorização do saber.</p>
 
                         <p>Os cursos serão ofertados nas modalidades presencial e EaD, sendo eles:</p>
 
@@ -272,6 +333,11 @@
                             Mecânico de Refrigeração e Climatização Industrial;<br>
                             Pedreiro de Alvenaria Estrutural;<br>
                             Soldador de Estruturas e Tubulação no Processo MIG/MAG.</p>
+                    </div>
+                    <div class="rowVideo">
+                        <div class="colunaVideo">
+                            <iframe width="356" height="634" src="https://www.youtube.com/embed/XxoAhHOKhaw" title="EPT   Adriano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -390,6 +456,13 @@
                             Mecânico de Refrigeração e Climatização Industrial;<br>
                             Pedreiro de Alvenaria Estrutural;<br>
                             Soldador de Estruturas e Tubulação no Processo MIG/MAG.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="VideoMobile">
+                <div class="rowVideo">
+                    <div class="colunaVideo">
+                        <iframe width="356" height="634" src="https://www.youtube.com/embed/XxoAhHOKhaw" title="EPT   Adriano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </section>
