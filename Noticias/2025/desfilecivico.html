@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desfile Cívico em Três Corações</title>
+    <style>
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .containerNoticias {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        .noticiasGrande {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px auto;
+        }
+
+        .noticiaPrincipal {
+            width: 80%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .noticiaPrincipalImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            display: block;
+        }
+
+        .noticiaPrincipalContent {
+            padding: 25px;
+        }
+
+        .noticiaPrincipalTitulo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #015822;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .noticiaPrincipalData {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .noticiaPrincipalTexto {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .noticiaSecundariaImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 0 0 10px 10px;
+            display: block;
+        }
+
+        .noticiaMeioImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .noticiasGrande {
+                flex-direction: column;
+            }
+
+            .noticiaPrincipal {
+                width: 100%;
+            }
+
+            .noticiaPrincipalImg,
+            .noticiaSecundariaImg,
+            .noticiaMeioImg {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerNoticias">
+        <div class="noticiasGrande">
+            <div class="noticiaPrincipal">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/Desfile%20Cvico%20em%20Trs%20Coraes.png"
+                    alt="Desfile Cívico em Três Corações" class="noticiaPrincipalImg">
+                <div class="noticiaPrincipalContent">
+                    <h3 class="noticiaPrincipalTitulo">Desfile Cívico em Três Corações</h3>
+                    <span class="noticiaPrincipalData">08/09/2025 - Por: William Sanches</span>
+                    <p class="noticiaPrincipalTexto">Celebrando os 141 anos da cidade de Três Corações, estudantes do
+                            Projeto EJA-EPT, da Escola Estadual Américo Dias Pereira, desfilaram na data comemorativa de
+                            7 de Setembro.<br><br>
+
+                            Com muita dedicação e presença, apresentaram à comunidade as oportunidades oferecidas pelo
+                            projeto, incluindo cursos profissionalizantes gratuitos para estudantes da EJA, em conjunto
+                            com o Ensino Médio.<br><br>
+
+                            Esse foi mais um momento marcante em que os alunos puderam demonstrar sua inclusão no avanço
+                            educacional proporcionado pelos cursos profissionalizantes do Projeto EJA-EPT.
+
+                            <!-- <img src="https://portal.poa.ifsuldeminas.edu.br/images/2024/Agosto/21/eja3.jpg"
+                            alt="Inauguração de cursinho pré-universitário" class="noticiaMeioImg"><br><br> -->
+                    </p>
+                </div>
+                <!-- <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/Alunos%20do%20Curso%20de%20Operador%20de%20Tratamento%20de%20Aguas%20e%20Efluentes%202.png"
+                    alt="Inauguração de cursinho pré-universitário" class="noticiaSecundariaImg"> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
