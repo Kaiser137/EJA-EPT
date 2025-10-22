@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Musicalidades    </title>
+    <style>
+        .content-header-options-1.row-fluid {
+            display: none !important;
+        }
+
+        .containerNoticias {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            margin: 0 auto;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+        }
+
+        .noticiasGrande {
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto;
+        }
+
+        .noticiaPrincipal {
+            width: 80%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .noticiaPrincipalContent {
+            padding: 0 25px 25px 25px;
+        }
+
+        .noticiaPrincipalTitulo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #015822;
+            margin-bottom: 10px;
+        }
+
+        .noticiaPrincipalData {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .noticiaPrincipalTexto {
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .noticiaMeioImg {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .imagensBaixo {
+            display: flex;
+            flex-direction: row;
+            gap: 5px; 
+            box-sizing: border-box;
+        }
+
+        .imagensBaixoImg1 {
+            width: calc(50% - 3px);
+            height: auto; 
+            object-fit: cover; 
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .imagensBaixoImg2 {
+            width: calc(50% - 3px);
+            height: auto; 
+            object-fit: cover; 
+            border-top-right-radius: 8px;
+            border-bottom-right-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .noticiasGrande {
+                flex-direction: column;
+            }
+
+            .noticiaPrincipal {
+                width: 100%;
+            }
+            
+            .imagensBaixo {
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .imagensBaixoImg1, .imagensBaixoImg2 {
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerNoticias">
+        <div class="noticiasGrande">
+            <div class="noticiaPrincipal">
+                <div class="noticiaPrincipalContent">
+                    <h3 class="noticiaPrincipalTitulo">Projeto Musicalidades – Oficina de Percussão e Musicalização:
+                        Saberes Tradicionais Afro-Brasileiros </h3>
+                    <p class="noticiaPrincipalTexto">O <b>Projeto Musicalidades</b> oferece oficinas de percussão e
+                        musicalização voltadas para a valorização dos saberes tradicionais afro-brasileiros. A
+                        iniciativa busca proporcionar aos participantes o contato com ritmos, músicas e práticas
+                        culturais que carregam forte significado histórico e social, promovendo o reconhecimento e a
+                        preservação de expressões culturais ancestrais.<br><br>
+
+                        O projeto é destinado a <b>pessoas a partir de 12 anos</b>, especialmente aquelas em situação de
+                        vulnerabilidade socioeconômica, ampliando o acesso à educação musical e à cultura de forma
+                        inclusiva e participativa.<br><br>
+
+                        Entre os principais benefícios, destacam-se o desenvolvimento de habilidades musicais e
+                        rítmicas, a valorização da cultura afro-brasileira, o estímulo à criatividade, à colaboração e à
+                        expressão artística, além do fortalecimento da identidade cultural e da autoestima dos
+                        participantes.<br><br>
+
+                        As atividades são ministradas por músicos do grupo <b>Samba na Madeira</b>, em turmas <b>diurnas e
+                        noturnas</b>, na <b>Casa da Cultura Negra de Ouro Preto – MG</b>, garantindo um espaço seguro e adequado
+                        para a vivência prática da música e da cultura.<br><br>
+
+
+                        O projeto é realizado pelo <b>IFSULDEMINAS – Campus Pouso Alegre</b>, em parceria com a <b>Secretaria de
+                        Educação Continuada, Alfabetização de Jovens e Adultos, Diversidade e Inclusão (SECADI)</b> e o
+                        <b>Ministério da Educação</b>, reafirmando o compromisso da instituição com a educação, a cultura e a
+                        inclusão social.
+
+                        <!--    <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20noticias/AULAO%20SOBRE%20HABILIDADES%202.png"
+                            alt="Projeto Musicalidades  " class="noticiaMeioImg"><br><br> -->
+                    </p>
+                </div>
+
+                    <div class="imagensBaixo">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Educacao%20em%20acao/feed-02%201.png"
+                    alt="Projeto Musicalidades" class="imagensBaixoImg1">
+                <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Educacao%20em%20acao/feed-01%201.png"
+                    alt="Projeto Musicalidades" class="imagensBaixoImg2">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
