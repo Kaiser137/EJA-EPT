@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Noções Básicas em Conservação e Restauro de Bens
-        Culturais</title>
+    <title>Curso de Noções Básicas de Conservação e Restauração de Bens Culturais</title>
     <style>
         .content-header-options-1.row-fluid {
             display: none !important;
@@ -72,24 +71,53 @@
         .imagensBaixo {
             display: flex;
             flex-direction: row;
-            gap: 5px; 
+            gap: 5px;
             box-sizing: border-box;
         }
 
         .imagensBaixoImg1 {
             width: calc(50% - 3px);
-            height: auto; 
-            object-fit: cover; 
+            height: auto;
+            object-fit: cover;
             border-top-left-radius: 8px;
             border-bottom-left-radius: 8px;
         }
 
         .imagensBaixoImg2 {
             width: calc(50% - 3px);
-            height: auto; 
-            object-fit: cover; 
+            height: auto;
+            object-fit: cover;
             border-top-right-radius: 8px;
             border-bottom-right-radius: 8px;
+        }
+
+        .botoes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .botao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            color: #01a342;
+        }
+
+        .botao:hover {
+            transform: scale(1.05);
+        }
+
+        .imagem-botao {
+            max-width: 200px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -106,7 +134,8 @@
                 gap: 5px;
             }
 
-            .imagensBaixoImg1, .imagensBaixoImg2 {
+            .imagensBaixoImg1,
+            .imagensBaixoImg2 {
                 width: 100%;
                 border-radius: 8px;
             }
@@ -119,13 +148,14 @@
         <div class="noticiasGrande">
             <div class="noticiaPrincipal">
                 <div class="noticiaPrincipalContent">
-                    <h3 class="noticiaPrincipalTitulo">Curso de Noções Básicas em Conservação e Restauro de Bens
-                        Culturais </h3>
+                    <h3 class="noticiaPrincipalTitulo">Curso de Noções Básicas de Conservação e Restauração de Bens
+                        Culturais</h3>
                     <p class="noticiaPrincipalTexto">O IFSULDEMINAS – Campus Pouso Alegre oferece uma oportunidade única
                         para quem deseja se especializar na preservação do patrimônio histórico e cultural.<br><br>
 
-                        Ofertado no Centro de Formação de Juventudes em Minas Novas/MG, o <b>Curso de Noções Básicas em
-                            Conservação e Restauro de Bens Culturais</b> é uma iniciativa que reforça o compromisso com
+                        Ofertado no Centro de Formação de Juventudes em Minas Novas/MG, o <b>Curso de Noções Básicas de
+                            Conservação e Restauração de Bens Culturais</b> é uma iniciativa que reforça o compromisso
+                        com
                         a
                         educação inclusiva, a cidadania e a valorização do patrimônio cultural.<br><br>
 
@@ -155,6 +185,34 @@
                             alt="Curso de Noções Básicas em Conservação e Restauro de Bens
                         Culturais" class="noticiaMeioImg"><br><br> -->
                     </p>
+                    <div class="botoes">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/PPC/PPC_Nocoes_conservacao_MN.pdf"
+                            class="botao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20cursos%20-%20botoes/02-projeto.png"
+                                alt="Projeto Pedagógico" class="imagem-botao">
+                            <span>Projeto Pedagógico (Minas Novas)</span>
+                        </a>
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Matriz%20Curricular/Novos/nocoes%20de%20conservacao%20MN.png"
+                            class="botao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20cursos%20-%20botoes/01-matriz.png"
+                                alt="Matriz Curricular" class="imagem-botao">
+                            <span>Matriz Curricular (Minas Novas)</span>
+                        </a>
+                    </div>
+                    <div class="botoes">
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/PPC/PPC_Nocoes_conservacao_OP.pdf"
+                            class="botao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20cursos%20-%20botoes/02-projeto.png"
+                                alt="Projeto Pedagógico" class="imagem-botao">
+                            <span>Projeto Pedagógico (Ouro Preto)</span>
+                        </a>
+                        <a href="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Matriz%20Curricular/Novos/NOCOES%20DE%20CONSERVACAO%20OP.png"
+                            class="botao">
+                            <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Pagina%20de%20cursos%20-%20botoes/01-matriz.png"
+                                alt="Matriz Curricular" class="imagem-botao">
+                            <span>Matriz Curricular (Ouro Preto)</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="imagensBaixo">
                     <img src="https://portal.poa.ifsuldeminas.edu.br/images/EJA-EPT/Educacao%20em%20acao/feed-03%201.png"
